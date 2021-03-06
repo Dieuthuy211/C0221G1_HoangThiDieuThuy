@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from>
+    <table>
+        <tr>
+   <th style="width: 200px">Amont</th>
+            <th style="width: 300px">from Currenxy</th>
+            <th style="width: 300px">To Curreny</th>
+
+        </tr>
+        <tr>
+  <td style="width: 200px">
+      <input type="text"name="" id="ipNhap"></td>
+  <td>    <select style="width: 100px;margin-left: 100px" id="fromCurrenxy">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select></td>
+
+  <td>  <select style="width: 100px;margin-left: 100px" id="toCurreny">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select></td>
+            <td style="width: 200px"> <button type="button" onclick="chuyendoi()" style="width: 100px">covert</button></td>
+        </tr>
+    </table>
+</from>
+<script>
+    function chuyendoi(){
+    let nhap = parseInt(document.getElementById("ipNhap").value);
+    let lay1=document.getElementById('fromCurrenxy').value;
+    let lay2=document.getElementById('toCurreny').value;
+    if(lay1=='VND'&& lay2=='VND'){
+         alert(nhap)
+    }
+    if(lay1=='VND'&&lay2=='USD'){
+        alert(nhap/23000)
+    }
+    if(lay1=='USD'&&lay2=='VND'){
+        alert(23000*nhap)
+    }
+    if(lay1=='USD'&&lay2=='USD'){
+        alert(nhap)
+    }
+    }
+</script>
+</body>
+</html>
