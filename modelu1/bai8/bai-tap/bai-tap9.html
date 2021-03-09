@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="name" id="nhapPhut" placeholder="nhập số phút">;
+<button type="button" onclick="dienthoai()">tinhtien</button>
+
+<script>
+    function dienthoai() {
+        let p = parseInt(document.getElementById('nhapPhut').value);
+        let tb=25000
+        if (p < 50) {
+            t = (600 * p) + tb
+            alert('số tiền đt phải thanh toan là' + t);
+        } else if (p < 150) {
+            t = (p - 50) * 400 + (600 * 50) + tb
+            alert('số tiền ddiet phải trả là' + t);
+        } else if (p < 200) {
+            t = (50 * 600) + (100 * 400) + (p - 200) * 200 + tb
+            alert('số tiền đt phai trả là' + t);
+        }
+    }
+</script>
+</body>
+</html>

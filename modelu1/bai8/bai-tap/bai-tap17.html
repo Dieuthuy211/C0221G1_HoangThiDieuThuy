@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt('nhập a'));
+    let b=parseInt(prompt('nhâp b'));
+    let c=parseInt(prompt('nhập c'));
+    const dt=b^2-4*a*c
+    if(dt<0){
+        alert('phương trình vô nghiệm');
+    }else if(dt==0){
+        x=(-b)/2*a
+    alert('nghiệm của phương trình là: x1=x2='+x);
+    }else if(dt>0){
+    alert('nghiệm của pt là x1='+((-b)+Math.sqrt(dt)/2*a));
+    alert('nghiệm của pt là x2='+((-b)-Math.sqrt(dt)/2*a));
+    }
+</script>
+</body>
+</html>

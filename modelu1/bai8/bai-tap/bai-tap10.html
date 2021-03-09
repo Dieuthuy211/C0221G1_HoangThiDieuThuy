@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="name" id="doC">
+<button type="button" onclick="tinhDoF()">chuyển đổi</button><br><br>
+<label id="hienThi"></label>
+<script>
+function tinhDoF() {
+    let c = parseInt(document.getElementById('doC').value);
+    f = (9 * c + 32) / 5
+    document.getElementById('hienThi').innerText='giá trị độ f là'+f;
+}
+</script>
+</body>
+</html>

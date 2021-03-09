@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="name" id="nhapA">
+<button type="button" onclick="hinhVuong()">diện tích</button><br><br>
+<label id="hienThi"></label>
+<script>
+    function hinhVuong() {
+        let a=parseInt(document.getElementById('nhapA').value);
+        dt=a*4
+        document.getElementById('hienThi').innerText='diện tích hình vuông là'+dt;
+
+    }
+</script>
+</body>
+</html>

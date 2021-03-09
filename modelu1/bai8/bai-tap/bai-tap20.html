@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let tienLuong=parseInt(prompt('nhap tiền lương'));
+    if(tienLuong<10){
+        alert('thuế thu nhập cá nhân là 0')
+    }else if (tienLuong<=20) {
+        alert('thuế thu nhập cá nhân là 10%='+(0.1)*tienLuong);
+    }else if(tienLuong<=30){
+        alert('thuế thu nhập cá nhân là 20%='+(0.2)*tienLuong);
+    }else {
+        alert('thuế thu nhập cá nhân là 30%='+(0.3)*tienLuong);
+    }
+</script>
+
+</body>
+</html>

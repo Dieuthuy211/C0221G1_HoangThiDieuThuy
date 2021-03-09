@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+chiều dài:<input type="text" name="name" id="nhapA"><br><br>
+chiều rộng:<input type="text"name="name" id="nhapB"><br><br>
+<button type="button" onclick="chuNhat()">diện tích</button><br><br>
+<label id="hienThi"></label>
+<script>
+    function chuNhat() {
+        let a=parseInt(document.getElementById('nhapA').value);
+        let b=parseInt(document.getElementById('nhapB').value);
+        dt=a*b
+        document.getElementById('hienThi').innerText='diện tích hình chữ nhật là'+dt;
+
+    }
+</script>
+</body>
+</html>

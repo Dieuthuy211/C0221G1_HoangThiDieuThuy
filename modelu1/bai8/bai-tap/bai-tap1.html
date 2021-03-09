@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let cannang= parseInt(prompt('nhập cân nặng'));
+    let chieucao=parseInt(prompt('nhập chiều cao'));
+    BMI=cannang/(chieucao^2);
+    if (BMI<18){
+        alert('thiếu cân'+BMI);
+    }else if(BMI<25){
+        alert('binh thường'+BMI);
+    } else if(BMI<30){
+        alert('thừa cân'+BMI);
+    }else {
+        alert('béo phì'+BMI);
+    }
+
+</script>
+
+</body>
+</html>

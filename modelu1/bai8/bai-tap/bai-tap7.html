@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xep học lực cho học sinh</title>
+</head>
+<body>
+<script>
+    let diemgiuaky=parseInt(prompt('nhập điểm thi giữa ky'));
+    let diemkiemtra=parseInt(prompt('nhâp điểm kiêm tra'));
+    let diemcuoiky=parseInt(prompt('nhập điểm thi cuối kỳ'));
+    tb=(diemgiuaky+diemkiemtra+diemcuoiky)/3;
+    if(tb<10){
+    if(tb>8.0){
+        alert(tb+'học sinh giỏi');
+    }else if(tb>6.5){
+        alert(tb+'học sinh khá');
+    }else if(tb>5.0){
+        alert(tb+'học sinh trung bình');
+    }else {
+        alert(tb+'học sinh kém');
+    }
+    }else {
+        alert('bạn nhập sai điểm');
+    }
+</script>
+</body>
+</html>

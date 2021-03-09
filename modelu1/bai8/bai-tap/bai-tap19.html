@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let kwh=parseInt(prompt('nhập số kwh'));
+    if(kwh<=50){
+        alert('số tiền điện là'+kwh*1484);
+    }else if(kwh<=100){
+        alert('số tiền điện là'+(kwh-50)*1535+(50*1484))
+    }else if(kwh<=200){
+        alert('số tiền điện là'+(kwh-100)*1786+(100*1535)+(50*1484));
+    }else if(kwh<=300){
+        alert('số tiền điện là'+(kwh-200)*2243+(200*1786)+(100*1535)+(50*1484));
+    }else if(kwh>300){
+        alert('số tiền điện là'+(kwh-300)*2503+(300*2243)+(200*1786)+(100*1535)+(50*1484))
+    }
+</script>
+
+</body>
+</html>

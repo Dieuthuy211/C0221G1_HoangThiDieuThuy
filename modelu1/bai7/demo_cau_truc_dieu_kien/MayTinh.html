@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<table>
+
+    <tr>
+        <td><input value="1" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="2" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="3" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="+" type="button" onclick="nhapLieu(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input value="4" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="5" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="6" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="-" type="button" onclick="nhapLieu(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input value="7" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="8" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="9" type="button" onclick="nhapLieu(this.value)"></td>
+        <td><input value="*" type="button" onclick="nhapLieu(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input value="AC" type="button" onclick="xoa()"></td>
+        <td><input value="0" type="button" onclick="nhapLieu()"></td>
+        <td><input value="=" type="button" onclick="bang()"></td>
+        <td><input value="/" type="button" onclick="nhapLieu(this.value)"></td>
+    </tr>
+</table>
+<script>
+    function nhapLieu(kyTu) {
+        document.getElementById("nhap").value += kyTu;
+    }
+     function bang() {
+         let string = document.getElementById("nhap").value;
+         let ketQua= eval(string);
+         document.getElementById("nhap").value=ketQua;
+     }
+     function xoa() {
+         document.getElementById("nhap").value="";
+     }
+</script>
+</body>
+</html>

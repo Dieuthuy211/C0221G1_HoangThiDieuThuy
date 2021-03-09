@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển met qua feet</title>
+</head>
+<body>
+<input type="text" id="nhapM">
+<button type="button" onclick="feet()">chuyển đổi</button><br><br>
+<lebel id="hienThi"></lebel>
+<script>
+    function feet() {
+        let m =parseInt(document.getElementById('nhapM').value);
+           ft= m*3.2808
+          document.getElementById('hienThi').innerText='feet ='+ft;
+    }
+</script>
+</body>
+</html>
