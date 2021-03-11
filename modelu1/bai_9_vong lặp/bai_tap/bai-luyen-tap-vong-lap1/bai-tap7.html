@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=0;
+    let dem=0;
+    while(dem<100){
+        i++;
+        if(i%3==0){
+            if(i%5==0){
+                document.writeln('fizzbuzz'+i+'<br>');
+            }else {
+                document.writeln('fizz'+i+'<br>');
+            }
+            dem++;
+        }else {
+            if(i%5==0){
+                document.writeln('buzz'+i+'<br>');dem++;
+            }
+        }
+    }
+</script>
+</body>
+</html>

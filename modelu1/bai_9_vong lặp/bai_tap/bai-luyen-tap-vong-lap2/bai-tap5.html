@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tiền lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let tiengoc=parseFloat(prompt('nhập số tiền'));
+    let laixuat=parseFloat(prompt('nhập lãi'));
+    let thang =parseInt(prompt('nhập tháng'));
+    for(let i=1;i<=thang;i++) {
+        tiengoc=tiengoc+(tiengoc*laixuat);
+    }
+    document.writeln(tiengoc);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for lòng nhau</title>
+</head>
+
+<body>
+
+<script>
+    let bang = '<table border="1">';
+    for (let i = 1; i < 10; i++) {
+        bang = bang + '<tr>';
+        for (let z = 1; z < 10; z++) {
+            bang = bang + '<td>' + i * z + '</td>';
+        }
+        bang = bang + '<tr>';
+    }
+    bang = bang + '</table>';
+    document.writeln(bang);
+</script>
+
+</body>
+</html>

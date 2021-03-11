@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lấy nhiệt độ</title>
+</head>
+<body>
+<script>
+    do {
+        doC = prompt('nhập độ c');
+    } while (isNaN(doC));
+    if (doC > 20) {
+        if (doC < 100) {
+            alert('nhiệt độ bình thường');
+        } else {
+            alert('nhiệt độ cao cần hạ nhiệt');
+        }
+    } else {
+        alert('nhiệt độ thấp cần phải tăng nhiệt độ');
+    }
+</script>
+</body>
+</html>
