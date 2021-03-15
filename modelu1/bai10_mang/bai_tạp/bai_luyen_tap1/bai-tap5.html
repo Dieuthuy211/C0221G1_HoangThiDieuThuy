@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên âm trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+let num=prompt('nhập số');
+  let mang=num.split(',');
+   let dem=0;
+    for( let i=0;i<mang.length;i++){
+        if(mang[i]<0){
+            dem++;
+        }
+    }document.writeln(dem);
+</script>
+</body>
+</html>

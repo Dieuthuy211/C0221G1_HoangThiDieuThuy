@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim gia trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let mang = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    let max = mang[0];
+    // let ketQua = 0;
+    for (let i = 1; i < 10; i++) {
+        if (mang[i] > max) {
+           max=mang[i];
+            // ketQua = i;
+        }
+    }
+    document.writeln(max);
+
+</script>
+
+</body>
+</html>

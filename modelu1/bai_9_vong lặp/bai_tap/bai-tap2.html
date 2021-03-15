@@ -6,24 +6,29 @@
 </head>
 <body>
 <script>
-    let num=2;
-    let dem;
-  let nto='';
-  let check;
-  while (dem <20){
-      check=true;
-      for(let i=2;i<num;i++){
-          if(num%i==0){
-              check=false;
-              break;
-          }else {
-              check=true;
-          }
-      }
- if(check){
-     
- }
-  }
+    let num = 2;
+    let dem = 0;
+    let nto = '';
+    while (dem < 20) {
+        let check = true;
+        if (num < 2) {
+            check = false
+        } else {
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if (check) {
+            dem++;
+            nto += num +','
+        }
+        num++
+    }
+    document.writeln(nto );
+    document.writeln('<br>');
 
 </script>
 </body>

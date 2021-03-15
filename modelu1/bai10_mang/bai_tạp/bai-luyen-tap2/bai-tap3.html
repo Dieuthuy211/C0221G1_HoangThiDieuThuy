@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số trong chuổi</title>
+</head>
+<body>
+<script>
+     // let chuoi=prompt('nhap mot chuoi');
+     // let dem =0;
+     // for(let i=0;i<chuoi.length;i++){
+     //        if(parseFloat(chuoi[i])-chuoi[i]===0)
+     //        {
+     //            dem++
+     //        }
+     //
+     // }document.writeln(dem)
+     //
+    let chuoi='1234abcd';
+    let arr = chuoi.split('');
+    let dem=0;
+    for(let i=0;i<arr.length;i++){
+        if(!isNaN(arr[i])){
+            dem++
+        }
+    }
+    alert(dem);
+</script>
+</body>
+</html>

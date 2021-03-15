@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dịch Sang Tiếng Việt</h1>
+<input type="text" id="nhap">
+<button type="button" onclick="kichVao()">Dịch</button>
+<script>
+    function kichVao() {
+        let nhap=document.getElementById('nhap').value;
+        let a=new Array('one','tow','three');
+        let b=new Array(1,2,3);
+        for(let i=0;i<a.length;i++){
+            if(nhap==a[i]){
+                document.writeln(b[i]);
+                break;
+            }
+            else if (i==a.length-1){
+                document.writeln('không tìm thấy');
+            }
+        }
+    }
+</script>
+</body>
+</html>

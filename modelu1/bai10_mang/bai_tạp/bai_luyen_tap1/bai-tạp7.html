@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let mang = new Array();
+    for (let i = 0; i < 4; i++) {
+        mang[i] = parseInt(prompt('nhập số'));
+    }
+    let v = parseInt(prompt('nhập v'));
+        for (let z = 0; z < 4; z++) {
+            if (v == mang[z]) {
+                mang.splice(z,1);
+                mang.push(0);
+                z=z-1;
+            }else {
+                continue;
+            }
+
+        }
+    document.writeln(mang);
+</script>
+</body>
+</html>

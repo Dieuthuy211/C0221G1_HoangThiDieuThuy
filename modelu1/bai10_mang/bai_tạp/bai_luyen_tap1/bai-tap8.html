@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = new Array();
+    for (let i = 0; i < 10; i++) {
+        mang[i] = parseInt(prompt('nhập số'));
+    }  document.writeln(mang + '<br>');
+    mang.sort(function (a, b) {
+        return a - b;
+
+    });
+    document.writeln(mang);
+</script>
+</body>
+</html>
