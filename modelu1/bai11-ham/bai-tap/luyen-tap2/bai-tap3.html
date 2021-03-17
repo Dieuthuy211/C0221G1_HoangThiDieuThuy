@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<script>
+
+    function tinhGiaiThua(num) {
+        let giaiThua = 1;
+        for (let i = 1; i <= num; i++) {
+            giaiThua = giaiThua * i;
+        }
+        return (giaiThua);
+    }
+
+    let num = parseInt(prompt('nhập số'));
+
+    document.writeln(tinhGiaiThua(num));
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan lý san phẩm</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<input type="text" id="nhapSanPham">
+<button type="button" onclick="themSanPham()">Add</button>
+<h3>Display All Product :</h3>
+<span id="ketQua"></span>
+<script>
+
+    let mang=['sony Xperia','Nokia 6','Samsung Galaxy',];
+    display();
+  function display() {
+let tablestring= '<table border="1" cellspacing="0">';
+for(let i=0;i<mang.length;i++){
+    tablestring +='<tr>';
+    tablestring +='<td>'+(i+1)+'</td>';
+    tablestring +='<th>'+mang[i]+'</th>';
+    tablestring +='<td><input type="button"value="Edit" onclick="sua('+i+')"></td>';
+    tablestring += '<td><input type="button" value="Delete" onclick="xoa('+i+')"></td>';
+    tablestring +='</tr>';
+}
+tablestring += '</table>';
+document.getElementById('ketQua').innerHTML=tablestring;
+  }
+function themSanPham() {
+      let nhap=document.getElementById('nhapSanPham').value;
+  if(nhap!==''){
+      mang.push(nhap);
+  }
+display()
+}
+function xoa(i) {
+      mang.splice(i,1);
+display()
+}
+function sua(index) {
+    let edit=prompt('nhập sản phẩm');
+
+mang[index]=edit;
+display()
+}
+</script>
+</body>
+</html>

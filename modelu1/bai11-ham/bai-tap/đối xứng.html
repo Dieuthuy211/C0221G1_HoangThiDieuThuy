@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đối xứng</title>
+</head>
+<body>
+<script>
+    function ktdoixung (mang) {
+        let i=0;
+        let n=mang.length-1;
+      while(i<=n) {
+          if (mang[i] == mang[n]) {
+              return true;
+          } else {
+              return false;
+          }
+          i++;
+          n--;
+      }
+    }
+    let str=prompt('nhâp từ');
+    let mang=[];
+    mang=str.split('');
+alert(ktdoixung(mang));
+
+</script>
+</body>
+</html>

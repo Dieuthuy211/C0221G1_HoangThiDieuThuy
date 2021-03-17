@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nhỏ nhất</title>
+</head>
+<body>
+<script>
+    function timMin(num1, num2, num3) {
+        if (num1 < num2) {
+            if (num1 < num3) {
+                alert(num1 + 'số bé nhất');
+            } else {
+                alert(num3 + 'số bé nhât');
+            }
+        } else if (num2 < num3) {
+            alert(num2 + 'số bé nhất');
+        } else {
+            alert(num3 + 'số bé nhất');
+        }
+    }
+    let num1 = parseInt(prompt('nhập num1'));
+    let num2 = parseInt(prompt('nhập num2'));
+    let num3 = parseInt(prompt('nhập num3'));
+    timMin(num1, num2, num3);
+</script>
+</body>
+</html>

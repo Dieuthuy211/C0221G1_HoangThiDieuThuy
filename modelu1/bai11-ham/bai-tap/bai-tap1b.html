@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>kiểm tra số nguyên tố</h1>
+<input type="text" name="name" id="nhap">
+<button type="button" onclick="kichVao(nhap.value)">Kiểm tra</button>
+<p>kêt quả : <span id="ketQua"></span></p>
+<script>
+
+  function check(number) {
+      for (let i=2;i<=number;i++){
+          if (number>2){
+              if (number%i==0){
+                 return false;
+              }else {
+                  return true;
+              }
+          }else if (number==2){
+              return true;
+          }else {
+              return false;
+          }
+      }
+
+  }
+  function kichVao(number) {
+      let a=[];
+      let count=0;
+      for (let j=2;j<100;j++){
+          if (check(j)==true){
+              a.push(j);
+              count++;
+          }
+          else if (count==number){
+              break;
+          }
+      }
+      document.getElementById('ketQua').innerHTML=a;
+
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    function kiemTra(mang, kiTu) {
+        let dem = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (kiTu == mang[i]) {
+                dem++;
+            }
+        }
+        if(dem>0){
+            return dem;
+        }else {
+            return -1;
+        }
+    }
+    let n = prompt('nhập độ dài mảng');
+    let mang =new Array();
+    for (let j = 0; j < n; j++) {
+        mang[j] = prompt('nhập mảng');
+    }
+    let kiTu = prompt('nhập kí tự');
+    kiemTra(mang, kiTu);
+    alert(kiemTra(mang, kiTu));
+</script>
+</body>
+</html>
