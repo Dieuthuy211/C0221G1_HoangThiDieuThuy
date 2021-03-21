@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+
+    class Circle{
+        constructor(radius) {
+            this.radius=radius;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        setRadius(radius){
+            this.radius=radius;
+        }
+        getArea(){
+            return Math.PI*this.radius*this.radius;
+        }
+        ve(){
+            let veHinh=document.getElementById('myCanvas').getContext("2d");
+            veHinh.fillStyle = "red";
+            veHinh.arc(100,200,this.radius,0,2*Math.PI);
+            veHinh.fill();
+        }
+    }
+    let circle =new Circle(50);
+    circle.ve();
+</script>
+
+</body>
+</html>

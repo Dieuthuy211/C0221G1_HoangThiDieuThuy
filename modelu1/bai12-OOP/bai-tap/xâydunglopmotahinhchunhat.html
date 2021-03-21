@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="1000" style="border:1px solid #c3c3c3;"></canvas>
+<script>
+class ChuNhat{
+    constructor(dai,rong) {
+        this.dai=dai;
+        this.rong=rong;
+    }
+    getDai(){
+        return this.dai;
+    }
+    getRong(){
+        return this.rong;
+    }
+    getDientich(){
+        return this.dai*this.rong;
+    }
+    getChuvi(){
+        return (this.dai+this.rong)*2;
+    }
+    ve1(){
+        let veHinh=document.getElementById("myCanvas").getContext("2d");
+           veHinh.fillStyle='black';
+           veHinh.fillRect(100,100,this.dai ,this.rong);
+    }
+}
+let a=parseInt(prompt('nhập chiều dai'));
+let b=parseInt(prompt('nhập chiều rộng'));
+let cNhat=new ChuNhat(a,b);
+let s=cNhat.getDientich();
+let v=cNhat.getChuvi();
+alert('dien tich'+s+'chu vi'+v);
+cNhat.ve1();
+
+</script>
+</body>
+</html>

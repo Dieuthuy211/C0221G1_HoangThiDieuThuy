@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class  Temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        getF(){
+            return 1.8*this.c+32;
+        }
+        getK(){
+            return this.c+273
+        }
+    }
+    let c=parseInt(prompt('nhập độ c'));
+    let  temperature=new  Temperature(c);
+    let F= temperature.getF();
+    let K=temperature.getK();
+    alert('độ F =' +F +'độ kenvin' +K);
+</script>
+</body>
+</html>

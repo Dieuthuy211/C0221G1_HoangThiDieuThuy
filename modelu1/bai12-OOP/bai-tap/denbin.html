@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Battery{
+        constructor(nangLuong) {
+            this.nangLuong=nangLuong;
+        }
+        getPin(){
+            return this.nangLuong;
+        }
+        setPin(){
+            this.nangLuong++;
+        }
+
+    }
+    class FlashLamp{
+        constructor(trangthai,cucpin) {
+            this.trangthai=trangthai;
+            this.cucpin=cucpin.nangLuong;
+        }
+        suaPin(){
+            this.cucpin++;
+        }
+        layPin(){
+            return  this.cucpin;
+        }
+        tatBat(){
+            //this.trangthai!=this.trangthai;
+            if(this.trangthai==false){
+                this.trangthai=true;
+                this.cucpin --;
+            }else {
+                this.trangthai=false;
+                this.cucpin--;
+            }
+        }
+        light(){
+            if(this.trangthai==true){
+                alert('đèn sáng');
+            }else {
+                alert('hêt pin');
+            }
+        }
+
+    }
+    let pin=new Battery(10);
+    let pin3=new Battery(20);
+    let den= new FlashLamp(false,pin);
+    // alert(pin.nangLuong);
+    alert(den.layPin());
+    den.light();
+    den.tatBat();
+    den.light();
+    alert(den.layPin());
+den.suaPin();
+alert(pin.getPin());
+
+
+</script>
+</body>
+</html>

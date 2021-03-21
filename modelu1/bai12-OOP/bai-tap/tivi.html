@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Tivi{
+        constructor(trangthai,kenh,amluong) {
+            this.trangthai=trangthai;
+            this.kenh=kenh;
+            this.amluong=amluong;
+        }
+        getTrangthai(){
+            return this.trangthai;
+        }
+        getKenh(){
+            return this.kenh;
+        }
+        getAmluong(){
+            return this.amluong;
+        }
+        // // status(){
+        // //     if(trangthai==false){
+        // //         alert('tivi đang tắt');
+        // //     }else {
+        // //         alert('tivi đang bật')
+        // //     }
+        // }
+    }
+    class Remote{
+        // // constructor(code) {
+        // //     this.code=code;
+        // }
+       batTat(tivi){
+            if(tivi.getTrangthai() == false){
+                tivi.getTrangthai()==true;
+            }else {
+                tivi.getTrangthai()==false
+            }
+       } chuyenKenh(tivi){
+           tivi.kenh++
+        }
+        amluong(tivi){
+            tivi.amluong ++
+        }
+    } let tivi=new Tivi(false,2,3);
+    let remote= new Remote(1);
+    alert(tivi.getTrangthai());
+    remote.batTat(tivi);
+    alert('tivi đk mở '+tivi.getTrangthai());
+    alert('tivi đang kênh '+tivi.getKenh());
+    remote.chuyenKenh(tivi);
+    alert('chuyển kênh'+tivi.getKenh());
+    alert('âm lượng tivi '+tivi.getAmluong());
+    remote.amluong(tivi);
+    alert('tăng âm lượng '+tivi.getAmluong());
+</script>
+</body>
+</html>
