@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    do {
+        let menu = prompt('1.cafe' + '\n' +
+            '2.nước cam' + '\n' +
+            '3.nước ép cà rốt' + '\n' +
+            '4.nước ép cà chua' + '\n' +
+            '5.nước lọc' + '\n' +
+            '6.nước dừa' + '\n' +
+            '7.thoát')
+        switch (menu) {
+            case "1":
+                cafe();
+            case "2":
+                nuoccam();
+            case "3":
+                carot();
+            case "4":
+                cachua();
+            case "5":
+                loc();
+            case "6":
+                dua();
+        }
+        if (menu == 4) {
+            break;
+        }
+    } while (true);
+
+    function cafe() {
+        let nhapSL = prompt('giá cafe : 15000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 7000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+    }
+    function nuoccam() {
+        let nhapSL = prompt('giá nước cam : 30000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 30000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+
+    }
+    function carot() {
+        let nhapSL = prompt('giá nước ép cà rốt : 25000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 25000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+
+    }
+    function cachua() {
+        let nhapSL = prompt('giá nước ép cà chua : 25000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 25000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+
+    }
+    function loc() {
+        let nhapSL = prompt('giá nước lọc : 30000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 30000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+
+    }
+    function dua() {
+        let nhapSL = prompt('giá nước dừa : 15000' + "số lượng cần mua");
+        let tinhTien = 0;
+        for (let i = 0; i <= nhapSL; i++) {
+            tinhTien += 15000 * i;
+        }
+        alert('số tiền bạn phải trả là ' + tinhTien)
+
+    }
+</script>
+</body>
+</html>

@@ -3,47 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Quan lý san phẩm</title>
+    <style>
+        table {
+            width: 500px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        button {
+            background: lawngreen;
+        }
+    </style>
 </head>
 <body>
 <h1>Add New Product</h1>
-<input type="text" id="nhapSanPham">
+<input type="text" id="nhapSanPham" placeholder="New product">
 <button type="button" onclick="themSanPham()">Add</button>
+<button type="button" onclick="traCuu()">search</button>
+<p>số lượng: <span id="soLuong"></span></p>
 <h3>Display All Product :</h3>
 <span id="ketQua"></span>
+
 <script>
 
-    let mang=['sony Xperia','Nokia 6','Samsung Galaxy',];
-    display();
-  function display() {
-let tablestring= '<table border="1" cellspacing="0">';
-for(let i=0;i<mang.length;i++){
-    tablestring +='<tr>';
-    tablestring +='<td>'+(i+1)+'</td>';
-    tablestring +='<th>'+mang[i]+'</th>';
-    tablestring +='<td><input type="button"value="Edit" onclick="sua('+i+')"></td>';
-    tablestring += '<td><input type="button" value="Delete" onclick="xoa('+i+')"></td>';
-    tablestring +='</tr>';
-}
-tablestring += '</table>';
-document.getElementById('ketQua').innerHTML=tablestring;
-  }
-function themSanPham() {
-      let nhap=document.getElementById('nhapSanPham').value;
-  if(nhap!==''){
-      mang.push(nhap);
-  }
-display()
-}
-function xoa(i) {
-      mang.splice(i,1);
-display()
-}
-function sua(index) {
-    let edit=prompt('nhập sản phẩm');
+    let mang = ['sony Xperia', 'Nokia 6', 'Samsung Galaxy', 'Xiaomi Redmi Note 4', 'Apple Iphone 6s', 'Xiaomi 5s Plus', 'Apple Iphone 8 Plus', 'Fujitsu F-04E', 'Oppo A71'];
+    display(mang);
 
-mang[index]=edit;
-display()
-}
+    function display(arr) {
+        let tablestring = '<table>';
+        for (let i = 0; i < arr.length; i++) {
+            tablestring += '<tr>';
+            tablestring += '<td>' + (i + 1) + '</td>';
+            tablestring += '<th>' + arr[i] + '</th>';
+            tablestring += '<td><button type="button" onclick="sua(' + i + ')">Edit</button></td>';
+            tablestring += '<td><button type="button" onclick="xoa(' + i + ')">Delete</button></td>';
+            tablestring += '</tr>';
+        }
+        tablestring += '</table>';
+        document.getElementById('ketQua').innerHTML = tablestring;
+        document.getElementById('soLuong').innerHTML = arr.length;
+    }
+
+    function themSanPham() {
+        let nhap = document.getElementById('nhapSanPham').value;
+        if (nhap !== '') {
+            mang.push(nhap);
+        }
+        display(mang)
+    }
+
+    function xoa(i) {
+        mang.splice(i, 1);
+        display(mang)
+    }
+
+    function sua(i) {
+        let edit = prompt('nhập sản phẩm');
+        mang[i] = edit;
+        display(mang)
+    }
+
+    function traCuu() {
+        let tim = document.getElementById('nhapSanPham').value;
+        let mang2 = [];
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i].includes(tim)) {
+                mang2.push(mang[i]);
+            }
+        }
+        display(mang2);
+    }
 </script>
 </body>
 </html>

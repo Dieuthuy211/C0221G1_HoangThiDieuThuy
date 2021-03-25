@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIETLOT</title>
+</head>
+<body>
+<h1>Xổ Số CODEGYM</h1>
+<p id="bang"></p>
+<input type="button" value="mua vé số" onclick="MuaVe()">
+<input type="button" value="xem kết quả" onclick="KetQua()">
+<script>
+    class VeSo {
+        constructor(so) {
+            this.so = so;
+        }
+
+        getSo() {
+            return this.so;
+        }
+
+        setSo() {
+            this.so = so;
+        }
+    }
+
+    let veso = new VeSo(0);
+    let veso1 = new VeSo(1);
+    let veso2 = new VeSo(2);
+    let veso3 = new VeSo(3);
+    let veso4 = new VeSo(4);
+    let veso5 = new VeSo(5);
+    let veso6 = new VeSo(6);
+
+    let arr = [];
+    arr.push(veso, veso1, veso2, veso3, veso4, veso5, veso6,);
+
+    function display(arr1) {
+        let tablestr = '<table>';
+        tablestr += '<tr>';
+        for (let i = 0; i < 3; i++) {
+        tablestr += '<td><button type="button" onclick="layVe()">'+arr1[i].getSo()+'</button></td>';
+        }
+        tablestr += '</tr>';
+        tablestr += '</table>';
+        tablestr += '<table>';
+        tablestr += '<tr>';
+        for (let i = 3; i < 6; i++) {
+            tablestr += '<td><button type="button" onclick="layVe()">'+arr1[i].getSo()+'</button></td>';
+        }
+        tablestr += '</tr>';
+        tablestr += '</table>';
+        document.getElementById('bang').innerHTML = tablestr;
+    }
+    display(arr);
+</script>
+</body>
+</html>

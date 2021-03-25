@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm nhỏ nhất lớn nhất trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    function TimMinMax(arr) {
+        let max = arr[0][0];
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }return 'số lớn nhât là '+max+'\n'+'số bé nhât là '+min;
+
+    } let a=[[1,2,3],[1,3,4]];
+    alert(TimMinMax(a));
+</script>
+</body>
+</html>

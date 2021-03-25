@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = prompt('nhập độ dài mảng');
+
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt('nhập mảng a'));
+    }
+    alert(a);
+
+    function prefixSums(a1) {
+        let s = 0;
+        for (let j = 0; j < a1.length; j++) {
+            a1[j] = s + a1[j];
+            s = a1[j];
+        }
+
+        return a1;
+    }
+
+    alert(prefixSums(a));
+</script>
+</body>
+</html>

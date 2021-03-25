@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt('nhập số').split('');
+    let a = '0123456789';
+    let b = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
+    let result =" ";
+    for (let i = 0; i < a.length; i++) {
+        if (a.indexOf(m[i])!== -1) {
+          let index = a.indexOf(m[i]);
+            result += b[index];
+        }
+    }
+    alert(result)
+</script>
+
+</body>
+</html>

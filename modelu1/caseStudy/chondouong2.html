@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=['cafe','nước cam','nước ép cà rốt','nước ép cà chua','nước suối','nước dừa','thoát'];
+    let arr1=[15000,30000,25000,25000,10000,15000];
+    let arr3=[];
+    let sum=0;
+   do{
+       let menu = prompt('1.cafe' + '\n' +
+           '2.nước cam' + '\n' +
+           '3.nước ép cà rốt' + '\n' +
+           '4.nước ép cà chua' + '\n' +
+           '5.nước lọc' + '\n' +
+           '6.nước dừa' + '\n' +
+           '7.thoát');
+       if(menu<7){
+           let n=parseInt(prompt('nhập số lượng '+arr[menu-1]));
+           for(let i=0;i<arr.length;i++){
+               if(menu==i+1){
+                   arr3.push(arr[i]);
+                   sum+= tinhtien(arr1[i],n);
+               }
+           } alert(n+' '+arr3+ ' có tổng số tiền là '+sum)
+       }
+       else {
+           alert('cam on quy khach');
+           break;
+       }
+   }while (true);
+   function tinhtien(tien,n) {
+       let s=0;
+        s += tien*n;
+        return s;
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [7, 2, 5, 3, 5, 3, 9];
+    // let n = prompt('nhập độ dài mảng a');
+    // for (let i = 0; i < n; i++) {
+    //     a[i] = prompt('nhập mảng a');
+    // }
+    let b = [7, 2, 5, 4, 6, 3, 5, 3];
+    let c = [];
+    for (let z = 0; z < 10; z++) {
+        if (b.toString().indexOf(a[z]) == -1) {
+            c.push(a[z]);
+        }
+        if (a.toString().indexOf(b[z]) == -1) {
+            c.push(b[z]);
+        }
+    }
+    let b=[];
+    for (let i=0; i<c.length; i++){
+        if (isNaN(c[i])){
+            b.push(c.splice(i,1));
+        }
+    }
+        alert(b);
+        // let m = prompt('nhập độ dài mảng b');
+        // for (let j = 0; j < m; j++) {
+        //     b[j] = prompt('nhập mảng b');
+        // }
+        // alert(a + '\n' + b);
+
+        // if (a.length > b.length) {
+        //     for (let z = 0; z < a.length; z++) {
+        //         if (b.toString().indexOf(a[z]) == -1) {
+        //             c.push(a[z]);
+        //         }
+        //     } alert(c);
+        // } else {
+        //     for (let t = 0; t < b.length; t++) {
+        //         if (a.toString().indexOf(b[t]) == -1) {
+        //             c.push(b[t]);
+        //         }
+        //     }alert(c);
+        // }
+
+</script>
+</body>
+</html>

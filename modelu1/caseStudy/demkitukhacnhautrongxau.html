@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm kí tự khác nhau trong sâu</title>
+</head>
+<body>
+<script>
+    let sau='abcda';
+    let str='abcdefkghmt';
+    let arr=str.split('');
+    let dem=0;
+    for(let i=0;i<arr.length;i++){
+        if(sau.indexOf(arr[i])!==-1){
+            dem ++;
+        }
+    }alert(dem);
+</script>
+</body>
+</html>

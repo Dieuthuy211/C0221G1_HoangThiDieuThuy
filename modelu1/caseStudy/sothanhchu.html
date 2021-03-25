@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số thành chữ</title>
+</head>
+<body>
+<script>
+    let num = prompt('nhập số');
+    let arrSo=['1','2','3'];
+    let arrChuSo=['mot','hai','ba'];
+    let result="";
+    for (let i=0;i<num.length;i++){
+        if(arrSo.indexOf(num[i])!==-1){
+            let viTri=arrSo.indexOf(num[i]);
+            result+=arrChuSo[viTri] +' ';
+        }
+    }
+    alert(result);
+
+
+</script>
+</body>
+</html>

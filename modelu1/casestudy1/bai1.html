@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính lương nhân viên</h1>
+<input type="text" id="nhap">
+<input type="button" onclick="Tinh()" value="Tính"><br><br>
+<h3>Kết Quả: <span id="ketQua"></span></h3>
+<script>
+
+
+function Tinh() {
+    let nhapL = document.getElementById('nhap').value;
+    let luongNhan = 0;
+    if (nhapL < 7000000) {
+        luongNhan = nhapL - (nhapL * 0.05);
+    } else if (nhapL < 15000000) {
+        luongNhan = nhapL - (nhapL * 0.1);
+    } else {
+        luongNhan = nhapL - (nhapL * 0.2);
+    }
+    document.getElementById('ketQua').innerHTML = luongNhan;
+}
+
+</script>
+</body>
+</html>

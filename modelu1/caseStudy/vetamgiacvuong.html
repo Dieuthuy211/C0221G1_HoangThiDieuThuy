@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n=prompt('nhập số');
+    for(let i=0;i<n;i++){
+        if(i<n-1){
+        for( let j=0;j<=i;j++) {
+            if (j>=1){
+                if(j<i){
+                    document.writeln('&nbsp&nbsp');
+                }else {
+                    document.writeln('*');
+                }
+            }else {
+                document.writeln('*');
+            }
+
+                } document.writeln('<br>');
+        }else {
+            for(z=0;z<n;z++){
+                document.writeln('*');
+            }
+        }
+
+    }
+</script>
 </body>
 </html>

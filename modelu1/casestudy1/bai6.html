@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[1,3,3];
+    let b=[2,1,2];
+    let max=a[0]/b[0];
+    let index=0;
+    for(let i=0;i<a.length;i++){
+
+        if((a[i]/b[i])>max){
+            max=a[i]/b[i];
+            index=i;
+        }
+    }alert('phan so lon nhat'+max+'\n'+index);
+</script>
+</body>
+</html>
