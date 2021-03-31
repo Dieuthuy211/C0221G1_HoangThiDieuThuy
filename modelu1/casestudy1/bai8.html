@@ -6,12 +6,26 @@
 </head>
 <body>
 <script>
-    let a=[15000,30000,25000,25000,10000,15000];
-    let b=[];
+    let a = [15000, 30000, 25000, 25000, 10000, 15000];
+    let b = [];
+    let tong = 0;
     do {
-        let menu=prompt()
-    }while ()
+        let menu = parseInt(prompt('1.cafe' + '\n' +
+            '2.nước cam' + '\n' +
+            '3.nước ép cà chua' + '\n' +
+            '4.nước ép cà rôt' + '\n' +
+            '5.nước lọc' + '\n' +
+            '6.nước dừa' + '\n' +
+            '7.thoát'));
+        if (menu >= 7 || menu<=0|| isNaN(menu)) {
+            break;
+        }
+        let soLuong = parseInt(prompt("nhap sl"));
+        tong += parseInt(a[menu - 1] * soLuong);
 
+
+    } while (true);
+    alert("tong tien" + tong);
 </script>
 </body>
 </html>

@@ -9,18 +9,18 @@
     // function soNguyenTo(arr){
     //
     // }
-    function soNguyento(arr) {
-        let dem=0;
-        let result="";
-        for(let i=0;i<arr.length;i++){
-            for(let j=0;j<arr[i].length;j++){
-                if(kiemtraSNT(arr[i][j])==true){
-                    dem++;
-                    result+=arr[i][j];
-                }
-            }
-        }return result;
-    }
+    // function soNguyento(arr) {
+    //     let dem=0;
+    //     let result="";
+    //     for(let i=0;i<arr.length;i++){
+    //         for(let j=0;j<arr[i].length;j++){
+    //             if(kiemtraSNT(arr[i][j])==true){
+    //                 dem++;
+    //                 result+=arr[i][j];
+    //             }
+    //         }
+    //     }return result;
+    // }
     function kiemtraSNT(num) {
         let kiemtra=true;
         if(num>2){
@@ -35,10 +35,10 @@
         return kiemtra;
 
     }
-    let a=[[5,8,13],
-           [1,4,7],
-           [5,8,13,1,4,7]];
-   alert(soNguyento(a));
+    // let a=[[5,8,13],
+    //        [2,4,7],
+    //        [5,8,13,1,4,7]];
+   alert(KiemTraSNT(5));
 
 
 </script>

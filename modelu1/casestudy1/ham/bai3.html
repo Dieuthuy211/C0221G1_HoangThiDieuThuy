@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên tố trong một mảng</title>
+</head>
+<body>
+<script>
+    function KiemTraSNT(num) {
+        let KTra = true;
+        for (let i = 2; i <= num - 1; i++) {
+            if (num > 2) {
+                if (num % i == 0) {
+                    KTra = false;
+                    break;
+                } else {
+                    KTra = true;
+                }
+            } else if (num = 2) {
+                KTra = true;
+            } else if (num<2){
+                KTra = false;
+            }
+        }
+        return KTra;
+    }
+    let mang2=new Array();
+    function timSnt(mang) {
+        for (let j=1;j<mang.length;j++){
+            if(KiemTraSNT(mang[j])===true){
+                mang2.push(mang[j]);
+            }
+        }
+        return mang2
+    }
+let mang=new Array();
+    let n=prompt('nhập chiều dài mảng');
+    for (let i=0;i<n;i++){
+        mang[i]=parseInt(prompt('nhập phần tử mảng'));
+    }
+    alert(mang);
+
+    alert(timSnt(mang));
+    mang2.sort(function (a,b) {
+        return a-b;
+
+    })
+    alert(mang2)
+</script>
+</body>
+</html>

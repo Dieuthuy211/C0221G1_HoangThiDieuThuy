@@ -6,19 +6,14 @@
 </head>
 <body>
 <script>
-    let diemly
-    let diemhoa
-    let diemtoan
-    diemly=prompt('nhập vào điểm lý')
-     diemhoa=prompt('nhập vào điểm hóa')
-    diemtoan=prompt('nhập vào điểm toán')
-let ly=parseInt(diemly)
-    let hoa=parseInt(diemhoa)
-    let toan=parseInt(diemtoan)
-    let area=ly+hoa+toan
-    alert('tổng điển 3 môn là'+area)
-    let tb=area/3
-    alert('điểm trung bình là' +tb)
+
+    let diemly = parseInt(prompt('nhập vào điểm lý'));
+    let diemhoa = parseInt(prompt('nhập vào điểm hóa'));
+    let diemtoan = parseInt(prompt('nhập vào điểm toán'));
+    let area = diemtoan + diemly + diemhoa;
+    let tb = area / 3;
+    alert('tổng điển 3 môn là ' + area);
+    alert('điểm trung bình là ' + tb);
 </script>
 </body>
 </html>

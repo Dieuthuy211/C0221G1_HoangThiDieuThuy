@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+<script>
+    let num1 = prompt('nhập số');
+
+    function TimSoFibonacci(num) {
+        let a = 0;
+        let b = 1;
+        let c;
+        let d = [];
+        for (let i = 0; i <= num; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            d.push(a);
+        }
+        return d
+    }
+
+    check = false;
+    document.write(TimSoFibonacci(21));
+    for (i = 0; i < TimSoFibonacci(21).length; i++) {
+        if (num1 == TimSoFibonacci(21)[i]) {
+            check = true;
+        }
+    }
+    if (check) {
+        document.write("dung ");
+    } else {
+        document.write("sai");
+    }
+
+
+    // alert(TimSoFibonacci(num1));
+    // if (num1.includes(TimSoFibonacci(num1))) {
+    //    alert('là số');
+    // } else {
+    //         alert('sai');
+    // }
+
+</script>
+</body>
+</html>

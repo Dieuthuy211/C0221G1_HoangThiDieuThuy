@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor(ma, ten, hangsx, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.hangsx = hangsx;
+            this.gia = gia;
+        }
+
+        getMa() {
+            return ma;
+        }
+
+        getTen() {
+            return ten;
+        }
+
+        getHangsx() {
+            return hangsx;
+        }
+
+        getGia() {
+            return gia;
+        }
+
+        setMa() {
+            this.ma = ma;
+        }
+
+        setTen() {
+            this.ten = ten
+        }
+
+        setHangsx() {
+            this.hangsx = hangsx;
+        }
+
+        setGia() {
+            this.gia = gia;
+        }
+
+        toTring() {
+            return 'mã sản phẩm ' + this.ma + ' tên sản phẩm' + this.ten + ' hãng sản xuất ' + this.hangsx + ' giá sản phẩm ' + this.gia;
+        }
+    }
+
+    let dienThoai = new DienThoai(1, 'nokia1280', 'nokia', 500);
+    alert(dienThoai.toTring());
+    let danhSach = [];
+    danhSach.push(dienThoai);
+
+    function themDienThoai() {
+        let ma = prompt('nhập mã');
+        let ten = prompt('nhập tên');
+        let hangsx = prompt('nhập hảng sản xuất');
+        let gia = prompt('nhạp giá');
+        danhSach.push(new DienThoai(ma, ten, hangsx, gia));
+        hienthi(danhSach);
+
+    }
+
+    themDienThoai();
+
+    function hienthi(danhSach1) {
+
+alert(danhSach1);
+    }
+</script>
+</body>
+</html>
