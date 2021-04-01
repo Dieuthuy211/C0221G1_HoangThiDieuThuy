@@ -1,6 +1,6 @@
 package thuhanh;
 import java.util.Scanner;
-public class giaiphuongtrinh {
+public class Giaiphuongtrinh {
     public static void main(String[] args) {
         float a;
         float b;

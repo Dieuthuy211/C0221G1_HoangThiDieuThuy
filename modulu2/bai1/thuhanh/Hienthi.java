@@ -2,7 +2,7 @@ package thuhanh;
 
 import javax.xml.crypto.Data;
 
-public class hienthi {
+public class Hienthi {
     public static void main(String[] args) {
         int i = 10;
         float f = 20.5f;
