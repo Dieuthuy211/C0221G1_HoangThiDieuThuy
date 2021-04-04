@@ -22,7 +22,6 @@ public class XoaPhanTuMang {
                 j++;
             }
         }
-
         for (int x=0;x<arr1.length;x++){
             System.out.print(arr1[x]);
         }

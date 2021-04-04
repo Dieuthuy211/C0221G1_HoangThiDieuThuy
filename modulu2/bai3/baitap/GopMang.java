@@ -23,8 +23,9 @@ public class GopMang {
         for (int z = 0; z < n; z++) {
                 c[z] = a[z];
         }
-        for (int v = 0; v < c.length; v++) {
-            c[c.length-n] = b[v];
+        for (int v = n; v < c.length; v++) {
+            c[v] = b[c.length-v-1];
+
         }
 
 
