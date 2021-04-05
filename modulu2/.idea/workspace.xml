@@ -2,19 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba3b1575-72db-4ee2-9c86-52012bb9029a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai3/baitap/DemSoKiTu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai3/baitap/TimMaxTrongMangHaiChieu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai3/baitap/TimMin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai3/baitap/TongDuongCheo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai3/baitap/TongMotCot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai3/thuchanh/SinhVienDo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/baitap/BaiTap1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/baitap/BaiTap2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/baitap/Baitap3a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/baitap/Fan/Fan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/baitap/Fan/TestFan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai4/thuchanh/ThucHanh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai3/baitap/GopMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai3/baitap/GopMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai3/baitap/ThemPhanTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai3/baitap/ThemPhanTu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai3/baitap/XoaPhanTuMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai3/baitap/XoaPhanTuMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/GopMang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/GopMang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/ThemPhanTu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/ThemPhanTu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/XoaPhanTuMang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/XoaPhanTuMang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/Bai2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/bai1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/DemSoKiTu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/DocSothanhchu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/GopMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/Hienthihinh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/InSoNguyenTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/SoNguyenTo100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/ThemPhanTu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/TimMaxTrongMangHaiChieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/TimMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/TongDuongCheo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/TongMotCot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/XoaPhanTuMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/hienthiloichao$doitien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/hienthiloichao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/out/production/bai1/META-INF/bai1.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/Daomang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/SinhVienDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/SoNguyenTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/ThietKeMenNu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/TienLaiNganHang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/TimGiaTriMax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/TimGiaTriMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/TimGiaTriTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuchanh/UcChungHaiSo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/ChiSocannang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/KiemTraNamNhuan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/RectangleProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/TinhSoNgayTrongThang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/giaiphuongtrinh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/hienthi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/thuhanh/systemtime.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +61,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
         <option value="JavaFXApplication" />
         <option value="package-info" />
+        <option value="package.json" />
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1qVRDMq7S3UdfGkbHm0EnJXn6M4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,9 +103,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DemSoKiTu">
-    <configuration name="DemSoKiTu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.DemSoKiTu" />
+  <component name="RunManager" selected="Application.BaiTap2">
+    <configuration name="BaiTap1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.BaiTap1" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
@@ -81,8 +117,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinhVienDo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuchanh.SinhVienDo" />
+    <configuration name="BaiTap2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.BaiTap2" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="baitap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaiTap3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.BaiTap3" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="baitap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.Fan.TestFan" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="baitap.Fan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThucHanh" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thuchanh.ThucHanh" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
@@ -94,59 +169,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThemPhanTu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.ThemPhanTu" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="baitap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TongDuongCheo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.TongDuongCheo" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="baitap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TongMotCot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.TongMotCot" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="baitap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.TongMotCot" />
-      <item itemvalue="Application.TongDuongCheo" />
-      <item itemvalue="Application.ThemPhanTu" />
-      <item itemvalue="Application.SinhVienDo" />
-      <item itemvalue="Application.DemSoKiTu" />
+      <item itemvalue="Application.ThucHanh" />
+      <item itemvalue="Application.BaiTap1" />
+      <item itemvalue="Application.BaiTap2" />
+      <item itemvalue="Application.BaiTap3" />
+      <item itemvalue="Application.TestFan" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DemSoKiTu" />
-        <item itemvalue="Application.SinhVienDo" />
-        <item itemvalue="Application.ThemPhanTu" />
-        <item itemvalue="Application.TongDuongCheo" />
-        <item itemvalue="Application.TongMotCot" />
+        <item itemvalue="Application.BaiTap2" />
+        <item itemvalue="Application.TestFan" />
+        <item itemvalue="Application.BaiTap3" />
+        <item itemvalue="Application.BaiTap1" />
+        <item itemvalue="Application.ThucHanh" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +209,9 @@
       <workItem from="1617332640702" duration="3510000" />
       <workItem from="1617338133322" duration="1310000" />
       <workItem from="1617340870549" duration="7613000" />
+      <workItem from="1617527311801" duration="16189000" />
+      <workItem from="1617591366235" duration="7663000" />
+      <workItem from="1617606798941" duration="4135000" />
     </task>
     <servers />
   </component>
@@ -204,6 +243,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617196191323" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1617597721308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617597721308" />
     <state x="313" y="54" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617200818517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -240,22 +283,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617247295818" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1617346035799">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1617608758702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617346035799" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1617346035798">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617608758702" />
+    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1617608758701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617346035798" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1617346035798">
+    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617608758701" />
+    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1617608758701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617346035798" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1617346035798">
+    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617608758701" />
+    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1617608758701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617346035798" />
+    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617608758701" />
     <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1617288990799">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -276,18 +319,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197466215" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617419562582">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617606990580">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617419562582" />
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617204718979">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617606990580" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617538857707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1617204718979" />
-    <state x="65" y="0" key="new project wizard" timestamp="1617203070193">
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1617538857707" />
+    <state x="65" y="0" key="new project wizard" timestamp="1617528255587">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1617203070193" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1617528255587" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1617260367158">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
