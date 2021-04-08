@@ -1,17 +1,17 @@
-package baitap;
+package baitap.baitapRectangle;
 
-public class Circle {
+public class Circle7th extends Shape7th {
     private double radius = 1.0;
     private String color = "red";
 
-    public Circle() {
+    public Circle7th() {
     }
 
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius) {
+    public Circle7th(double radius) {
     }
 
     public String getColor() {
@@ -22,7 +22,7 @@ public class Circle {
         this.color = color;
     }
 
-    public Circle(double radius, String color) {
+    public Circle7th(double radius, String color) {
         this.color = color;
         this.radius = radius;
     }
@@ -39,15 +39,13 @@ public class Circle {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
-                ", color='" + color + '\'' +
-                "diện tích hinh tròn =" + getArea() +
+                " diện tích hinh tròn " + getArea() +
                 '}';
     }
 
-//    public static void main(String[] args) {
-//        Circle circle1 = new Circle(2, "red");
-//        System.out.println(circle1.getRadius());
-//        System.out.println("diện tích hinh tròn là " + circle1.getArea());
-//    }
+    @Override
+    public void reSize(double percent) {
+        super.reSize(percent);
+        setRadius(getRadius()+(getRadius()*percent/100));
+    }
 }

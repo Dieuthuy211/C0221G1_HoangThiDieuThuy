@@ -2,11 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba3b1575-72db-4ee2-9c86-52012bb9029a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai6/baitap/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai6/baitap/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai6/thuchanh/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai6/thuchanh/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai6/thuchanh/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Circle7bt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Colorable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/ColorableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Rectangle7bt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Shape7bth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Square7bt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Circle7th.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Rectangle7th.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Resizeable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/ResizeableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Shape7th.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Square7th.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/AbstractAndInterfaceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Tiger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/comparable/ComparableCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/comparable/ComparableCircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/edible/Edible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai6/baitap/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai6/baitap/Point2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai5/baitap/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai5/baitap/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai6/baitap/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai6/baitap/Cylinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/Circle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/Cylinder.class" afterDir="false" />
     </list>
@@ -62,14 +86,18 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="baitap.baitapColorable" />
+      <recent name="baitap.baitapRectangle" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Point3D">
-    <configuration name="MoveablePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.MoveablePoint" />
+  <component name="RunManager" selected="Application.ColorableTest">
+    <configuration name="ColorableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.baitapColorable.ColorableTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.*" />
+          <option name="PATTERN" value="baitap.baitapColorable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Point2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.Point2D" />
+    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thuc_hanh.comparable.ComparableCircleTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.*" />
+          <option name="PATTERN" value="thuc_hanh.comparable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Point3D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.Point3D" />
+    <configuration name="RectangleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thuchanh.RectangleTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.*" />
+          <option name="PATTERN" value="thuchanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThemPhanTu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.ThemPhanTu" />
+    <configuration name="ResizeableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.ResizeableTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.*" />
+          <option name="PATTERN" value="bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +144,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Triangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.Triangle" />
+    <configuration name="ResizeableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.baitapRectangle.ResizeableTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.*" />
+          <option name="PATTERN" value="baitap.baitapRectangle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,19 +158,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Point3D" />
-      <item itemvalue="Application.ThemPhanTu" />
-      <item itemvalue="Application.Point2D" />
-      <item itemvalue="Application.MoveablePoint" />
-      <item itemvalue="Application.Triangle" />
+      <item itemvalue="Application.ComparableCircleTest" />
+      <item itemvalue="Application.ResizeableTest" />
+      <item itemvalue="Application.RectangleTest" />
+      <item itemvalue="Application.ResizeableTest (1)" />
+      <item itemvalue="Application.ColorableTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Point3D" />
-        <item itemvalue="Application.Triangle" />
-        <item itemvalue="Application.MoveablePoint" />
-        <item itemvalue="Application.Point2D" />
-        <item itemvalue="Application.ThemPhanTu" />
+        <item itemvalue="Application.ColorableTest" />
+        <item itemvalue="Application.ResizeableTest (1)" />
+        <item itemvalue="Application.ResizeableTest" />
+        <item itemvalue="Application.RectangleTest" />
+        <item itemvalue="Application.ComparableCircleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +207,9 @@
       <workItem from="1617712091824" duration="7258000" />
       <workItem from="1617759039681" duration="804000" />
       <workItem from="1617776125160" duration="6224000" />
+      <workItem from="1617800637628" duration="5140000" />
+      <workItem from="1617844817810" duration="19669000" />
+      <workItem from="1617886121800" duration="3853000" />
     </task>
     <servers />
   </component>
@@ -210,10 +241,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617196191323" />
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1617779139856">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1617888907891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617779139856" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617888907891" />
     <state x="313" y="54" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617200818517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -226,18 +257,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="377" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1617205932603" />
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617270691545">
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617864332859">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617270691545" />
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617864332859" />
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617205938269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1617205938269" />
-    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617698987162">
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617887125061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1617698987162" />
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1617887125061" />
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617888056587">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1617888056587" />
     <state x="280" y="0" key="CommitChangelistDialog2" timestamp="1617200110529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -254,22 +289,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617247295818" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1617781147559">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1617890034714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617781147559" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1617781147559">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
+    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1617890034714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617781147559" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1617781147558">
+    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
+    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1617890034714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617781147558" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1617781147559">
+    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617890034713" />
+    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1617890034714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617781147559" />
+    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
     <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1617288990799">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -290,10 +325,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197466215" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617776129522">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617886126220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617776129522" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617886126220" />
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617538857707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -302,14 +337,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1617698507916" />
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1617870589874">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1617870589874" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1617718073426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617718073426" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617254294334">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617803326932">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617254294334" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617803326932" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/modulu2$docsothanhchu.ic" NAME="docsothanhchu Coverage Results" MODIFIED="1617201692500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

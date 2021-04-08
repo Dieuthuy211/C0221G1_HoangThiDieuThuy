@@ -1,17 +1,17 @@
-package baitap;
+package baitap.baitapColorable;
 
-public class Circle {
+public class Circle7bt extends Shape7bth {
     private double radius = 1.0;
     private String color = "red";
 
-    public Circle() {
+    public Circle7bt() {
     }
 
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius) {
+    public Circle7bt(double radius) {
     }
 
     public String getColor() {
@@ -22,7 +22,7 @@ public class Circle {
         this.color = color;
     }
 
-    public Circle(double radius, String color) {
+    public Circle7bt(double radius, String color) {
         this.color = color;
         this.radius = radius;
     }
@@ -39,9 +39,8 @@ public class Circle {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
-                ", color='" + color + '\'' +
-                "diện tích hinh tròn =" + getArea() +
+                " diện tích hinh tròn =" + getArea() +
+                ", color =" + color  +
                 '}';
     }
 
