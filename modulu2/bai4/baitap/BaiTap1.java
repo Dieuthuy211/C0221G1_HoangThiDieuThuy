@@ -40,23 +40,26 @@ public class BaiTap1 {
 
         private String getTinh() {
             if (a == 0) {
-                return "phương trinh có vô số nghiệm";
-            } else if (b == 0) {
-                return "phương trình vô nghiệm";
-            } else {
-                double delta = (b * b) - (4 * a * c);
-                double x1 = 0;
-                double x2 = 0;
-                if (delta > 0) {
-                    x1 = ((-b + Math.sqrt(delta)) / 2 * a);
-                    x2 = ((-b - Math.sqrt(delta)) / 2 * a);
-                    return "phương trình có 2 nghiệm" + "x1=" + x1 + ", x2=" + x2;
-                } else if (delta == 0) {
-                    x1 = -b / 2 * a;
-                    return "phương trình có nghiệm kép" + x1;
-                } else if (delta < 0) {
-                    return "phương trình vô nghiệm";
+                if (b == 0) {
+                    System.out.println("Phương trình vô nghiệm!");
+                } else {
+                    System.out.println("Phương trình có một nghiệm: "
+                            + "x = " + (-c / b));
                 }
+
+            }
+            double delta = (b * b) - (4 * a * c);
+            double x1 = 0;
+            double x2 = 0;
+            if (delta > 0) {
+                x1 = ((-b + Math.sqrt(delta)) / 2 * a);
+                x2 = ((-b - Math.sqrt(delta)) / 2 * a);
+                System.out.println("phương trình có 2 nghiệm" + "x1=" + x1 + ", x2=" + x2);
+            } else if (delta == 0) {
+                x1 = -b / 2 * a;
+                System.out.println("phương trình có nghiệm kép x1=x2=" + x1);
+            } else if (delta < 0) {
+                System.out.println("phương trình vô nghiệm");
             }
             return "";
         }

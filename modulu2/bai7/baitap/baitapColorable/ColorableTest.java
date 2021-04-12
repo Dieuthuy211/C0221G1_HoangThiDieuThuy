@@ -7,9 +7,9 @@ public class ColorableTest {
         shape[1]=new Rectangle7bt();
         shape[2]=new Circle7bt();
         for(Shape7bth shape1: shape){
-           if(shape1 instanceof Square7bt){
-               shape1.howToColor();
+           if(shape1 instanceof Colorable){
                System.out.println(shape1);
+               shape1.howToColor();
            }else {
                System.out.println(shape1);
            }

@@ -38,7 +38,6 @@ public class Shape7bth implements Colorable {
 
     @Override
     public void howToColor() {
-        setColor(" Color all four sides.. ");
     }
 }
 

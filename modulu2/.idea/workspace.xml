@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba3b1575-72db-4ee2-9c86-52012bb9029a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai6/thuchanh/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai6/thuchanh/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Circle7bt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Colorable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/ColorableTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Rectangle7bt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Shape7bth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Square7bt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Circle7th.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Rectangle7th.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Resizeable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/ResizeableTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Shape7th.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/baitap/baitapRectangle/Square7th.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/AbstractAndInterfaceTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Chicken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/animal/Tiger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/comparable/ComparableCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/comparable/ComparableCircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/edible/Edible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Orange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai7/thuc_hanh/fruit/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/bai_tap/MyList/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/bai_tap/MyList/LinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/bai_tap/MyList/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/bai_tap/MyList/MyListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/thuc_hanh/myList/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/thuc_hanh/myList/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/thuc_hanh/myList/MyListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai10/thuc_hanh/myList/TestMyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai8/baitap/TennisGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai8/baitap/TennisGameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap_lm_them/account/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai5/baitap/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai5/baitap/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai6/baitap/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai6/baitap/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/Cylinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai4/baitap/BaiTap1.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai4/baitap/BaiTap1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai7/baitap/baitapColorable/ColorableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/ColorableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Shape7bth.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Shape7bth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Square7bt.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai7/baitap/baitapColorable/Square7bt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/BaiTap1$QuadraticEquation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/BaiTap1$QuadraticEquation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/ColorableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/ColorableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/Shape7bth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/Shape7bth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/Square7bt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/baitapColorable/Square7bt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/baitap/baitapRectangle/ResizeableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/baitap/baitapRectangle/ResizeableTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +56,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -90,14 +85,17 @@
       <recent name="baitap.baitapColorable" />
       <recent name="baitap.baitapRectangle" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="arr" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.ColorableTest">
-    <configuration name="ColorableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.baitapColorable.ColorableTest" />
+  <component name="RunManager" selected="Application.LinkedListTest">
+    <configuration name="BaiTap1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baitap.BaiTap1" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.baitapColorable.*" />
+          <option name="PATTERN" value="baitap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuc_hanh.comparable.ComparableCircleTest" />
+    <configuration name="LinkedListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.MyList.LinkedListTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thuc_hanh.comparable.*" />
+          <option name="PATTERN" value="bai_tap.MyList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +116,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuchanh.RectangleTest" />
+    <configuration name="MyListTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.MyList.MyListTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thuchanh.*" />
+          <option name="PATTERN" value="bai_tap.MyList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResizeableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_tap.ResizeableTest" />
+    <configuration name="MyListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thuc_hanh.myList.MyListTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_tap.*" />
+          <option name="PATTERN" value="thuc_hanh.myList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,12 +142,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResizeableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baitap.baitapRectangle.ResizeableTest" />
+    <configuration name="TestMyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thuc_hanh.myList.TestMyLinkedList" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baitap.baitapRectangle.*" />
+          <option name="PATTERN" value="thuc_hanh.myList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,19 +156,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ComparableCircleTest" />
-      <item itemvalue="Application.ResizeableTest" />
-      <item itemvalue="Application.RectangleTest" />
-      <item itemvalue="Application.ResizeableTest (1)" />
-      <item itemvalue="Application.ColorableTest" />
+      <item itemvalue="Application.MyListTest" />
+      <item itemvalue="Application.BaiTap1" />
+      <item itemvalue="Application.MyListTest (1)" />
+      <item itemvalue="Application.TestMyLinkedList" />
+      <item itemvalue="Application.LinkedListTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ColorableTest" />
-        <item itemvalue="Application.ResizeableTest (1)" />
-        <item itemvalue="Application.ResizeableTest" />
-        <item itemvalue="Application.RectangleTest" />
-        <item itemvalue="Application.ComparableCircleTest" />
+        <item itemvalue="Application.LinkedListTest" />
+        <item itemvalue="Application.MyListTest (1)" />
+        <item itemvalue="Application.TestMyLinkedList" />
+        <item itemvalue="Application.MyListTest" />
+        <item itemvalue="Application.BaiTap1" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +208,16 @@
       <workItem from="1617800637628" duration="5140000" />
       <workItem from="1617844817810" duration="19669000" />
       <workItem from="1617886121800" duration="3853000" />
+      <workItem from="1617939486227" duration="1634000" />
+      <workItem from="1617951105060" duration="3537000" />
+      <workItem from="1618048451455" duration="7909000" />
+      <workItem from="1618114598947" duration="855000" />
+      <workItem from="1618117991212" duration="4157000" />
+      <workItem from="1618133898555" duration="10653000" />
+      <workItem from="1618150494719" duration="166000" />
+      <workItem from="1618150699882" duration="6424000" />
+      <workItem from="1618190532801" duration="647000" />
+      <workItem from="1618197807379" duration="16227000" />
     </task>
     <servers />
   </component>
@@ -241,10 +249,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617196191323" />
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1617888907891">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1618215332730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617888907891" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1618215332730" />
     <state x="313" y="54" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617200818517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -289,46 +297,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617247295818" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1617890034714">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1618222131837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1617890034714">
+    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618222131837" />
+    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1618222131837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1617890034714">
+    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618222131837" />
+    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1618222131837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617890034713" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1617890034714">
+    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618222131837" />
+    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1618222131837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617890034714" />
-    <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1617288990799">
+    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618222131837" />
+    <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1618144976275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617288990799" />
-    <state width="1323" height="215" key="GridCell.Tab.1.center" timestamp="1617288990798">
+    <state width="1323" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618144976275" />
+    <state width="1323" height="215" key="GridCell.Tab.1.center" timestamp="1618144976275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1617288990798" />
-    <state width="1323" height="215" key="GridCell.Tab.1.left" timestamp="1617288990798">
+    <state width="1323" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618144976275" />
+    <state width="1323" height="215" key="GridCell.Tab.1.left" timestamp="1618144976275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1617288990798" />
-    <state width="1323" height="215" key="GridCell.Tab.1.right" timestamp="1617288990799">
+    <state width="1323" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618144976275" />
+    <state width="1323" height="215" key="GridCell.Tab.1.right" timestamp="1618144976275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1617288990799" />
+    <state width="1323" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618144976275" />
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617197466215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197466215" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617886126220">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1618230598756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617886126220" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618230598756" />
+    <state x="387" y="258" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1617941112740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="258" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1617941112740" />
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617538857707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -337,18 +349,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1617698507916" />
-    <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1617870589874">
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1618155565076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1617870589874" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1617718073426">
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1618155565076" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1618201858242">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617718073426" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617803326932">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1618201858242" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618222059837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617803326932" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618222059837" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/modulu2$docsothanhchu.ic" NAME="docsothanhchu Coverage Results" MODIFIED="1617201692500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

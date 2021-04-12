@@ -1,6 +1,8 @@
 package baitap.baitapColorable;
 
-public class Square7bt extends Shape7bth {
+import java.util.Objects;
+
+public class Square7bt extends Shape7bth implements Colorable {
     double side=1.0;
     public Square7bt(double v, String color, boolean b) {
         super(color,b);
@@ -27,5 +29,12 @@ public class Square7bt extends Shape7bth {
                " diện tích hình vuông ="+getAge()+
                 ", color =" + getColor()+
                 '}';
+    }
+
+
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides..");
     }
 }
