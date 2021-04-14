@@ -4,27 +4,26 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class BstackTest {
+
     public static void main(String[] args) {
         String str;
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("nhập chuổi vào");
-        str=sc.nextLine();
-        Stack<Character> bStack= new Stack<Character>();
+        str = sc.nextLine();
+        Stack<Character> bStack = new Stack<Character>();
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '('){
+            if (str.charAt(i) == '(') {
                 bStack.push(str.charAt(i));
-            }
-            else if (!bStack.isEmpty() && str.charAt(i)==')' && bStack.peek()=='('){
+            } else if (!bStack.isEmpty() && str.charAt(i) == ')' && bStack.peek() == '(') {
                 bStack.pop();
-            }
-            else if (str.charAt(i)==')'){
+            } else if (str.charAt(i) == ')') {
                 bStack.push(str.charAt(i));
             }
         }
-        if (bStack.isEmpty()){
+        if (bStack.isEmpty()) {
             System.out.println("true");
-        }
-        else {
+        } else {
             System.out.println("false");
+        }
     }
-}}
+}

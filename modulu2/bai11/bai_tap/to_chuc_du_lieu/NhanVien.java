@@ -1,14 +1,16 @@
 package bai_tap.to_chuc_du_lieu;
 
+import java.util.Comparator;
+
 public class NhanVien {
     private  String name;
     private String gender;
-    private int age;
+    private String age;
 
     public NhanVien() {
     }
 
-    public NhanVien(String name, String gender, int age) {
+    public NhanVien(String name, String gender, String age) {
         this.name = name;
         this.gender = gender;
         this.age = age;
@@ -18,11 +20,12 @@ public class NhanVien {
         return name;
     }
 
-    public static String getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public int getAge() {
+
+    public String getAge() {
         return age;
     }
 
