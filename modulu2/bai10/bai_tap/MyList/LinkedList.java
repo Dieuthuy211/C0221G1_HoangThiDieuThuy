@@ -3,6 +3,9 @@ package bai_tap.MyList;
 import thuc_hanh.myList.MyLinkedList;
 
 public class LinkedList<E> {
+    public void add(E charAt) {
+    }
+
     private class Node{
         private Node next;
         private Object data;

@@ -23,7 +23,8 @@ public class DiemTu {
 //        System.out.println(map.toString());
     }
     public static void main(String[] args) {
-        String str = "hello words hello words lan huệ";
+        String str = "hello words hello words lan huệ , ";
+    str.replace(","," ");
         String[] arr = str.split(" ");
         String key = "";
         int value;
