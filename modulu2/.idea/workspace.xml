@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba3b1575-72db-4ee2-9c86-52012bb9029a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../modelu1/casestudy1/ham/tinhtong.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai15/thuc_hanh/ArrayExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai15/thuc_hanh/CalculationExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/ReadTestFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/WriteATextFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/newTestFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/doc_file/ReadFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/doc_file/quocgia.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/ReadFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/ReadAndWriteFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/mangso.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/somax.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/controllers/AddNewServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/controllers/ShowServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/data/RearFileServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/data/Services.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/model/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/model/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/model/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modelu1/casestudy1/ham/tinhtong.html" beforeDir="false" afterPath="$PROJECT_DIR$/../modelu1/casestudy1/ham/tinhtong.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai15/bai_tap/tam_giac/TestTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai15/bai_tap/tam_giac/TestTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai15/bai_tap/tam_giac/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai15/bai_tap/tam_giac/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap_lm_them/he_thong_quan_ly_so_thu/Tiger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/bai_tap/tim_chuoi_do_dai_max/StringAscending.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/bai_tap/tim_chuoi_do_dai_max/StringAscending.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/model/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/model/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/model/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/model/Services.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="190" />
+    <option name="myElementSize" value="185" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,13 +90,13 @@
       <recent name="arr" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestTriangle">
-    <configuration name="ArrayExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuc_hanh.ArrayExample" />
+  <component name="RunManager" selected="Application.MainController">
+    <configuration name="AddNewServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.AddNewServices" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thuc_hanh.*" />
+          <option name="PATTERN" value="controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuc_hanh.CalculationExample" />
+    <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.MainController" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thuc_hanh.*" />
+          <option name="PATTERN" value="controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="he_thong_quan_ly_so_thu.Cat" />
+    <configuration name="QuanLi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.quan_li_san_pham.QuanLi" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="he_thong_quan_ly_so_thu.*" />
+          <option name="PATTERN" value="bai_tap.quan_li_san_pham.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSort (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_tap.insertionSort.InsertionSort" />
+    <configuration name="RearFileServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data.RearFileServices" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_tap.insertionSort.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_tap.tam_giac.TestTriangle" />
+    <configuration name="ShowServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.ShowServices" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_tap.tam_giac.*" />
+          <option name="PATTERN" value="controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,19 +157,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.InsertionSort (1)" />
-      <item itemvalue="Application.Cat" />
-      <item itemvalue="Application.TestTriangle" />
-      <item itemvalue="Application.ArrayExample" />
-      <item itemvalue="Application.CalculationExample" />
+      <item itemvalue="Application.QuanLi" />
+      <item itemvalue="Application.AddNewServices" />
+      <item itemvalue="Application.MainController" />
+      <item itemvalue="Application.RearFileServices" />
+      <item itemvalue="Application.ShowServices" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestTriangle" />
-        <item itemvalue="Application.CalculationExample" />
-        <item itemvalue="Application.ArrayExample" />
-        <item itemvalue="Application.Cat" />
-        <item itemvalue="Application.InsertionSort (1)" />
+        <item itemvalue="Application.MainController" />
+        <item itemvalue="Application.ShowServices" />
+        <item itemvalue="Application.RearFileServices" />
+        <item itemvalue="Application.AddNewServices" />
+        <item itemvalue="Application.QuanLi" />
       </list>
     </recent_temporary>
   </component>
@@ -230,6 +240,12 @@
       <workItem from="1618999928117" duration="1514000" />
       <workItem from="1619021131191" duration="4857000" />
       <workItem from="1619054443318" duration="4596000" />
+      <workItem from="1619146491181" duration="17878000" />
+      <workItem from="1619256660368" duration="19093000" />
+      <workItem from="1619313957668" duration="6282000" />
+      <workItem from="1619320346118" duration="1223000" />
+      <workItem from="1619340961757" duration="6393000" />
+      <workItem from="1619350185247" duration="4992000" />
     </task>
     <servers />
   </component>
@@ -257,14 +273,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1617205544243" />
-    <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618559898451">
+    <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619160738990">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1618559898451" />
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1619024701408">
+    <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1619160738990" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1619260092191">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1619024701408" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1619260092191" />
     <state x="313" y="54" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617200818517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -277,18 +293,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="377" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1619000815894" />
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617864332859">
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1619264158724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617864332859" />
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1619264158724" />
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617205938269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1617205938269" />
-    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617887125061">
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619316542376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1617887125061" />
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1619316542376" />
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618296936269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -309,22 +325,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618560196544" />
-    <state width="1323" height="107" key="GridCell.Tab.0.bottom" timestamp="1619076261051">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom" timestamp="1619354991058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="107" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619076261051" />
-    <state width="1323" height="107" key="GridCell.Tab.0.center" timestamp="1619076261051">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619354991058" />
+    <state width="1323" height="256" key="GridCell.Tab.0.center" timestamp="1619354991057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="107" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619076261051" />
-    <state width="1323" height="107" key="GridCell.Tab.0.left" timestamp="1619076261051">
+    <state width="1323" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
+    <state width="1323" height="256" key="GridCell.Tab.0.left" timestamp="1619354991057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="107" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619076261051" />
-    <state width="1323" height="107" key="GridCell.Tab.0.right" timestamp="1619076261051">
+    <state width="1323" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right" timestamp="1619354991057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="107" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619076261051" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
     <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1618759890679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -345,10 +361,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197466215" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1619054442213">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1619350189676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1619054442213" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1619350189676" />
     <state x="387" y="258" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1617941112740">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -365,18 +381,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1618470995409" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1618329365200">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1619164603649">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1618329365200" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618325319727">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619164603649" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619316412739">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618325319727" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619316412739" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/modulu2$docsothanhchu.ic" NAME="docsothanhchu Coverage Results" MODIFIED="1617201692500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>baitap.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/modulu2$MainController.ic" NAME="MainController Coverage Results" MODIFIED="1619319261777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/modulu2$BaiTap2.ic" NAME="BaiTap2 Coverage Results" MODIFIED="1617627292457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>baitap.*</FILTER>
