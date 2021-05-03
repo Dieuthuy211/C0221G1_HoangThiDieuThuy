@@ -2,28 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba3b1575-72db-4ee2-9c86-52012bb9029a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/ReadTestFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/WriteATextFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/copy_file_test/newTestFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/doc_file/ReadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/bai_tap/doc_file/quocgia.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/ReadFileExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/ReadAndWriteFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/mangso.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai16/thuc_hanh/tim_gia_tri_max_trong_file/somax.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/controllers/AddNewServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/controllers/ShowServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/data/RearFileServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/data/Services.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/model/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/model/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study/model/Villa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai17/bai_tap/luu_file_nhi_phan/FileStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai17/bai_tap/luu_file_nhi_phan/QuanLySanPham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai17/bai_tap/luu_file_nhi_phan/Quanly.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai17/bai_tap/luu_file_nhi_phan/SanPham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai17/thuc_hanh/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/bai_tap/crawl_tin_tuc/CrawlNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/bai_tap/so_dien_thoai/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/bai_tap/ten_lop_hoc/NameClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/thuc_hanh/danh_sach_bai_hat/CrawlSongExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/thuc_hanh/email/EmailExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai19/thuc_hanh/validate_Acconunt/AccountExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/commons/CanBoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/commons/GhiDocFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/controllers/DanhMuc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/controllers/QuanLyChucNang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/data/canbo.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/data/nganhdaotao.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/models/CanBo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/models/CongNhan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/models/KySu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/models/NhanVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_don_vi_san_xuat/views/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/commons/DocGhiFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/commons/PhuongTienException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/controllers/ChucNangDanhMuc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/controllers/DanhMucPhuongTien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/controllers/QuanLyNhapDuLIeu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/data/hangSanSuat.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/data/phuongTien.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/models/Oto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/models/PhuongTien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/models/XeMay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_quan_ly_xe_co/models/XeTai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/controllers/MethodCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/controllers/Regex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/data/Customer.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/data/WriteReadCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../modelu1/casestudy1/ham/tinhtong.html" beforeDir="false" afterPath="$PROJECT_DIR$/../modelu1/casestudy1/ham/tinhtong.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/controllers/AddNewServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/controllers/AddNewServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/data/RearFileServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/data/RearFileServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/data/WriteFileServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/data/WriteFileServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/model/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_study/model/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/model/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/module2/model/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/model/Services.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/model/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/model/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/controllers/AddNewServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/controllers/AddNewServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/data/RearFileServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/data/RearFileServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/data/WriteFileServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/data/WriteFileServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/module2/model/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/module2/model/Villa.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +72,7 @@
         <option value="package-info" />
         <option value="package.json" />
         <option value="module-info" />
+        <option value="Arquillian JUnit Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -64,7 +97,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (3)" />
+    <property name="last.edited.regexp" value="73C-134.13" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/bai_quan_ly_xe_co/controllers" />
     <property name="last_opened_file_path" value="G:/FuramaResort/commons/CustomerException.java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -78,7 +115,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="controllers" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -86,17 +129,31 @@
       <recent name="baitap.baitapRectangle" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="data" />
       <recent name="thuc_hanh.stack" />
       <recent name="arr" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainController">
-    <configuration name="AddNewServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controllers.AddNewServices" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CrawlNews" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.crawl_tin_tuc.CrawlNews" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controllers.*" />
+          <option name="PATTERN" value="bai_tap.crawl_tin_tuc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="views.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,34 +174,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuanLi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_tap.quan_li_san_pham.QuanLi" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bai_tap.quan_li_san_pham.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RearFileServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data.RearFileServices" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShowServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controllers.ShowServices" />
+    <configuration name="MethodCustomer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.MethodCustomer" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
@@ -156,20 +187,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PhoneNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_tap.so_dien_thoai.PhoneNumber" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bai_tap.so_dien_thoai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.QuanLi" />
-      <item itemvalue="Application.AddNewServices" />
+      <item itemvalue="Application.PhoneNumber" />
+      <item itemvalue="Application.CrawlNews" />
       <item itemvalue="Application.MainController" />
-      <item itemvalue="Application.RearFileServices" />
-      <item itemvalue="Application.ShowServices" />
+      <item itemvalue="Application.MethodCustomer" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MethodCustomer" />
         <item itemvalue="Application.MainController" />
-        <item itemvalue="Application.ShowServices" />
-        <item itemvalue="Application.RearFileServices" />
-        <item itemvalue="Application.AddNewServices" />
-        <item itemvalue="Application.QuanLi" />
+        <item itemvalue="Application.CrawlNews" />
+        <item itemvalue="Application.PhoneNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -246,6 +290,19 @@
       <workItem from="1619320346118" duration="1223000" />
       <workItem from="1619340961757" duration="6393000" />
       <workItem from="1619350185247" duration="4992000" />
+      <workItem from="1619365754536" duration="609000" />
+      <workItem from="1619399986867" duration="18066000" />
+      <workItem from="1619438723594" duration="932000" />
+      <workItem from="1619439832082" duration="7106000" />
+      <workItem from="1619493999733" duration="4850000" />
+      <workItem from="1619505076309" duration="10804000" />
+      <workItem from="1619529135448" duration="2668000" />
+      <workItem from="1619532626409" duration="1679000" />
+      <workItem from="1619580723133" duration="11900000" />
+      <workItem from="1619944529568" duration="10594000" />
+      <workItem from="1619955737782" duration="413000" />
+      <workItem from="1619958683328" duration="11636000" />
+      <workItem from="1620005376464" duration="10023000" />
     </task>
     <servers />
   </component>
@@ -265,10 +322,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1617202799115" />
-    <state x="275" y="23" key="#Project_Structure" timestamp="1617206117185">
+    <state x="275" y="23" key="#Project_Structure" timestamp="1619947080534">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1617206117185" />
+    <state x="275" y="23" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1619947080534" />
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617205544243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -277,10 +334,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1619160738990" />
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1619260092191">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1620010719824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1619260092191" />
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1620010719824" />
     <state x="313" y="54" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617200818517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -305,18 +362,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1619316542376" />
-    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618296936269">
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619963153306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618296936269" />
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1619963153306" />
     <state x="280" y="0" key="CommitChangelistDialog2" timestamp="1617200110529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="280" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1617200110529" />
-    <state width="418" height="438" key="DebuggerActiveHint" timestamp="1617268321513">
+    <state width="454" height="438" key="DebuggerActiveHint" timestamp="1619430275284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="418" height="438" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1617268321513" />
+    <state width="454" height="438" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1619430275284" />
     <state x="417" y="126" key="EnvironmentVariablesDialog" timestamp="1617201026853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -325,54 +382,66 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618560196544" />
-    <state width="1323" height="256" key="GridCell.Tab.0.bottom" timestamp="1619354991058">
+    <state width="1323" height="410" key="GridCell.Tab.0.bottom" timestamp="1620006302303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619354991058" />
-    <state width="1323" height="256" key="GridCell.Tab.0.center" timestamp="1619354991057">
+    <state width="1323" height="410" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620006302303" />
+    <state width="1323" height="410" key="GridCell.Tab.0.center" timestamp="1620006302303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
-    <state width="1323" height="256" key="GridCell.Tab.0.left" timestamp="1619354991057">
+    <state width="1323" height="410" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620006302303" />
+    <state width="1323" height="410" key="GridCell.Tab.0.left" timestamp="1620006302303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
-    <state width="1323" height="256" key="GridCell.Tab.0.right" timestamp="1619354991057">
+    <state width="1323" height="410" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620006302303" />
+    <state width="1323" height="410" key="GridCell.Tab.0.right" timestamp="1620006302303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619354991057" />
-    <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1618759890679">
+    <state width="1323" height="410" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620006302303" />
+    <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1619960027061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618759890679" />
-    <state width="1323" height="215" key="GridCell.Tab.1.center" timestamp="1618759890679">
+    <state width="1323" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619960027061" />
+    <state width="1323" height="215" key="GridCell.Tab.1.center" timestamp="1619960027061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618759890679" />
-    <state width="1323" height="215" key="GridCell.Tab.1.left" timestamp="1618759890679">
+    <state width="1323" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619960027061" />
+    <state width="1323" height="215" key="GridCell.Tab.1.left" timestamp="1619960027061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618759890679" />
-    <state width="1323" height="215" key="GridCell.Tab.1.right" timestamp="1618759890679">
+    <state width="1323" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619960027061" />
+    <state width="1323" height="215" key="GridCell.Tab.1.right" timestamp="1619960027061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618759890679" />
+    <state width="1323" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619960027061" />
+    <state x="450" y="76" key="RollbackChangesDialog" timestamp="1619430417340">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="450" y="76" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1619430417340" />
+    <state x="499" y="143" key="chooseDestDirectoryDialog" timestamp="1620011002011">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="499" y="143" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1620011002011" />
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617197466215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197466215" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1619350189676">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1620005376480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1619350189676" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1620005376480" />
     <state x="387" y="258" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1617941112740">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="387" y="258" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1617941112740" />
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617538857707">
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619513098101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1617538857707" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1619513098101" />
+    <state x="454" y="68" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1620011002027">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="68" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1620011002027" />
     <state x="65" y="0" key="new project wizard" timestamp="1618805040659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -381,14 +450,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1618470995409" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1619164603649">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1619430437854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619164603649" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619316412739">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619430437854" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619968076221">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619316412739" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619968076221" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/modulu2$docsothanhchu.ic" NAME="docsothanhchu Coverage Results" MODIFIED="1617201692500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

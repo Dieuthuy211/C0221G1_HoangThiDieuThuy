@@ -1,12 +1,12 @@
 package model;
 
 public abstract class Services {
-    private String id;
-    private String ServiceName;
-    private String areaUsed;
-    private String rentalCosts;
-    private String maximumPeople;
-    private String rentalType;
+    private String id;           //mã dịch vụ
+    private String ServiceName;  //ten dịch vụ
+    private String areaUsed;     //diện tích sử dụng
+    private String rentalCosts;  //chi phí thuê
+    private String maximumPeople; //người tối đa
+    private String rentalType;     //kiểu thuê
 
     public Services() {
     }

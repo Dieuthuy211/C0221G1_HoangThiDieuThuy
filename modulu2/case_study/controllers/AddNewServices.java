@@ -8,80 +8,159 @@ import model.Villa;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddNewServices{
-    static Scanner scanner=new Scanner(System.in);
-   static WriteFileServices writeFile=new WriteFileServices();
-    public static void addVilla(){
-        ArrayList<Villa> listVilla=new ArrayList<>();
-        Villa villa=new Villa();
+public class AddNewServices {
+    static Scanner scanner = new Scanner(System.in);
+    static WriteFileServices writeFile = new WriteFileServices();
+
+    public static void addVilla() {
+        ArrayList<Villa> listVilla = new ArrayList<>();
         System.out.println("nhập id");
-        villa.setId(scanner.nextLine());
+        String id = scanner.nextLine();
+        Regex regex = new Regex();
+            while (regex.checkIDVilA(id) == false) {
+                System.out.println("nhập sai mã villa nhập lại");
+                id = scanner.nextLine();
+            }
         System.out.println("nhập tên dịch vụ");
-        villa.setServiceName(scanner.nextLine());
+        String serviceName = scanner.nextLine();
+        while(regex.checkNameService(serviceName)==false){
+            System.out.println("tên dịch vụ sai nhập lại");
+            serviceName=scanner.nextLine();
+        }
         System.out.println("nhập diện tích sử dụng");
-        villa.setAreaUsed(scanner.nextLine());
+        String areaUsed = scanner.nextLine();
+        while (regex.checkArea(areaUsed)==false){
+            System.out.println("nhập sai rồi!!! nhập lại");
+            areaUsed=scanner.nextLine();
+        }
         System.out.println("nhập chi phí thuê");
-        villa.setRentalCosts(scanner.nextLine());
+        String rentalCosts = scanner.nextLine();
+        while (regex.checkRentalCosts(rentalCosts)==false){
+            System.out.println("nhập sai nhập lại");
+            rentalCosts=scanner.nextLine();
+        }
         System.out.println("số lượng người tối đa");
-        villa.setMaximumPeople(scanner.nextLine());;
+        String maximumPeople = scanner.nextLine();
+        while (regex.checkMaximumPeople(maximumPeople)==false){
+            System.out.println("nhập sai rồi!!! vui lòng nhập lại");
+            maximumPeople=scanner.nextLine();
+        }
         System.out.println("kiểu thuê");
-        villa.setRentalType(scanner.nextLine());
+        String rentalType = scanner.nextLine();
         System.out.println("tiêu chuẩn phòng");
-        villa.setStandardRoom(scanner.nextLine());
+        String standardRoom = scanner.nextLine();
         System.out.println("mô tả tiện nghi khác");
-        villa.setOtherFacilitie(scanner.nextLine());
+        String otherFacilitie = scanner.nextLine();
         System.out.println("diện tích hồ bơi");
-        villa.setPoolArea(scanner.nextLine());
+        String poolArea = scanner.nextLine();
+        while (regex.checkArea(poolArea)==false){
+            System.out.println("nhập sai rồi!!! nhập lại");
+            poolArea=scanner.nextLine();
+        }
         System.out.println("số tầng");
-        villa.setNumberFloor(scanner.nextLine());
+        String numberFloor = scanner.nextLine();
+        while (regex.checkNumberFloor(numberFloor)==false){
+            System.out.println("nhập sai rồi!!nhập lại");
+            numberFloor=scanner.nextLine();
+        }
+        Villa villa = new Villa(id, serviceName, areaUsed, rentalCosts, maximumPeople, rentalType, standardRoom, otherFacilitie, poolArea, numberFloor);
         listVilla.add(villa);
-      writeFile.wriveFileVila(listVilla);
+        writeFile.wriveFileVila(listVilla);
+
     }
-    public static void addNewHouse(){
-        ArrayList<House> listHouse=new ArrayList<>();
-       House house=new House();
+
+    public static void addNewHouse() {
+        ArrayList<House> listHouse = new ArrayList<>();
         System.out.println("nhập id");
-        house.setId(scanner.nextLine());
+        String id = scanner.nextLine();
+        Regex regex = new Regex();
+        while (regex.checkIDHouse(id) == false) {
+            System.out.println("nhập sai mã villa nhập lại");
+            id = scanner.nextLine();
+        }
         System.out.println("nhập tên dịch vụ");
-        house.setServiceName(scanner.nextLine());
+        String serviceName = scanner.nextLine();
+        while(regex.checkNameService(serviceName)==false){
+            System.out.println("tên dịch vụ sai nhập lại");
+            serviceName=scanner.nextLine();
+        }
         System.out.println("nhập diện tích sử dụng");
-        house.setAreaUsed(scanner.nextLine());
+        String areaUsed = scanner.nextLine();
+        while (regex.checkArea(areaUsed)==false){
+            System.out.println("nhập sai rồi!!! nhập lại");
+            areaUsed=scanner.nextLine();
+        }
         System.out.println("nhập chi phí thuê");
-        house.setRentalCosts(scanner.nextLine());
+        String rentalCosts = scanner.nextLine();
+        while (regex.checkRentalCosts(rentalCosts)==false){
+            System.out.println("nhập sai nhập lại");
+            rentalCosts=scanner.nextLine();
+        }
         System.out.println("số lượng người tối đa");
-        house.setMaximumPeople(scanner.nextLine());;
+        String maximumPeople = scanner.nextLine();
+        while (regex.checkMaximumPeople(maximumPeople)==false){
+            System.out.println("nhập sai rồi!!! vui lòng nhập lại");
+            maximumPeople=scanner.nextLine();
+        }
         System.out.println("kiểu thuê");
-        house.setRentalType(scanner.nextLine());
+        String rentalType = scanner.nextLine();
         System.out.println("tiêu chuẩn phòng");
-        house.setStandardRoom(scanner.nextLine());
+        String standardRoom = scanner.nextLine();
         System.out.println("mô tả tiện nghi khác");
-        house.setOtherFacilitie(scanner.nextLine());
+        String otherFacilitie = scanner.nextLine();
         System.out.println("số tầng");
-        house.setNumberFloor(scanner.nextLine());
+        String numberFloor = scanner.nextLine();
+        while (regex.checkNumberFloor(numberFloor)==false){
+            System.out.println("nhập sai rồi!!nhập lại");
+            numberFloor=scanner.nextLine();
+        }
+        House house = new House(id, serviceName, areaUsed, rentalCosts, maximumPeople, rentalType, standardRoom, otherFacilitie, numberFloor);
         listHouse.add(house);
         writeFile.writeFileHouse(listHouse);
     }
-public static void addNewRoom(){
-        ArrayList<Room> listRoom=new ArrayList<>();
-        Room room=new Room();
-    System.out.println("nhập id");
-    room.setId(scanner.nextLine());
-    System.out.println("nhập tên dịch vụ");
-    room.setServiceName(scanner.nextLine());
-    System.out.println("nhập diện tích sử dụng");
-    room.setAreaUsed(scanner.nextLine());
-    System.out.println("nhập chi phí thuê");
-    room.setRentalCosts(scanner.nextLine());
-    System.out.println("số lượng người tối đa");
-    room.setMaximumPeople(scanner.nextLine());;
-    System.out.println("kiểu thuê");
-    room.setRentalType(scanner.nextLine());
-    System.out.println("dịch vụ miễn phí đi kèm");
-    room.setFreeService(scanner.nextLine());
-    listRoom.add(room);
-   writeFile.writeFileRoom(listRoom);
 
-}
+    public static void addNewRoom() {
+        ArrayList<Room> listRoom = new ArrayList<>();
+        Regex regex = new Regex();
+        System.out.println("nhập id");
+        String id = scanner.nextLine();
+        while (regex.checkIDRoom(id)==false){
+            System.out.println("nhập sai!!vui lòng nhập lại");
+            id=scanner.nextLine();
+        }
+        System.out.println("nhập tên dịch vụ");
+        String serviceName = scanner.nextLine();
+        while(regex.checkNameService(serviceName)==false){
+            System.out.println("tên dịch vụ sai nhập lại");
+            serviceName=scanner.nextLine();
+        }
+        System.out.println("nhập diện tích sử dụng");
+        String areaUsed = scanner.nextLine();
+        while (regex.checkArea(areaUsed)==false){
+            System.out.println("nhập sai rồi!!! nhập lại");
+            areaUsed=scanner.nextLine();
+        }
+        System.out.println("nhập chi phí thuê");
+        String rentalCosts = scanner.nextLine();
+        while (regex.checkRentalCosts(rentalCosts)==false){
+            System.out.println("nhập sai nhập lại");
+            rentalCosts=scanner.nextLine();
+        }
+        System.out.println("số lượng người tối đa");
+        String maximumPeople = scanner.nextLine();
+        while (regex.checkMaximumPeople(maximumPeople)==false){
+            System.out.println("nhập sai rồi!!! vui lòng nhập lại");
+            maximumPeople=scanner.nextLine();
+        }
+        System.out.println("kiểu thuê");
+        String rentalType = scanner.nextLine();
+        System.out.println("dịch vụ miễn phí đi kèm");
+       String freeService=scanner.nextLine();
+        Room room = new Room(id, serviceName, areaUsed, rentalCosts, maximumPeople, rentalType,freeService);
+        listRoom.add(room);
+        writeFile.writeFileRoom(listRoom);
+
+    }
 
 
 }

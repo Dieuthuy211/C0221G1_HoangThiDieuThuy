@@ -10,10 +10,10 @@ public class Villa extends Services {
     }
 
     public Villa(String standardRoom, String otherFacilitie, String poolArea, String numberFloor) {
-        this.standardRoom = standardRoom;
-        OtherFacilitie = otherFacilitie;
-        this.poolArea = poolArea;
-        this.numberFloor = numberFloor;
+        this.standardRoom = standardRoom;  //tiêu chuẩn phòng
+        OtherFacilitie = otherFacilitie;   //mô tả tiện nghi khác
+        this.poolArea = poolArea;          //diện tích hồ bơi
+        this.numberFloor = numberFloor;    //số tầng
     }
 
     public Villa(String id, String serviceName, String areaUsed, String rentalCosts, String maximumPeople, String rentalType, String standardRoom, String otherFacilitie, String poolArea, String numberFloor) {
