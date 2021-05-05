@@ -15,10 +15,13 @@ public class DanhMucPhuongTien {
             String chon=scanner.nextLine();
             switch (chon){
                 case "1":
+                    ChucNangDanhMuc.themPhuongTien();
                     break;
                 case "2":
+                    ChucNangDanhMuc.hienThi();
                     break;
                 case "3":
+                    ChucNangDanhMuc.xoa();
                     break;
                 case "4":
                     System.exit(0);

@@ -1,33 +1,27 @@
 package model;
 
 public class Room extends Services {
-    private String freeService;
+   private DichVuDiKem dichVuDiKem;
 
     public Room() {
     }
 
-    public Room(String freeService) {
-        this.freeService = freeService;
+    public Room(String maDichVu, String tenDichVu, String dienTichSuDUng, String chiPhiThue, String soNguoiToiDa, String kieuThue, DichVuDiKem dichVuDiKem) {
+        super(maDichVu, tenDichVu, dienTichSuDUng, chiPhiThue, soNguoiToiDa, kieuThue);
+        this.dichVuDiKem = dichVuDiKem;
     }
 
-    public Room(String id, String serviceName, String areaUsed, String rentalCosts, String maximumPeople, String rentalType, String freeService) {
-        super(id, serviceName, areaUsed, rentalCosts, maximumPeople, rentalType);
-        this.freeService = freeService; //dích vụ miễn phí
+    public DichVuDiKem getDichVuDiKem() {
+        return dichVuDiKem;
     }
 
-    public String getFreeService() {
-        return freeService;
-    }
-
-    public void setFreeService(String freeService) {
-        this.freeService = freeService;
+    public void setDichVuDiKem(DichVuDiKem dichVuDiKem) {
+        this.dichVuDiKem = dichVuDiKem;
     }
 
     @Override
     public String toString() {
-        return "Room{" + super.toString() +
-                "freeService='" + freeService + '\'' +
-                '}';
+        return super.toString()+","+ dichVuDiKem.toString();
     }
 
     @Override

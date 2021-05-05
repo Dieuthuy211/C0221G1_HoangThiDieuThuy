@@ -34,7 +34,7 @@ public class QuanLyChucNang {
                     themNhanVien();
                     break;
                 case "4":
-                  DanhMucPhuongTien.quanLi();
+                  DanhMuc.quanLi();
                     break;
                 case "5":
                     System.exit(0);
@@ -107,7 +107,7 @@ public class QuanLyChucNang {
                    hienThiTatCa();
                    break;
                case "5":
-                   DanhMucPhuongTien.quanLi();
+                   DanhMuc.quanLi();
                    break;
                case "6":
                    System.exit(0);

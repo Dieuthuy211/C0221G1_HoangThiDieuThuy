@@ -2,78 +2,69 @@ package model;
 
 //Customer:khách hàng
 public class Customer {
-    private String id;
-    private String fullName;        //họ tên
-    private String firstName;
-    private String dateOfBirth;    //ngày sinh
-    private String gender;         //giới tinh
-    private String identityCard;   //cmnd
-    private String phone;         //số điện thoại
+    private String hoTen;
+    private String ngaySinh;
+    private String gioiTinh;
+    private String cmnn;
+    private String soDienThoai;
     private String email;
-    private String typeCustomer; //loại khách
-    private String address;      //địa chỉ
+    private String loaiKhach;
+    private String diaChi;
+
 
     public Customer() {
     }
 
-    public Customer(String id, String fullName, String dateOfBirth, String gender, String identityCard, String phone, String email, String typeCustomer, String address) {
-       this.id=id;
-        this.fullName = fullName;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.identityCard = identityCard;
-        this.phone = phone;
+    public Customer(String hoTen, String ngaySinh, String gioiTinh, String cmnn, String soDienThoai, String email, String loaiKhach, String diaChi) {
+        this.hoTen = hoTen;
+        this.ngaySinh = ngaySinh;
+        this.gioiTinh = gioiTinh;
+        this.cmnn = cmnn;
+        this.soDienThoai = soDienThoai;
         this.email = email;
-        this.typeCustomer = typeCustomer;
-        this.address = address;
+        this.loaiKhach = loaiKhach;
+        this.diaChi = diaChi;
+
     }
 
-    public String getId() {
-        return id;
+    public String getHoTen() {
+        return hoTen;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getNgaySinh() {
+        return ngaySinh;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setNgaySinh(String ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
-    public String getGender() {
-        return gender;
+    public String getCmnn() {
+        return cmnn;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCmnn(String cmnn) {
+        this.cmnn = cmnn;
     }
 
-    public String getIdentityCard() {
-        return identityCard;
+    public String getSoDienThoai() {
+        return soDienThoai;
     }
 
-    public void setIdentityCard(String identityCard) {
-        this.identityCard = identityCard;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
     }
 
     public String getEmail() {
@@ -84,42 +75,33 @@ public class Customer {
         this.email = email;
     }
 
-    public String getTypeCustomer() {
-        return typeCustomer;
+    public String getLoaiKhach() {
+        return loaiKhach;
     }
 
-    public void setTypeCustomer(String typeCustomer) {
-        this.typeCustomer = typeCustomer;
+    public void setLoaiKhach(String loaiKhach) {
+        this.loaiKhach = loaiKhach;
     }
 
-    public String getAddress() {
-        return address;
+    public String getDiaChi() {
+        return diaChi;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String fullName) {
-        this.address = getFullName().split(" ")[getFullName().length()-1];
-    }
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "fullName='" + fullName + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", gender='" + gender + '\'' +
-                ", identityCard='" + identityCard + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", typeCustomer='" + typeCustomer + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+        return
+                hoTen +
+                "," + ngaySinh +
+                "," + gioiTinh +
+                "," + cmnn +
+                "," + soDienThoai +
+                "," + email +
+                "," + loaiKhach +
+                "," + diaChi;
     }
-
 }

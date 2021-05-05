@@ -1,82 +1,85 @@
 package model;
 
 public abstract class Services {
-    private String id;           //mã dịch vụ
-    private String ServiceName;  //ten dịch vụ
-    private String areaUsed;     //diện tích sử dụng
-    private String rentalCosts;  //chi phí thuê
-    private String maximumPeople; //người tối đa
-    private String rentalType;     //kiểu thuê
+    private String maDichVu;
+    private String tenDichVu;
+    private String DienTichSuDUng;
+    private String chiPhiThue;
+    private String soNguoiToiDa;
+    private String kieuThue;
 
     public Services() {
     }
 
-    public Services(String id, String serviceName, String areaUsed, String rentalCosts, String maximumPeople, String rentalType) {
-        this.id = id;
-        ServiceName = serviceName;
-        this.areaUsed = areaUsed;
-        this.rentalCosts = rentalCosts;
-        this.maximumPeople = maximumPeople;
-        this.rentalType = rentalType;
+    public Services(String maDichVu, String tenDichVu, String dienTichSuDUng, String chiPhiThue, String soNguoiToiDa, String kieuThue) {
+        this.maDichVu = maDichVu;
+        this.tenDichVu = tenDichVu;
+        DienTichSuDUng = dienTichSuDUng;
+        this.chiPhiThue = chiPhiThue;
+        this.soNguoiToiDa = soNguoiToiDa;
+        this.kieuThue = kieuThue;
     }
 
-    public String getId() {
-        return id;
+    public String getMaDichVu() {
+        return maDichVu;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMaDichVu(String maDichVu) {
+        this.maDichVu = maDichVu;
     }
 
-    public String getServiceName() {
-        return ServiceName;
+    public String getTenDichVu() {
+        return tenDichVu;
     }
 
-    public void setServiceName(String serviceName) {
-        ServiceName = serviceName;
+    public void setTenDichVu(String tenDichVu) {
+        this.tenDichVu = tenDichVu;
     }
 
-    public String getAreaUsed() {
-        return areaUsed;
+    public String getDienTichSuDUng() {
+        return DienTichSuDUng;
     }
 
-    public void setAreaUsed(String areaUsed) {
-        this.areaUsed = areaUsed;
+    public void setDienTichSuDUng(String dienTichSuDUng) {
+        DienTichSuDUng = dienTichSuDUng;
     }
 
-    public String getRentalCosts() {
-        return rentalCosts;
+    public String getChiPhiThue() {
+        return chiPhiThue;
     }
 
-    public void setRentalCosts(String rentalCosts) {
-        this.rentalCosts = rentalCosts;
+    public void setChiPhiThue(String chiPhiThue) {
+        this.chiPhiThue = chiPhiThue;
     }
 
-    public String getMaximumPeople() {
-        return maximumPeople;
+    public String getSoNguoiToiDa() {
+        return soNguoiToiDa;
     }
 
-    public void setMaximumPeople(String maximumPeople) {
-        this.maximumPeople = maximumPeople;
+    public void setSoNguoiToiDa(String soNguoiToiDa) {
+        this.soNguoiToiDa = soNguoiToiDa;
     }
 
-    public String getRentalType() {
-        return rentalType;
+    public String getKieuThue() {
+        return kieuThue;
     }
 
-    public void setRentalType(String rentalType) {
-        this.rentalType = rentalType;
+    public void setKieuThue(String kieuThue) {
+        this.kieuThue = kieuThue;
     }
 
     @Override
     public String toString() {
-        return "id='" + id + '\'' +
-                ", ServiceName='" + ServiceName + '\'' +
-                ", areaUsed='" + areaUsed + '\'' +
-                ", rentalCosts='" + rentalCosts + '\'' +
-                ", maximumPeople='" + maximumPeople + '\'' +
-                ", rentalType='" + rentalType + '\'' ;
+        return
+               maDichVu + "," +
+                 tenDichVu + "," +
+                 DienTichSuDUng + "," +
+                       chiPhiThue + "," +
+                soNguoiToiDa + "," +
+                kieuThue ;
     }
+
+
 
     public abstract void showInFor();
 }

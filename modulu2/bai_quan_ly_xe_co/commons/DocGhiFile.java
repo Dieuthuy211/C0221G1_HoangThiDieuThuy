@@ -17,7 +17,7 @@ public class DocGhiFile {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter(file);
+            fileWriter = new FileWriter(file,trangThai);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (PhuongTien phuongTien : phuongTienList) {
                 bufferedWriter.write(phuongTien.toString());

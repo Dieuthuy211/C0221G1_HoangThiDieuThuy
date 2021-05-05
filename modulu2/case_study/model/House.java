@@ -1,57 +1,49 @@
 package model;
 
 public class House extends Services {
-    private String standardRoom;
-    private String OtherFacilitie;
-    private String numberFloor;
+    private String tieuChuanPhong;
+    private String tienNghiKhac;
+    private String soTang;
 
     public House() {
     }
 
-    public House(String standardRoom, String otherFacilitie, String numberFloor) {
-        this.standardRoom = standardRoom;
-        OtherFacilitie = otherFacilitie;
-        this.numberFloor = numberFloor;
+    public House(String maDichVu, String tenDichVu, String dienTichSuDUng, String chiPhiThuê, String soNguoiToiDa, String kieuThue, String tieuChuanPhong, String tienNghiKhac, String soTang) {
+        super(maDichVu, tenDichVu, dienTichSuDUng, chiPhiThuê, soNguoiToiDa, kieuThue);
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.tienNghiKhac = tienNghiKhac;
+        this.soTang = soTang;
     }
 
-    public House(String id, String serviceName, String areaUsed, String rentalCosts, String maximumPeople, String rentalType, String standardRoom, String otherFacilitie, String numberFloor) {
-        super(id, serviceName, areaUsed, rentalCosts, maximumPeople, rentalType);
-        this.standardRoom = standardRoom;
-        OtherFacilitie = otherFacilitie;
-        this.numberFloor = numberFloor;
+    public String getTieuChuanPhong() {
+        return tieuChuanPhong;
     }
 
-    public String getStandardRoom() {
-        return standardRoom;
+    public void setTieuChuanPhong(String tieuChuanPhong) {
+        this.tieuChuanPhong = tieuChuanPhong;
     }
 
-    public void setStandardRoom(String standardRoom) {
-        this.standardRoom = standardRoom;
+    public String getTienNghiKhac() {
+        return tienNghiKhac;
     }
 
-    public String getOtherFacilitie() {
-        return OtherFacilitie;
+    public void setTienNghiKhac(String tienNghiKhac) {
+        this.tienNghiKhac = tienNghiKhac;
     }
 
-    public void setOtherFacilitie(String otherFacilitie) {
-        OtherFacilitie = otherFacilitie;
+    public String getSoTang() {
+        return soTang;
     }
 
-    public String getNumberFloor() {
-        return numberFloor;
-    }
-
-    public void setNumberFloor(String numberFloor) {
-        this.numberFloor = numberFloor;
+    public void setSoTang(String soTang) {
+        this.soTang = soTang;
     }
 
     @Override
     public String toString() {
-        return "House{" + super.toString() +
-                "standardRoom='" + standardRoom + '\'' +
-                ", OtherFacilitie='" + OtherFacilitie + '\'' +
-                ", numberFloor='" + numberFloor + '\'' +
-                '}';
+        return super.toString()+","+ tieuChuanPhong +
+                "," + tienNghiKhac +
+                ", " + soTang;
     }
 
     @Override
