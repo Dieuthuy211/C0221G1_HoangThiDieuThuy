@@ -1,17 +1,14 @@
 package controllers;
 
-import commons.DocGhiFile;
 import commons.DocGhiFileStudy;
-import commons.GhiDocFile;
 import model.*;
 
 import java.io.File;
 import java.util.*;
 
-import static controllers.QuanLyChucNang.sapXep;
-
 public class HamControllers {
     static Scanner scanne = new Scanner(System.in);
+    private String chiPhiThue;
 
     public static void themMoiDichVu() {
         do {
@@ -65,7 +62,7 @@ public class HamControllers {
         String maHouse = NhapDuLieu.nhapMaHouse();
         String ten = NhapDuLieu.nhapTenDichVu();
         String dienTichSuDdung = NhapDuLieu.nhapdienTichSuDung();
-        String chiPhiThue = NhapDuLieu.nhapChiPhiThue();
+        String chiPhiThue =NhapDuLieu.nhapChiPhiThue();
         String soNguoi = NhapDuLieu.nhapSoNguoiToiDa();
         String kieuThue = NhapDuLieu.nhapKieuThue();
         String tieuchuanPhong = NhapDuLieu.nhapTieuChuanPhong();
@@ -95,8 +92,8 @@ public class HamControllers {
         Villa villa = new Villa(maVilla, ten, dienTichSuDdung, chiPhiThue, soNguoi, kieuThue, tieuchuanPhong, tienNghiKhac, dienTichHoBoi, soTang);
         List<Villa> villaList = new ArrayList<>();
         villaList.add(villa);
-        File file = new File("case_study/commons/DocGhiFileStudy.java");
-        DocGhiFileStudy.ghiFileVilla(villaList, true, file);
+        File filevilla = new File("D:\\C0221G1_HoangThiDieuThuy\\modulu2\\case_study\\data\\Villa.csv");
+        DocGhiFileStudy.ghiFileVilla(villaList, true,filevilla);
     }
 
     public static void hienThiDichVu() {
@@ -332,5 +329,5 @@ public class HamControllers {
         }
     }
 
-public static void
+
 }

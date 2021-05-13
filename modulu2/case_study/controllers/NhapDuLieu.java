@@ -50,17 +50,16 @@ public class NhapDuLieu {
     public static String nhapdienTichSuDung(){
         System.out.println("nhập diện tích sử dụng");
         String dientich=scanner.nextLine();
-            while (Integer.parseInt(dientich)<30){
+            while (DinhdangNhap.kiemTraDienTich(dientich)==false){
                 System.err.println("nhập sai!!! vui lòng nhâp lại");
                 dientich=scanner.nextLine();
             }
-
         return dientich;
     }
     public static String nhapSoNguoiToiDa(){
         System.out.println("nhập số lượng người tối đa của dịch vụ");
         String soNguoi=scanner.nextLine();
-            while (Integer.parseInt(soNguoi)>20&&Integer.parseInt(soNguoi)<0){
+            while (DinhdangNhap.kiemSo(soNguoi)==false){
                 System.err.println("nhập sai vui lòng nhập lại");
                 soNguoi=scanner.nextLine();
             }
@@ -85,7 +84,7 @@ public class NhapDuLieu {
     public static String nhapDienTichHoBoi(){
         System.out.println("nhập diện tích hồ bơi");
         String dientich=scanner.nextLine();
-            while (Integer.parseInt(dientich)<30){
+            while (DinhdangNhap.kiemTraDienTich(dientich)==false){
                 System.out.println("nhập sai!!! vui lòng nhâp lại");
                 dientich=scanner.nextLine();
             }
@@ -95,12 +94,12 @@ public class NhapDuLieu {
     public static String nhapSoTang(){
         System.out.println("nhâp tầng dich vụ");
         String soTang=scanner.nextLine();
-        if(Integer.parseInt(soTang)<0){
-            while (Integer.parseInt(soTang)>0){
+
+            while (DinhdangNhap.kiemSo(soTang)==false){
                 System.err.println("nhập sai!!!nhập lại");
                 soTang=scanner.nextLine();
             }
-        }
+
         return soTang;
     }
     public static String nhapTenDichVuDiKem(){
@@ -129,7 +128,7 @@ public class NhapDuLieu {
     public static String nhapChiPhiThue(){
         System.out.println("nhập chi phí thuê");
         String chiPhiThue= scanner.nextLine();
-        while (Integer.parseInt(chiPhiThue)<0){
+        while (DinhdangNhap.kiemSo(chiPhiThue)==false){
             System.err.println("nhập sai nhập lại");
             chiPhiThue=scanner.nextLine();
         }
