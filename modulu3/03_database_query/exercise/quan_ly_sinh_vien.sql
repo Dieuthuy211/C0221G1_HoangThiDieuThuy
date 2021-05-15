@@ -22,5 +22,5 @@ select student.student_name,`subject`.subject_name,mark.mark
 from mark
 join student on student.id_student=mark.id_student
 join `subject` on `subject`.id_subject=mark.id_subject
-order by mark.mark ,student.student_name;
+order by mark.mark ,student.student_name desc;
 
