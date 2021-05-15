@@ -22,7 +22,8 @@ left join hop_dong hp on hp.id_khach_hang=k.id_khach_hang
 left join loai_khach lk on lk.id_loai_khach=k.id_loai_khach
 where id_hop_dong is not null and
 lk.ten_loai_khach="Diamond" 
-group by id_hop_dong;
+group by id_hop_dong
+order by dat_phong;
 
 
 -- 5.	Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
