@@ -2,28 +2,23 @@ use furama;
 
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-select  dk.id_dich_vu_di_kem,dk.ten_dich_vu_di_kem,dk.gia,dk.trang_thai_kha_dung
-from khach_hang k
-join hop_dong hd on hd.id_khach_hang=k.id_khach_hang
-join hop_dong_chi_tiet ht on ht.id_hop_dong=hd.id_hop_dong
-join dich_vu_di_kem dk on dk.id_dich_vu_di_kem=ht.id_dich_vu_di_kem
-group by dk.id_dich_vu_di_kem
-having dk.id_dich_vu_di_kem>=all(select max(id_dich_vu_di_kem)
-                                 from dich_vu_di_kem);
+select ten_dich_vu_di_kem,gia,max(so_lan_su_dung) 
+from  (select dk.ten_dich_vu_di_kem,dk.gia,dk.don_vi,sum(ht.so_luong) as so_lan_su_dung
+      from dich_vu_di_kem dk
+	  inner join hop_dong_chi_tiet ht on dk.id_dich_vu_di_kem = ht.id_dich_vu_di_kem
+      inner join hop_dong hd on hd.id_hop_dong = ht.id_hop_dong
+	  group by dk.ten_dich_vu_di_kem)So_lan_su_dung;
+      
 
--- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
-select hd.id_Hop_dong,
-       lv.ten_loai_dich_vu,
-       dk.ten_dich_vu_di_kem,
-        count(dk.id_dich_vu_di_kem) as so_luong_dich_vu_di_kem
-from hop_dong hd
-join dich_vu dv on dv.id_dich_vu=hd.id_dich_vu
-join loai_dich_vu lv on lv.id_loai_dich_vu=dv.id_loai_dich_vu
-join hop_dong_chi_tiet ht on ht.id_hop_dong=hd.id_hop_dong
-join dich_vu_di_kem dk on dk.id_dich_vu_di_kem=ht.id_dich_vu_di_kem
-group by  ht.id_hop_dong_chi_tiet
-having so_luong_dich_vu_di_kem=1;     
-	 
+-- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.   
+select ten_dich_vu_di_kem,gia,tong_so
+from  (select dk.ten_dich_vu_di_kem,dk.gia,dk.don_vi,sum(ht.so_luong) as so_lan_su_dung
+      from dich_vu_di_kem dk
+	  inner join hop_dong_chi_tiet ht on dk.id_dich_vu_di_kem = ht.id_dich_vu_di_kem
+      inner join hop_dong hd on hd.id_hop_dong = ht.id_hop_dong
+	  group by dk.ten_dich_vu_di_kem)so_lan_su_dung
+where so_lan_su_dung=1;
+
 
 -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
 select n.id_nhan_vien,n.ho_ten,n.sdt,n.dia_chi,

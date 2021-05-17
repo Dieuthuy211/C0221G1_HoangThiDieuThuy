@@ -36,7 +36,4 @@ where dv.id_dich_vu  in( select hd.id_dich_vu
 						  where ((year(ngay_lam_hop_dong)=2019) 
 						  and (month(ngay_lam_hop_dong) in (10,11,12))
                            and not (month(ngay_lam_hop_dong) in (1,2,3,4,5,6))))
-group by ht.id_dich_vu_di_kem;           
-           
-            
-
+group by ht.id_dich_vu_di_kem;         
