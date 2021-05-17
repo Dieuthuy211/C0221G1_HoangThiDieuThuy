@@ -24,5 +24,5 @@ select s.id_student,s.student_name,avg(mark) as diem_trung_binh
 from student s
 join mark m on m.id_student=s.id_student
 group by s.id_student
-having diem_trung_binh<= all(select avg(mark) from mark m group by m.id_student);
+having diem_trung_binh>= all(select avg(mark) from mark m group by m.id_student);
 
