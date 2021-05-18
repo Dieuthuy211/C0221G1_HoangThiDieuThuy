@@ -5,8 +5,8 @@ use furama;
 select hd.id_hop_dong, hd.ngay_lam_hop_Dong,hd.ngay_ket_thuc,
 count(id_dich_vu_di_kem) as so_luong_dich_vu_di_kem
 from hop_dong hd
-join hop_dong_chi_tiet dk on dk.id_hop_dong=hd.id_hop_dong
-group by dk.id_dich_vu_di_kem;
+join hop_dong_chi_tiet dt on dt.id_hop_dong=hd.id_hop_dong
+group by dt.id_hop_dong;
        
 -- 11.	Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang là “Diamond” và có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
 select k.id_khach_hang,k.dia_chi,
@@ -31,9 +31,10 @@ join nhan_vien n on n.id_nhan_vien= hd.id_hop_dong
 join khach_hang k on k.id_khach_hang=hd.id_khach_hang
 join dich_vu dv on dv.id_dich_vu=hd.id_dich_vu
 join hop_dong_chi_tiet ht on ht.id_hop_dong =hd.id_hop_dong
-where dv.id_dich_vu  in( select hd.id_dich_vu
-					     from hop_dong hd
-						  where ((year(ngay_lam_hop_dong)=2019) 
-						  and (month(ngay_lam_hop_dong) in (10,11,12))
-                           and not (month(ngay_lam_hop_dong) in (1,2,3,4,5,6))))
-group by ht.id_dich_vu_di_kem;         
+where (hd.ngay_lam_hop_dong between 2019-10-1 and 2019-12-31)
+and dv.id_dich_vu   not in( select hd.id_dich_vu
+							from hop_dong hd
+							where hd.ngay_lam_hop_dong between 2019-1-1 and 2019-6-30)
+group by ht.id_hop_dong_chi_tiet ;
+  
+     

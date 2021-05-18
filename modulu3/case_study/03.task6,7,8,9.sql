@@ -19,11 +19,11 @@ select dv.id_dich_vu,dv.ten_dich_vu,dv.so_nguoi_toi_da,dv.chi_phi_thue,
 from dich_vu dv
 join loai_dich_vu l on l.id_loai_dich_vu=dv.id_loai_dich_vu
 join hop_dong hd on hd.id_dich_vu=dv.id_dich_vu
-where dv.id_dich_vu in(select hd.id_dich_vu
-                       from hop_dong hd 
-                       where (year(ngay_lam_hop_dong)=2018)
-                       and (not year(ngay_lam_hop_dong) =2019)
-                       );
+where (year(hd.ngay_lam_hop_dong)=2018) 
+and dv.id_dich_vu not in(select hd.id_dich_vu
+                          from hop_dong hd 
+                          where (year(ngay_lam_hop_dong)=2019)
+                          );
                        
                        
 --  8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
@@ -45,12 +45,9 @@ select distinctrow ho_ten
 from khach_hang;
   
 --   9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
-  select dv.id_dich_vu,dv.ten_dich_vu,
-       sum(dv.chi_phi_thue+ht.so_luong*dk.gia) as tong_tien_thang
-  from hop_dong hd
-  join dich_vu dv on dv.id_dich_vu=hd.id_dich_vu
-  join hop_dong_chi_tiet ht on ht.id_hop_dong=hd.id_hop_dong
-  join dich_vu_di_kem dk on dk.id_dich_vu_di_kem=ht.id_dich_vu_di_kem
-  where year(ngay_lam_hop_dong)=2019
-  group by month(ngay_lam_hop_dong);
+ select month(ngay_lam_hop_dong) as thang, count(id_khach_hang) as so_lan_khach_dat_phong
+ from hop_dong
+ where year(ngay_lam_hop_dong)=2019
+ group by month(ngay_lam_hop_dong);
+ 
                        
