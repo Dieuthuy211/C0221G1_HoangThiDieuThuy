@@ -2,12 +2,15 @@ use furama;
 
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-select ten_dich_vu_di_kem,gia,max(so_lan_su_dung) 
-from  (select dk.ten_dich_vu_di_kem,dk.gia,dk.don_vi,sum(ht.so_luong) as so_lan_su_dung
-      from dich_vu_di_kem dk
-	  inner join hop_dong_chi_tiet ht on dk.id_dich_vu_di_kem = ht.id_dich_vu_di_kem
-      inner join hop_dong hd on hd.id_hop_dong = ht.id_hop_dong
-	  group by dk.ten_dich_vu_di_kem)So_lan_su_dung;
+select ten_dich_vu_di_kem,sum(ht.so_luong) as so_lan_su_dung
+from dich_vu_di_kem dt
+join hop_dong_chi_tiet ht on ht.id_dich_vu_di_kem=dt.id_dich_vu_di_kem
+group by ht.id_hop_dong_chi_tiet
+having so_lan_su_dung>=all(select sum(ht.so_luong)
+                           from dich_vu_di_kem dk
+                           join hop_dong_chi_tiet ht on ht.id_dich_vu_di_kem=dk.id_dich_vu_di_kem
+                           group by ht.id_hop_dong_chi_tiet);
+
       
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.   
