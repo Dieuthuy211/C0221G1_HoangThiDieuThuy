@@ -30,6 +30,7 @@ from products;
 update view_product
 set product_price=6000
 where product_price=5000;
+
 drop view view_product;
 
 -- Tạo store procedure 
@@ -39,9 +40,6 @@ begin
 select * from products;
 end 
 // delimiter ;
-
-
-
 
 delimiter //
 create procedure add_product(p_id int,
@@ -55,7 +53,7 @@ begin
 insert into products
 values(p_id,p_code,p_name,p_price,p_amount,p_description,p_status);
 end 
- //delimiter ;
+// delimiter ;
 
 call add_product(4,4,"sap mau",15000,3,"12 mau","con");
 
@@ -80,9 +78,10 @@ set id=p_id,
     product_status=p_status
 where id=search_id;
 end 
+
+
 // delimiter ;
 call edit_product(3,5,5,"but xoa",10000,5,"mau xanh","con");
-
 
 delimiter //
 create procedure delete_product(in p_id int)
