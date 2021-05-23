@@ -1,8 +1,53 @@
 h1{background: blueviolet}
-div{background: darkgray}
 .can-anh{
    margin-left: 30px ;
 }
-a{margin-left: 100px}
-#doremon{margin-left: 170px}
-select{background: darkgray;}
+input{
+   position: relative;
+   top: -5px;
+}
+.truyen{margin-left: 100px}
+.doremon{margin-left: 170px}
+div{
+   height: 200px;
+}
+#menu{
+   font-family: Arial;
+   width: 100%;
+   height: 40px;
+   padding: 0;
+   margin: 0;
+   background: darkgray;
+}
+#menu #root li{
+   margin: 0;
+   padding: 0;
+
+}
+#root li {
+   float: left;
+   list-style: none;
+   width: 300px;
+}
+#root li a{
+   text-decoration: none;
+   padding: 0px 15px 0 15px;
+   line-height: 40px;
+   display: block;
+
+}
+.submemu li{
+   background: darkgray;
+   border-bottom: 1px solid black;
+   display: none;
+}
+#root li a:hover{
+   background: rebeccapurple;
+   color: red;
+   transition: ease-in o.6s;
+   -moz-transition: ease-in 0.6s;
+   -webkit-transition:ease-in 0.6s ;
+}
+#root li:hover .submemu li{
+   display: block;
+}
