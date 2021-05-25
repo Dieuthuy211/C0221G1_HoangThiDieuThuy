@@ -1,0 +1,133 @@
+#header {
+    background: aqua;
+    width: 100%;
+    font-family: Algerian;
+    font-size: 80px;
+    height: 200px;
+    position: fixed;
+    top: 0;
+}
+
+#logo {
+    float: left;
+}
+
+span {
+    margin-left: 200px;
+
+    color: blue;
+    line-height: 200px;
+}
+
+#head-link {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background: coral;
+    font-size: 10px;
+    z-index: 1;
+    text-align: center;
+
+
+}
+
+#head-link #root li {
+    margin: 0;
+    padding: 0;
+
+}
+
+#root li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    width: 25%;
+    right: 0;
+    left: 0;
+
+}
+
+#root li a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    display: block;
+    border-right: 1px solid black;
+
+}
+
+/*.submemu li {*/
+/*    padding: 0;*/
+/*    margin-left: -10px;*/
+/*    background: coral;*/
+/*    border-bottom: 1px solid black;*/
+/*    display: none;*/
+/*}*/
+
+#root li a:hover {
+    background: rebeccapurple;
+    color: red;
+    transition: ease-in 0.6s;
+    -moz-transition: ease-in 0.6s;
+    -webkit-transition: ease-in 0.6s;
+}
+
+/*#root li:hover .submemu li {*/
+/*    display: block;*/
+/*}*/
+
+img {
+
+    width: 200px;
+    height: 200px;
+}
+
+#left-content {
+    float: left;
+    width: 25%;
+    display: block;
+    /*position: absolute;*/
+    border: darkgray solid;
+    margin: 20px;
+
+}
+
+.content {
+    margin: 40px 0px 40px 40px;
+
+}
+
+#right-content {
+    float: left;
+    width: 70%;
+    /*position: absolute;*/
+    z-index: 0;
+}
+
+#video {
+    margin: 40px 0 0 400px;
+}
+
+#day {
+    margin: 210px 0 0 0;
+}
+
+#footer {
+    width: 100%;
+    height: 45px;
+    background-color: #a9a9a9;
+    color: black;
+    margin-bottom: 5px;
+    font-style: italic;
+    padding-top: 17px;
+    font-size: 23px;
+    clear: both;
+    text-align: center;
+
+
+}
+
+
