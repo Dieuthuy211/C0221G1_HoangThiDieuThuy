@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,12 +16,11 @@ public class DiscountServlet extends HttpServlet {
         float  chietKhau=Float.parseFloat(request.getParameter("chietKhau"));
         double luongChietKhau = giaNiemYet * chietKhau * 0.01;
         double giaChietKhau = giaNiemYet*luongChietKhau;
-        PrintWriter writer=response.getWriter();
-        writer.println("<html>");
-        writer.println("<h1>Product Description : "+tenSanPham+"</h1>");
-        writer.println("<h1>Discount Amount : "+luongChietKhau+"</h1>");
-        writer.println("<h1>Discount Price : "+giaChietKhau+"</h1>");
-        writer.println("</html>");
+        request.setAttribute("luongChietKhau",luongChietKhau);
+        request.setAttribute("giaChietKhau",giaChietKhau);
+        request.setAttribute("tenSanPham",tenSanPham);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("display.jsp");
+        requestDispatcher.forward(request,response);
 
     }
 
