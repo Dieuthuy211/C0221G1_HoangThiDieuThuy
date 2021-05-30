@@ -12,9 +12,9 @@
     <a href="/products">back to list pages</a>
 </p>
 
-<table class="table table-striped table-bordered" >
+<table class="table table-striped " >
     <tr>
-        <td>ID</td>
+
         <td>Name</td>
         <td>Price</td>
         <td>Description</td>
@@ -22,26 +22,23 @@
     </tr>
     <tr>
         <form method="post">
-            <td>
 
-
-            </td>
             <td>
-                <legend>name product</legend>
+                <label>name product</label>
                 <input type="text" name="nameProduct" id="nameProduct" value="${products.nameProduct}">
             </td>
             <td>
-                <legend>price</legend>
+                <label>price</label>
                 <input type="text" name="price" id="price" value="${products.price}">
             </td>
             <td>
-                <legend>description</legend>
+                <label>description</label>
                 <input type="text" name="description" id="description" value="${products.description}">
             </td>
             <td>
 
                 <input type="text" name="producer" id="producer" value="${products.producer}">
-                <button type="submit">create product</button>
+                <button type="submit">update product</button>
             </td>
         </form>
     </tr>
