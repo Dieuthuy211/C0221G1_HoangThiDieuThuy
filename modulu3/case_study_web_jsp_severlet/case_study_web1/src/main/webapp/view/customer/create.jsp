@@ -16,6 +16,9 @@
             <form class="form-horizontal" id="form-edit-client" method="post" action="/customers?action=create">
                 <fieldset>
                     <legend>create</legend>
+                    <c:if test="${message!=null}">
+                        <span>${message}</span>
+                    </c:if>
                     <div class="form-group">
                         <label class="col-md-4 control-label">ID Customer Type</label>
                         <div class="col-md-4">
@@ -53,7 +56,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Date of birth</label>
                         <div class="col-md-4">
-                            <input  name="dateOfBirth" id="dateOfBirth" type="text"
+                            <input  name="dateOfBirth" id="dateOfBirth" type="date"
                                    placeholder="YYYY-MM-DD"
                                    class="form-control input-md">
                             <span class="help-block">Date of birth of your customer</span>

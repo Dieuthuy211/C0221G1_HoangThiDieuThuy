@@ -1,12 +1,13 @@
 package model.service.impl;
 
 import model.bean.Customer;
+import model.bean.ServiceType;
 import model.repository.CustomerRepository;
 import model.service.IService;
 
 import java.util.List;
 
-public class CustomerServiceImp implements IService {
+public class CustomerServiceImp implements IService<Customer> {
     CustomerRepository customerRepository = new CustomerRepository();
 
     @Override
@@ -22,6 +23,7 @@ public class CustomerServiceImp implements IService {
     @Override
     public void save(Customer customer) {
         customerRepository.insertCustomer(customer);
+
     }
 
 
@@ -38,6 +40,11 @@ public class CustomerServiceImp implements IService {
     @Override
     public List<Customer> search(String search) {
         return customerRepository.search(search);
+    }
+
+    @Override
+    public List<ServiceType> select() {
+        return null;
     }
 
 

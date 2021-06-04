@@ -15,7 +15,10 @@
         <div class="col-md-12">
             <form class="form-horizontal" id="form-edit-client" method="post" action="/customers?action=edit">
                 <div class="bober">
-                    <legend>create</legend>
+                    <legend>edit</legend>
+                    <c:if test="${message!=null}">
+                        <span>${message}</span>
+                    </c:if>
                     <div class="form-group">
                         <label class="col-md-4 control-label" >ID</label>
                         <div class="col-md-4">

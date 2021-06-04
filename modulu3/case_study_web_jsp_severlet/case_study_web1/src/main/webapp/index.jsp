@@ -36,7 +36,7 @@
         <a class="nav-link " href="#" data-toggle="dropdown" aria-expanded="false">Home</a>
       </li>
       <li class="nav-item" style="margin-left: 50px">
-        <a class="nav-link " href="#" data-toggle="dropdown" aria-expanded="false">Employee</a>
+        <a class="nav-link " href="/employees" aria-expanded="false">Employee</a>
       </li>
       <li class="nav-item" style="margin-left: 50px">
 
@@ -44,11 +44,11 @@
       </li>
 
       <li class="nav-item" style="margin-left: 50px">
-        <a class="nav-link " href="#" data-toggle="dropdown" aria-expanded="false">Service</a>
+        <a class="nav-link " href="/services"  aria-expanded="false">Service</a>
       </li>
 
       <li class="nav-item" style="margin-left: 50px">
-        <a class="nav-link " href="#" data-toggle="dropdown" aria-expanded="false">contract</a>
+        <a class="nav-link " href="#"  aria-expanded="false">contract</a>
       </li>
 
     </ul>

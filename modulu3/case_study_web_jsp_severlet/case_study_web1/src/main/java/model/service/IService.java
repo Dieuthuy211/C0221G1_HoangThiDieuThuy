@@ -1,19 +1,21 @@
 package model.service;
 
 import model.bean.Customer;
+import model.bean.Service;
+import model.bean.ServiceType;
 
 import java.util.List;
 
-public interface IService {
-    List<Customer> findAll();
+public interface IService<E> {
+    List<E> findAll();
 
-    void save(Customer customer);
+    void save(E e);
 
-    Customer findById(int id);
+    E findById(int id);
 
-   boolean update(Customer customer);
+   boolean update(E e);
 
     boolean remove(int id);
-    List<Customer> search(String search);
-
+    List<E> search(String search);
+    List<ServiceType> select();
 }
