@@ -1,7 +1,7 @@
 package model.repository;
 
-import model.bean.Customer;
-import model.bean.CustomerType;
+import model.bean.customer.Customer;
+import model.bean.customer.CustomerType;
 
 
 import java.sql.Connection;

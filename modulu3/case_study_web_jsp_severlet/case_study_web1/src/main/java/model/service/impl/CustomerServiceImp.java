@@ -1,6 +1,14 @@
 package model.service.impl;
 
-import model.bean.*;
+import model.bean.contract.AmountOfServicesIncluded;
+import model.bean.contract.AttachService;
+import model.bean.customer.Customer;
+import model.bean.customer.CustomerType;
+import model.bean.employee.Division;
+import model.bean.employee.EducationDegree;
+import model.bean.employee.Position;
+import model.bean.service.RentType;
+import model.bean.service.ServiceType;
 import model.repository.CustomerRepository;
 import model.service.IService;
 
@@ -74,6 +82,11 @@ public class CustomerServiceImp implements IService<Customer> {
 
     @Override
     public List<AttachService> selectAttachService() {
+        return null;
+    }
+
+    @Override
+    public List<AmountOfServicesIncluded> selectAmount() {
         return null;
     }
 

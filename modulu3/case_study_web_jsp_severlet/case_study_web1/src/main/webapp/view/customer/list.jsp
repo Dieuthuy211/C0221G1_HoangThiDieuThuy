@@ -61,6 +61,7 @@
 <div class="row">
     <div class="container-fluid border pt-5 mt-5">
         <h1 class="text-center">List Customer</h1>
+        <a href="/userService">list of customers using the service </a>
         <div class="row" style="margin-left: 20px">
                 <div ><a class="btn btn-default-btn-xs btn-success"
                                                                         href="/customers?action=create">

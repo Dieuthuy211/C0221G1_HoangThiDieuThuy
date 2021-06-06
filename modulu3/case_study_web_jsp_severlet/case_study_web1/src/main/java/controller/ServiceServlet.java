@@ -1,9 +1,9 @@
 package controller;
 
 
-import model.bean.RentType;
-import model.bean.Service;
-import model.bean.ServiceType;
+import model.bean.service.RentType;
+import model.bean.service.Service;
+import model.bean.service.ServiceType;
 import model.service.IService;
 import model.service.impl.ServiceImp;
 

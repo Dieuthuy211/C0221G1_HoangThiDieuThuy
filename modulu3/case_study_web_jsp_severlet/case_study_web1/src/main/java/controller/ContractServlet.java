@@ -1,6 +1,9 @@
 package controller;
 
-import model.bean.*;
+import model.bean.contract.ConTract;
+import model.bean.customer.Customer;
+import model.bean.employee.Employee;
+import model.bean.service.Service;
 import model.service.IService;
 import model.service.impl.ContractImpl;
 import model.service.impl.CustomerServiceImp;
@@ -38,7 +41,21 @@ public class ContractServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
 
+            default:
+             showContract(request,response);
+                break;
+        }
+
+
+    }
+
+    private void showContract(HttpServletRequest request, HttpServletResponse response) {
         List<Employee> employees=this.employeeService.findAll();
         request.setAttribute("employees", employees);
         List<Customer> customers=this.customerService.findAll();
@@ -53,7 +70,6 @@ public class ContractServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
 

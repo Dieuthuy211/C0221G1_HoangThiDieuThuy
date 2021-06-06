@@ -1,7 +1,9 @@
 package controller;
 
-import model.bean.*;
-import model.repository.ContractDetailRepository;
+import model.bean.contract.AttachService;
+import model.bean.contract.ConTract;
+import model.bean.contract.ContractDetail;
+import model.bean.customer.Customer;
 import model.service.IService;
 import model.service.impl.ContractDetailImp;
 import model.service.impl.ContractImpl;
@@ -32,7 +34,7 @@ IService customerService=new CustomerServiceImp();
                 create(request, response);
                 break;
             default:
-                doGet(request,response);
+                showCreate(request,response);
                 break;
         }
     }
@@ -40,6 +42,19 @@ IService customerService=new CustomerServiceImp();
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            default:
+                showCreate(request,response);
+                break;
+        }
+    }
+
+    private void showCreate(HttpServletRequest request, HttpServletResponse response) {
+
         List<AttachService> attachServices=this.contractDetailService.selectAttachService();
         request.setAttribute("attachServices", attachServices);
         List<Customer> customers=this.customerService.findAll();
@@ -55,6 +70,7 @@ IService customerService=new CustomerServiceImp();
             e.printStackTrace();
         }
     }
+
     private void create(HttpServletRequest request, HttpServletResponse response) {
         int contractId = Integer.parseInt(request.getParameter("contractId"));
         int attachServiceId = Integer.parseInt(request.getParameter("attachServiceId"));

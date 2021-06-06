@@ -1,9 +1,7 @@
 package model.repository;
 
-import model.bean.ConTract;
-import model.bean.Customer;
-import model.bean.Employee;
-import model.bean.Service;
+import model.bean.contract.ConTract;
+import model.bean.customer.Customer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,7 +15,34 @@ public class ContractRepository {
     final String SELECT_CONTRACT="select* from contract";
     final String INSERT_CONTRACT="insert into contract (employee_id,customer_id,service_id,contract_start_date,contract_end_date,contract_deposit,contract_total)\n" +
             "values  (?,?,?,?,?,?,?)";
+    final String UPDATE_CONTRACT="update contract\n" +
+            "set employee_id=?, customer_id=?,service_id=?,contract_start_date?,contract_end_date=?,contract_deposit=?,contract_total=?\n" +
+            "where contract_id=?";
 
+    public boolean update(ConTract conTract) {
+        boolean rowUpdated = false;
+        Connection connection = basaRepository.connectDataBase();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(UPDATE_CONTRACT);
+            preparedStatement.setInt(1, conTract.getEmployeeId());
+            preparedStatement.setInt(2, conTract.getCustomerId());
+            preparedStatement.setInt(3, conTract.getServiceId());
+            preparedStatement.setString(4, conTract.getContractStartDate());
+            preparedStatement.setString(5, conTract.getContractEndDate());
+            preparedStatement.setInt(6, conTract.getDeposit());
+            preparedStatement.setInt(7, conTract.getTotal());
+            preparedStatement.setInt(8, conTract.getContractId());
+            rowUpdated = preparedStatement.executeUpdate() > 0;
+            preparedStatement.close();
+            connection.close();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return rowUpdated;
+
+    }
     public void insertContract(ConTract conTract) {
         Connection connection = basaRepository.connectDataBase();
         PreparedStatement preparedStatement = null;

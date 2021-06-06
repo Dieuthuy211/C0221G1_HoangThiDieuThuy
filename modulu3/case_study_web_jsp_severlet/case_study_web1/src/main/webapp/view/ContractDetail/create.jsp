@@ -12,7 +12,7 @@
 
 <div class="container border">
     <div class="row">
-        <form class="form-horizontal" id="form-edit-client" method="post">
+        <form class="form-horizontal" id="form-edit-client" method="post" action="/contractDetails?action=create">
             <legend>create</legend>
             <c:if test="${message!=null}">
                 <span>${message}</span>

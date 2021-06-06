@@ -1,7 +1,15 @@
 package model.service.impl;
 
 
-import model.bean.*;
+import model.bean.contract.AmountOfServicesIncluded;
+import model.bean.contract.AttachService;
+import model.bean.customer.CustomerType;
+import model.bean.employee.Division;
+import model.bean.employee.EducationDegree;
+import model.bean.employee.Position;
+import model.bean.service.RentType;
+import model.bean.service.Service;
+import model.bean.service.ServiceType;
 import model.repository.ServiceRepository;
 import model.service.IService;
 
@@ -20,6 +28,11 @@ ServiceRepository serviceRepository=new ServiceRepository();
 
     @Override
     public List<AttachService> selectAttachService() {
+        return null;
+    }
+
+    @Override
+    public List<AmountOfServicesIncluded> selectAmount() {
         return null;
     }
 

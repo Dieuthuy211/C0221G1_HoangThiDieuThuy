@@ -1,9 +1,7 @@
 package model.repository;
 
-import model.bean.AttachService;
-import model.bean.ConTract;
-import model.bean.ContractDetail;
-import model.bean.Customer;
+import model.bean.contract.AttachService;
+import model.bean.contract.ContractDetail;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,6 +15,32 @@ public class ContractDetailRepository {
     final String INSERT_CONTRACTDETAIL="insert into contract_detail(contract_id,attach_service_id,quantity)\n" +
             " values (?,?,?)";
     final String SELECT_ATTACHSERVICE="select* from attach_service";
+    final String SELECT_CONTRACTDETAIL="select* from contract_detail";
+
+    public List<ContractDetail> listContractDetail() {
+        List<ContractDetail> contractDetails = new ArrayList<>();
+        Connection connection = basaRepository.connectDataBase();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_CONTRACTDETAIL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int contractDetailId = resultSet.getInt("contract_detail_id");
+                int contractId = resultSet.getInt("contract_id");
+                int attachServiceId = resultSet.getInt("attach_service_id");
+                int quantity = resultSet.getInt("quantity");
+
+
+                contractDetails.add(new ContractDetail(contractDetailId,contractId,attachServiceId,quantity));
+
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return contractDetails;
+    }
+
     public void insertContract(ContractDetail contractDetail) {
 
         Connection connection = basaRepository.connectDataBase();

@@ -1,6 +1,13 @@
 package model.service;
 
-import model.bean.*;
+import model.bean.contract.AmountOfServicesIncluded;
+import model.bean.contract.AttachService;
+import model.bean.customer.CustomerType;
+import model.bean.employee.Division;
+import model.bean.employee.EducationDegree;
+import model.bean.employee.Position;
+import model.bean.service.RentType;
+import model.bean.service.ServiceType;
 
 import java.util.List;
 
@@ -22,6 +29,7 @@ public interface IService<E> {
     List<EducationDegree> selectEducationDegree();
     List<RentType> selectRentType();
     List<AttachService> selectAttachService();
+    List<AmountOfServicesIncluded> selectAmount();
 
 
 }

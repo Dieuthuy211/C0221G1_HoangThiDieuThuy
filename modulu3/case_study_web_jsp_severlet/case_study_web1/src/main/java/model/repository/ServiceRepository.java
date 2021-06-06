@@ -1,8 +1,8 @@
 package model.repository;
 
-import model.bean.RentType;
-import model.bean.Service;
-import model.bean.ServiceType;
+import model.bean.service.RentType;
+import model.bean.service.Service;
+import model.bean.service.ServiceType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

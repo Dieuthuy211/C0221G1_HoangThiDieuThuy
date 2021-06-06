@@ -1,6 +1,9 @@
 package model.repository;
 
-import model.bean.*;
+import model.bean.employee.Division;
+import model.bean.employee.EducationDegree;
+import model.bean.employee.Employee;
+import model.bean.employee.Position;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

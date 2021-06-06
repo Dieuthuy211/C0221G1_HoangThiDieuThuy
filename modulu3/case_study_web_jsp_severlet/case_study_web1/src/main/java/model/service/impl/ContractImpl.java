@@ -1,6 +1,14 @@
 package model.service.impl;
 
-import model.bean.*;
+import model.bean.contract.AmountOfServicesIncluded;
+import model.bean.contract.AttachService;
+import model.bean.contract.ConTract;
+import model.bean.customer.CustomerType;
+import model.bean.employee.Division;
+import model.bean.employee.EducationDegree;
+import model.bean.employee.Position;
+import model.bean.service.RentType;
+import model.bean.service.ServiceType;
 import model.repository.ContractRepository;
 import model.service.IService;
 
@@ -18,15 +26,13 @@ public class ContractImpl implements IService<ConTract> {
     public void save(ConTract conTract) {
         contractRepository.insertContract(conTract);
     }
-
+    @Override
+    public boolean update(ConTract conTract) {
+        return contractRepository.update(conTract);
+    }
     @Override
     public ConTract findById(int id) {
         return null;
-    }
-
-    @Override
-    public boolean update(ConTract conTract) {
-        return false;
     }
 
     @Override
@@ -72,6 +78,11 @@ public class ContractImpl implements IService<ConTract> {
 
     @Override
     public List<AttachService> selectAttachService() {
+        return null;
+    }
+
+    @Override
+    public List<AmountOfServicesIncluded> selectAmount() {
         return null;
     }
 }
