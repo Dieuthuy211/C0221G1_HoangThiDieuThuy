@@ -2,12 +2,15 @@ package controller;
 
 import model.bean.contract.AmountOfServicesIncluded;
 import model.bean.contract.AttachService;
+import model.bean.contract.ConTract;
 import model.bean.contract.ContractDetail;
 import model.bean.customer.Customer;
+import model.bean.customer.CustomerType;
 import model.bean.customer.CustomerUseService;
+import model.bean.employee.Employee;
+import model.bean.service.Service;
 import model.service.IService;
-import model.service.impl.ContractDetailImp;
-import model.service.impl.CustomerUseServiceImp;
+import model.service.impl.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +24,11 @@ import java.util.List;
 @WebServlet(name = "CustomerUseServiceServlet",urlPatterns = {"/userService"})
 public class CustomerUseServiceServlet extends HttpServlet {
     IService customerUseServiceService=new CustomerUseServiceImp();
-    IService contractDetailService=new ContractDetailImp();
+    IService customerService=new CustomerServiceImp();
+    IService employeeService=new EmployeeServiceImp();
+    IService contractService=new ContractImpl();
+    IService serviceService=new ServiceImp();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
@@ -29,7 +36,7 @@ public class CustomerUseServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "edit":
-//                edit(request, response);
+                edit(request, response);
                 break;
             case "delete":
                 deleteCustomer(request, response);
@@ -54,11 +61,58 @@ public class CustomerUseServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "edit":
-//                showEdit(request, response);
+                showEdit(request, response);
                 break;
             default:
                 showCustomerUseService(request, response);
                 break;
+        }
+    }
+
+    private void showEdit(HttpServletRequest request, HttpServletResponse response) {
+
+        int id = Integer.parseInt(request.getParameter("contractId"));
+        ConTract conTract= (ConTract) contractService.findById(id);
+        List<Customer> customers=customerService.findAll();
+        List<Employee> employees=employeeService.findAll();
+        List<Service> services=serviceService.findAll();
+        request.setAttribute("customers", customers);
+        request.setAttribute("services", services);
+        request.setAttribute("employees", employees);
+        request.setAttribute("conTract", conTract);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customerUseService/edit.jsp");
+
+
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void edit(HttpServletRequest request, HttpServletResponse response) {
+        int contractId = Integer.parseInt(request.getParameter("contractId"));
+        int employeeId = Integer.parseInt(request.getParameter("employeeId"));
+        int customerId = Integer.parseInt(request.getParameter("customerId"));
+        int serviceId = Integer.parseInt(request.getParameter("serviceId"));
+        String contractStartDate = request.getParameter("contractStartDate");
+        String contractEndDate = request.getParameter("contractEndDate");
+        int deposit = Integer.parseInt(request.getParameter("deposit"));
+        int total = Integer.parseInt(request.getParameter("total"));
+
+        ConTract  conTract=new ConTract(contractId,employeeId,customerId,serviceId,contractStartDate,contractEndDate,deposit,total);
+        contractService.update(conTract);
+        request.setAttribute("message","da sua thanh cong");
+
+        request.setAttribute("conTract",conTract);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customerUseService/edit.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
