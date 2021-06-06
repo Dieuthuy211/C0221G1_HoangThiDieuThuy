@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>List product</title>
+    <title>List</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
 
@@ -35,7 +35,7 @@
             <th>Employee Birthday</th>
             <th>Employee Id Card</th>
             <th>Employee Salary</th>
-            <th>Employee Phone/th>
+            <th>Employee Phone</th>
             <th>Employee Email</th>
             <th>Employee Address</th>
             <th>username</th>

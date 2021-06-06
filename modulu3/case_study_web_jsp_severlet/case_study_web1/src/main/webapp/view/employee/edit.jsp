@@ -40,36 +40,30 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">position</label>
                         <div class="col-md-4">
-                            <select name="positionId" value="${employee.positionId}" >
-                                <option value="1">bao ve</option>
-                                <option value="2">phuc vu</option>
-                                <option value="3">le tan</option>
-                                <option value="4">quan ly</option>
-                                <option value="5">giam doc</option>
+                            <select name="positionId" class="form-control">
+                                <c:forEach  var="position" items="${positions}">
+                                    <option value="${position.positionId}" ${position.positionId==position.positionId?"selected":""}>${position.positionName}</option>
+                                </c:forEach>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-4 control-label">education degree(</label>
+                        <label class="col-md-4 control-label">education degree</label>
                         <div class="col-md-4">
-                            <select name="educationDegreeId" value="${employee.educationDegreeId}" >
-                                <option value="1">lao dong pho thong</option>
-                                <option value="2">trung cap</option>
-                                <option value="3">cao dang</option>
-                                <option value="4">dai hoc</option>
-                                <option value="5">sau dai hoc</option>
+                            <select name="educationDegreeId" class="form-control">
+                                <c:forEach  var="educationDegree" items="${educationDegrees}">
+                                    <option value="${educationDegree.educationDegreeId}" ${educationDegree.educationDegreeId==educationDegree.educationDegreeId?"selected":""}>${educationDegree.educationDegreeName}</option>
+                                </c:forEach>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-4 control-label">division</label>
                         <div class="col-md-4">
-                            <select name="divisionId" value="${employee.divisionId}">
-                                <option value="1">bao an</option>
-                                <option value="2">nhan su</option>
-                                <option value="3">hanh chinh</option>
-                                <option value="4">quan li</option>
-                                <option value="5">giam doc</option>
+                            <select name="divisionId" class="form-control">
+                                <c:forEach  var="division" items="${divisions}">
+                                    <option value="${division.divisionId}"${division.divisionId==division.divisionId?"selected":""}>${division.divisionName}</option>
+                                </c:forEach>
                             </select>
                         </div>
                     </div>

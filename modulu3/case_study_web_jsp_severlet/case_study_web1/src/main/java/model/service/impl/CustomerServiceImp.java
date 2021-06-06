@@ -1,7 +1,6 @@
 package model.service.impl;
 
-import model.bean.Customer;
-import model.bean.ServiceType;
+import model.bean.*;
 import model.repository.CustomerRepository;
 import model.service.IService;
 
@@ -44,6 +43,37 @@ public class CustomerServiceImp implements IService<Customer> {
 
     @Override
     public List<ServiceType> select() {
+        return null;
+    }
+
+    @Override
+    public List<CustomerType> selectCustomerType() {
+        return customerRepository.selectCustomerTyPe();
+    }
+
+    @Override
+    public List<Position> selectPosition() {
+        return null;
+    }
+
+    @Override
+    public List<Division> selectDivision() {
+        return null;
+    }
+
+    @Override
+    public List<EducationDegree> selectEducationDegree() {
+        return null;
+    }
+
+
+    @Override
+    public List<RentType> selectRentType() {
+        return null;
+    }
+
+    @Override
+    public List<AttachService> selectAttachService() {
         return null;
     }
 

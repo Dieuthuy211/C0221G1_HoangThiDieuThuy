@@ -1,7 +1,6 @@
 package model.repository;
 
-import model.bean.Customer;
-import model.bean.Employee;
+import model.bean.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,15 +17,77 @@ public class EmployeeRepository {
     final  String SELECT_ONE_EMPLOYEE="select* from employee where employee_id=?";
     final String UPDATE_EMPLOYEE="update employee set employee_name=?,position_id=?,education_degree_id=?,division_id=?,employee_birthday=?,employee_id_card=?,employee_salary=?,employee_phone=?,employee_email=?,employee_address=?,username=null\n" +
             "where employee_id=?";
-    final String DELETE_EMPLOYESS="delete from employee where employee_id=?";
-    final String SEARCH_EMPLOYESSS="select* from employee where employee_name like ?";
+    final String DELETE_EMPLOYEE="delete from employee where employee_id=?";
+    final String SEARCH_EMPLOYEE="select* from employee where employee_name like ?";
+    final  String SELECT_DIVISION="select* from division";
+    final  String SELECT_POSITION="select* from position";
+    final  String SELECT_EDUCATION="select* from education_degree";
+
+public List<Division> selectDivision(){
+    Connection connection=basaRepository.connectDataBase();
+    List<Division> divisions=new ArrayList<>();
+    PreparedStatement preparedStatement;
+    try {
+        preparedStatement=connection.prepareStatement(SELECT_DIVISION);
+        ResultSet resultSet=preparedStatement.executeQuery();
+        while (resultSet.next()){
+            int divisionId=resultSet.getInt("division_id");
+            String divisionName=resultSet.getString("division_name");
+            divisions.add(new Division(divisionId,divisionName));
+        }
+        preparedStatement.close();
+        connection.close();
+    } catch (SQLException throwables) {
+        throwables.printStackTrace();
+    }
+    return divisions;
+}
+    public List<Position> selectPosition(){
+        Connection connection=basaRepository.connectDataBase();
+        List<Position> positions=new ArrayList<>();
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement=connection.prepareStatement(SELECT_POSITION);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int positionId=resultSet.getInt("position_id");
+                String positionName=resultSet.getString("position_name");
+                positions.add(new Position(positionId,positionName));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return positions;
+    }
+
+    public List<EducationDegree> selectEducationDegree(){
+        Connection connection=basaRepository.connectDataBase();
+        List<EducationDegree> educationDegrees=new ArrayList<>();
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement=connection.prepareStatement(SELECT_EDUCATION);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int educationDegreeId=resultSet.getInt("education_degree_id");
+                String educationDegreeName=resultSet.getString("education_degree_name");
+                educationDegrees.add(new EducationDegree(educationDegreeId,educationDegreeName));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return educationDegrees;
+    }
 
 
     public List<Employee> search(String search) {
         Connection connection = basaRepository.connectDataBase();
         List<Employee> list = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_EMPLOYESSS);
+            PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_EMPLOYEE);
             preparedStatement.setString(1, "%"+ search +"%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -59,7 +120,7 @@ public class EmployeeRepository {
         PreparedStatement preparedStatement = null;
         boolean rowDeleted = false;
         try {
-            preparedStatement = connection.prepareStatement(DELETE_EMPLOYESS);
+            preparedStatement = connection.prepareStatement(DELETE_EMPLOYEE);
             preparedStatement.setInt(1, id);
             rowDeleted = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {

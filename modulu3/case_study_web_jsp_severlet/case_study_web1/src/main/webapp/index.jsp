@@ -48,7 +48,10 @@
       </li>
 
       <li class="nav-item" style="margin-left: 50px">
-        <a class="nav-link " href="#"  aria-expanded="false">contract</a>
+        <a class="nav-link " href="/contracts"  aria-expanded="false">contract</a>
+      </li>
+      <li class="nav-item" style="margin-left: 50px">
+        <a class="nav-link " href="/contractDetails"  aria-expanded="false">contract detail</a>
       </li>
 
     </ul>
@@ -62,7 +65,7 @@
 
 <!--body-->
 <div class="container-fluid">
-  <div class="row " style="height: 600px">
+  <div class="row ">
     <div class="col-3 border">
       <div class="row" style="margin:40px 0 10px 10px">
         <img src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg" width="370" height="200">
@@ -95,14 +98,14 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-Night.jpg"
-                     width="1550" height="600">
+                     width="1265" height="600">
                 <div class="carousel-caption">
                   <h3 style="color: white">Khu nghĩ dưỡng âm thực</h3>
                   <p style="color: white">tọa lạc tại bãi biển Đà Nẳng một trong 6 bãi biển đẹp nhất thế giới</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img width="1550" height="600"
+                <img width="1265" height="600"
                      src="https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior_Courtyard.jpg">
                 <div class="carousel-caption">
                   <h3 style="color: white">Khu nghĩ dưỡng âm thực</h3>
@@ -111,7 +114,7 @@
               </div>
               <div class="carousel-item">
                 <img src="https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior-Lobby.jpg"
-                     width="1550" height="600">
+                     width="1265" height="600">
                 <div class="carousel-caption">
                   <h3 style="color: white;">Khu nghĩ dưỡng âm thực</h3>
                   <p style="color: white;">tọa lạc tại bãi biển Đà Nẳng một trong 6 bãi biển đẹp nhất thế giới</p>
@@ -149,7 +152,7 @@
 
 <div class="row">
   <div class="card-footer " style="height: 50px ;width: 100% ">
-    <p style="text-align: center;">Card footer</p>
+    <p style="text-align: center;">@ 2021 case study design</p>
   </div>
 </div>
 

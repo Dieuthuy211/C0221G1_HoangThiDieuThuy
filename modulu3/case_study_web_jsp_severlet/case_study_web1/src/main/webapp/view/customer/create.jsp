@@ -22,12 +22,10 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">ID Customer Type</label>
                         <div class="col-md-4">
-                            <select name="customerType" >
-                                <option value="1">Diamond</option>
-                                <option value="2">Platinium</option>
-                                <option value="3">Gold</option>
-                                <option value="4">Silver</option>
-                                <option value="5">Member</option>
+                            <select class="form-control" name="idCustomerType">
+                                <c:forEach  var="customerType" items="${customerTypes}">
+                                <option value="${customerType.customerTypeId}">${customerType.customerTypeName}</option>
+                                </c:forEach>
                             </select>
 
                         </div>
@@ -46,7 +44,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Gender</label>
                         <div class="col-md-4">
-                            <select name="gender" >
+                            <select class="form-control" name="gender" >
                                 <option value="male">male</option>
                                 <option value="female">female</option>
                             </select>
@@ -57,7 +55,7 @@
                         <label class="col-md-4 control-label">Date of birth</label>
                         <div class="col-md-4">
                             <input  name="dateOfBirth" id="dateOfBirth" type="date"
-                                   placeholder="YYYY-MM-DD"
+
                                    class="form-control input-md">
                             <span class="help-block">Date of birth of your customer</span>
                         </div>

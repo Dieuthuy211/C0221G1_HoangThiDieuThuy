@@ -1,7 +1,6 @@
 package controller;
 
-import model.bean.Customer;
-import model.bean.Employee;
+import model.bean.*;
 import model.service.IService;
 import model.service.impl.EmployeeServiceImp;
 
@@ -144,6 +143,12 @@ public class EmployeeServlet extends HttpServlet {
     private void showEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
        Employee employee= (Employee) this.employeeService.findById(id);
+        List<Position> positions = this.employeeService.selectPosition();
+        request.setAttribute("positions", positions);
+        List<Division> divisions = this.employeeService.selectDivision();
+        request.setAttribute("divisions", divisions);
+        List<EducationDegree> educationDegrees = this.employeeService.selectEducationDegree();
+        request.setAttribute("educationDegrees", educationDegrees);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/edit.jsp");
         request.setAttribute("employee", employee);
         try {
@@ -182,6 +187,13 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void showCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<Position> positions = this.employeeService.selectPosition();
+        request.setAttribute("positions", positions);
+        List<Division> divisions = this.employeeService.selectDivision();
+        request.setAttribute("divisions", divisions);
+        List<EducationDegree> educationDegrees = this.employeeService.selectEducationDegree();
+        request.setAttribute("educationDegrees", educationDegrees);
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/create.jsp");
         try {
             requestDispatcher.forward(request, response);

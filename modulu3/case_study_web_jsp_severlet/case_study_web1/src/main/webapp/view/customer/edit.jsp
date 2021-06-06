@@ -11,19 +11,18 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row border">
+
             <form class="form-horizontal" id="form-edit-client" method="post" action="/customers?action=edit">
                 <div class="bober">
-                    <legend>edit</legend>
+                    <h1 class="text-center">edit</h1>
                     <c:if test="${message!=null}">
                         <span>${message}</span>
                     </c:if>
                     <div class="form-group">
                         <label class="col-md-4 control-label" >ID</label>
                         <div class="col-md-4">
-                            <input id="id" name="id" value="${customer.id}" type="text"
-                                   placeholder="your client's name"
+                            <input id="id" name="id" value="${customer.id}" type="hidden"
                                    class="form-control input-md">
                             <span class="help-block">Id of your customer</span>
                         </div>
@@ -32,12 +31,10 @@
                         <label class="col-md-4 control-label">ID Customer Type</label>
 
                         <div class="col-md-4">
-                            <select name="customerType" >
-                                <option value="1">Diamond</option>
-                                <option value="2">Platinium</option>
-                                <option value="3">Gold</option>
-                                <option value="4">Silver</option>
-                                <option value="5">Member</option>
+                            <select class="form-control" name="idCustomerType" >
+                                    <c:forEach items="${customerTypes}" var="customerType">
+                                        <option value="${customerType.customerTypeId}" ${customerType.customerTypeId==customerType.customerTypeId?"selected":""}>${customerType.customerTypeName}</option>
+                                    </c:forEach>
                             </select>
 
                         </div>
@@ -56,9 +53,9 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Gender</label>
                         <div class="col-md-4">
-                            <select name="gender" >
-                                <option value="male">male</option>
-                                <option value="female">female</option>
+                            <select name="gender" style="width: 370px;height: 35px">
+                                <option value="male" ${customer.gender=='male'?"selected":""}>male</option>
+                                <option value="female" ${customer.gender=='female'?"selected":""}>female</option>
                             </select>
                         </div>
                     </div>
@@ -124,7 +121,6 @@
             </form>
 
 
-        </div>
     </div>
 </div>
 </body>

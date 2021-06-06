@@ -1,8 +1,7 @@
 package model.service.impl;
 
 
-import model.bean.Service;
-import model.bean.ServiceType;
+import model.bean.*;
 import model.repository.ServiceRepository;
 import model.service.IService;
 
@@ -15,14 +14,45 @@ ServiceRepository serviceRepository=new ServiceRepository();
         return serviceRepository.selectServiceType();
     }
     @Override
-    public List<Service> findAll() {
+    public List<RentType> selectRentType() {
+        return serviceRepository.selectRentType();
+    }
+
+    @Override
+    public List<AttachService> selectAttachService() {
         return null;
     }
 
     @Override
-    public void save(Service service) {
-serviceRepository.insertService(service);
+    public List<Service> findAll() {
+        return serviceRepository.listService();
     }
+
+    @Override
+    public void save(Service service) {
+        serviceRepository.insertService(service);
+    }
+
+    @Override
+    public List<CustomerType> selectCustomerType() {
+        return null;
+    }
+
+    @Override
+    public List<Position> selectPosition() {
+        return null;
+    }
+
+    @Override
+    public List<Division> selectDivision() {
+        return null;
+    }
+
+    @Override
+    public List<EducationDegree> selectEducationDegree() {
+        return null;
+    }
+
 
     @Override
     public Service findById(int id) {

@@ -1,8 +1,6 @@
 package model.service;
 
-import model.bean.Customer;
-import model.bean.Service;
-import model.bean.ServiceType;
+import model.bean.*;
 
 import java.util.List;
 
@@ -18,4 +16,12 @@ public interface IService<E> {
     boolean remove(int id);
     List<E> search(String search);
     List<ServiceType> select();
+    List<CustomerType> selectCustomerType();
+    List<Position> selectPosition();
+    List<Division> selectDivision();
+    List<EducationDegree> selectEducationDegree();
+    List<RentType> selectRentType();
+    List<AttachService> selectAttachService();
+
+
 }

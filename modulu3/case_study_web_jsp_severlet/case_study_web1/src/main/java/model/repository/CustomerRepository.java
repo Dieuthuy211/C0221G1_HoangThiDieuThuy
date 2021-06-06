@@ -1,6 +1,7 @@
 package model.repository;
 
 import model.bean.Customer;
+import model.bean.CustomerType;
 
 
 import java.sql.Connection;
@@ -22,6 +23,27 @@ public class CustomerRepository {
     final String SELECT_CUSTOMER = "select*from customer where customer_id=? ";
 
     final String SEARCH_CUSTOMER = "  select * from customer where customer_name like ?";
+    final String SELECT_CUSTOMERTYPE="select*from customer_type";
+
+    public  List<CustomerType> selectCustomerTyPe(){
+        Connection connection=basaRepository.connectDataBase();
+        List<CustomerType> customerTypes=new ArrayList<>();
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement=connection.prepareStatement(SELECT_CUSTOMERTYPE);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int customerTypeId=resultSet.getInt("customer_type_id");
+                String customerTypeName=resultSet.getString("customer_type_name");
+                customerTypes.add(new CustomerType(customerTypeId,customerTypeName));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return  customerTypes;
+    }
 
     public List<Customer> search(String search) {
         Connection connection = basaRepository.connectDataBase();

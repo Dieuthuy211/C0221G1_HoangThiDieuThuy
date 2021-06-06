@@ -1,6 +1,7 @@
 package controller;
 
 
+import model.bean.RentType;
 import model.bean.Service;
 import model.bean.ServiceType;
 import model.service.IService;
@@ -47,6 +48,8 @@ public class ServiceServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ServiceType> serviceTypes= services.select();
         request.setAttribute("serviceTypes", serviceTypes);
+        List<RentType> rentTypes= services.selectRentType();
+        request.setAttribute("rentTypes", rentTypes);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/service/create.jsp");
         try {
             requestDispatcher.forward(request, response);

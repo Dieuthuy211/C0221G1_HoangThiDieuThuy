@@ -1,6 +1,7 @@
 package controller;
 
 import model.bean.Customer;
+import model.bean.CustomerType;
 import model.service.IService;
 import model.service.impl.CustomerServiceImp;
 
@@ -106,8 +107,12 @@ public class CustomerServlet extends HttpServlet {
     private void showEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
        Customer customer= (Customer) customerService.findById(id);
+        List<CustomerType> customerTypes=customerService.selectCustomerType();
+        request.setAttribute("customerTypes", customerTypes);
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         request.setAttribute("customer", customer);
+
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -143,6 +148,8 @@ public class CustomerServlet extends HttpServlet {
 
 
     private void showCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<CustomerType> customerTypes=customerService.selectCustomerType();
+        request.setAttribute("customerTypes", customerTypes);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/create.jsp");
         try {
             requestDispatcher.forward(request, response);
