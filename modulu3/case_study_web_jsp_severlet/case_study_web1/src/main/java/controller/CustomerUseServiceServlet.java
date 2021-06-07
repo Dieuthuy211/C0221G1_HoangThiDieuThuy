@@ -105,7 +105,7 @@ public class CustomerUseServiceServlet extends HttpServlet {
         contractService.update(conTract);
         request.setAttribute("message","da sua thanh cong");
 
-        request.setAttribute("conTract",conTract);
+//        request.setAttribute("conTract",conTract);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customerUseService/edit.jsp");
         try {
             dispatcher.forward(request, response);
@@ -119,7 +119,6 @@ public class CustomerUseServiceServlet extends HttpServlet {
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("contractId"));
-        customerUseServiceService.remove(id);
         List<CustomerUseService> customerUseServices = this.customerUseServiceService.findAll();
         request.setAttribute("customerUseServices", customerUseServices);
         RequestDispatcher requestDispatcher=null ;

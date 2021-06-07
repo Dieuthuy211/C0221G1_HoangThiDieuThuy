@@ -100,6 +100,7 @@ public class CustomerUseServiceRepository {
         try {
             preparedStatement = connection.prepareStatement(DELETE_CONTRACT);
             preparedStatement.setInt(1, id);
+            System.out.println(preparedStatement.toString());
             rowDeleted = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -114,51 +115,6 @@ public class CustomerUseServiceRepository {
         return rowDeleted;
     }
 
-//
-//
-//
-//    public boolean update(CustomerUseService customerUseService) {
-//        boolean rowUpdated = false;
-//        Connection connection = basaRepository.connectDataBase();
-//        PreparedStatement preparedStatement = null;
-//        try {
-//            preparedStatement = connection.prepareStatement(UPDATE_CUSTOMER);
-//            preparedStatement.setInt(1, customerUseService.getCustomerId());
-//            preparedStatement.setString(2, customerUseService.getCustomerName());
-//            preparedStatement.setString(3, customerUseService.getServiceName());
-//            preparedStatement.setString(5, customerUseService.getContractStartDate());
-//            preparedStatement.setString(6, customerUseService.getContractEndDate());
-//            rowUpdated = preparedStatement.executeUpdate() > 0;
-//            preparedStatement.close();
-//            connection.close();
-//
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return rowUpdated;
-//
-//    }
-//
-//    public CustomerUseService selectCustomerService(int id) {
-//        Connection connection = basaRepository.connectDataBase();
-//        PreparedStatement preparedStatement = null;
-//        CustomerUseService customerUseService = null;
-//        try {
-//            preparedStatement = connection.prepareStatement(SELECT_CUSTOMER);
-//            preparedStatement.setInt(1, id);
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//            while (resultSet.next()) {
-//                int customerId = resultSet.getInt("customer_id");
-//                String customerName = resultSet.getString("customer_name");
-//                String serviceName = resultSet.getString("service_name");
-//                String contractStartDate = resultSet.getString("contract_start_date");
-//                String contractEndDate = resultSet.getString("contract_end_date");
-//               customerUseService=new  CustomerUseService(id,customerId,customerName,serviceName,contractStartDate,contractEndDate);
-//            }
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return customerUseService;
-//    }
+
 
 }

@@ -32,7 +32,7 @@ public class ContractImpl implements IService<ConTract> {
     }
     @Override
     public ConTract findById(int id) {
-        return null;
+        return contractRepository.selectContract(id);
     }
 
     @Override

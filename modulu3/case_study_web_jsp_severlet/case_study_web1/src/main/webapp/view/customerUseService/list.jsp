@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </td>
-            <td><a href="/userService?action=edit&id=${customerUseService.contractId}">
+            <td><a href="/userService?action=edit&contractId=${customerUseService.contractId}">
                 <button type="button" class="btn btn-primary">Edit</button>
             </a>
             </td>

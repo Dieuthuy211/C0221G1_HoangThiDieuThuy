@@ -1,5 +1,6 @@
 package controller;
 
+import common.Validate;
 import model.bean.contract.ConTract;
 import model.bean.customer.Customer;
 import model.bean.employee.Employee;
@@ -31,7 +32,7 @@ public class ContractServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                create(request, response);
+               create(request,response);
                 break;
             default:
                 doGet(request,response);
@@ -94,5 +95,6 @@ public class ContractServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 
 }

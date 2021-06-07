@@ -16,8 +16,34 @@ public class ContractRepository {
     final String INSERT_CONTRACT="insert into contract (employee_id,customer_id,service_id,contract_start_date,contract_end_date,contract_deposit,contract_total)\n" +
             "values  (?,?,?,?,?,?,?)";
     final String UPDATE_CONTRACT="update contract\n" +
-            "set employee_id=?, customer_id=?,service_id=?,contract_start_date?,contract_end_date=?,contract_deposit=?,contract_total=?\n" +
+            "set employee_id=?, customer_id=?,service_id=?,contract_start_date=?,contract_end_date=?,contract_deposit=?,contract_total=?\n" +
             "where contract_id=?";
+    final String SELECT_CONTRACT_BY_ID="select* from contract where contract_id=?";
+
+    public ConTract selectContract(int id) {
+        Connection connection = basaRepository.connectDataBase();
+        PreparedStatement preparedStatement = null;
+        ConTract conTract = null;
+        try {
+            preparedStatement = connection.prepareStatement(SELECT_CONTRACT_BY_ID);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int employeeId = resultSet.getInt("employee_id");
+                int customerId = resultSet.getInt("customer_id");
+                int serviceId = resultSet.getInt("service_id");
+                String contractStartDate = resultSet.getString("contract_start_date");
+                String contractEndDate = resultSet.getString("contract_end_date");
+                int deposit = resultSet.getInt("contract_deposit");
+                int total = resultSet.getInt("contract_total");
+                conTract = new ConTract(id, employeeId, customerId,serviceId,contractStartDate, contractEndDate, deposit, total);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return conTract;
+    }
+
 
     public boolean update(ConTract conTract) {
         boolean rowUpdated = false;
