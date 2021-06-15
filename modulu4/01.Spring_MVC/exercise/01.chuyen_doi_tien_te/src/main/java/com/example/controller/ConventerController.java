@@ -13,9 +13,9 @@ public class ConventerController {
     @Autowired
     IConventer iConventer;
 
-    @GetMapping
+    @GetMapping("/")
     public String home(){
-        return "/home";
+        return "home";
     }
   @PostMapping("/convert")
   public String convert(@RequestParam String rate, String usd, Model model){

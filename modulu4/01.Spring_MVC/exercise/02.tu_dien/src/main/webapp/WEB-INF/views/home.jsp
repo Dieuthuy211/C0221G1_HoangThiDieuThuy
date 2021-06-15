@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form method="post">
+<form action="/tuDien" method="post">
     <center>
         <h1>Từ Điển</h1>
         <input type="text" placeholder="nhập từ muốn dịch" name="input" value="${input}">

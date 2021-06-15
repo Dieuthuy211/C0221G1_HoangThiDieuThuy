@@ -14,11 +14,11 @@ public class TuDienController {
     @Autowired
     ITuDien tuDien;
 
-    @GetMapping
+    @GetMapping("/")
     public String home(){
         return "/home";
     }
-    @PostMapping
+    @PostMapping("/tuDien")
     private String tuDien(@RequestParam String input, Model model){
         model.addAttribute("result",tuDien.chuyenDoi(input));
         return "/home";
