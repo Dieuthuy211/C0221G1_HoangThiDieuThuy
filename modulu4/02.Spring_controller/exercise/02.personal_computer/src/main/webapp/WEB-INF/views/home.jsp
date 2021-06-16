@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Caculator</h1>
-<form action="/Calculator">
+<form action="/Calculator" method="post">
     <input type="text" value="${numberOne}" name="numberOne" pattern="[0-9-.]+">
     <input type="text" value="${numberTwo}" name="numberTwo" pattern="[0-9-.]+">
     <br>
