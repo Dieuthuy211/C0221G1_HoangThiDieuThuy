@@ -5,10 +5,7 @@ import com.example.model.service.ICustomerService;
 import com.example.model.service.imple.CustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -46,14 +43,14 @@ public class CustomerController {
         customerService.update(customer.getId(), customer);
         return "redirect:/customer";
     }
-    @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
-        return "/delete";
-    }
+//    @GetMapping("/{id}/delete")
+//    public String delete(@PathVariable int id, Model model) {
+//        model.addAttribute("customer", customerService.findById(id));
+//        return "/delete";
+//    }
     @PostMapping("/delete")
-    public String delete(Customer customer, RedirectAttributes redirect) {
-        customerService.remove(customer.getId());
+    public String delete(@RequestParam int id, RedirectAttributes redirect) {
+        customerService.remove(id);
         redirect.addFlashAttribute("success", "Removed customer successfully!");
         return "redirect:/customer";
     }

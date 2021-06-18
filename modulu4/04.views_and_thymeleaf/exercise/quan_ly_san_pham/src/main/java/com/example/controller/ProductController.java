@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 
 import java.util.List;
 
@@ -48,15 +48,15 @@ public class ProductController {
         return "redirect:/product/";
     }
 
-    @GetMapping(value = "/{productId}/delete")
-    public String delete(@PathVariable int productId, Model model) {
-        model.addAttribute("product", productService.findById(productId));
-        return "delete";
-    }
+//    @GetMapping(value = "/{productId}/delete")
+//    public String delete(@PathVariable int productId, Model model) {
+//        model.addAttribute("product", productService.findById(productId));
+//        return "delete";
+//    }
 
     @PostMapping(value = "/delete")
-    public String delete(Product product, RedirectAttributes redirect) {
-        productService.remove(product.getProductId());
+    public String delete(@RequestParam int id) {
+        productService.remove(id);
         return "redirect:/product/";
 
     }
