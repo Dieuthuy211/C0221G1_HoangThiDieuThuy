@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<h3>List Product</h3>
+
+<p>
+    <a th:href="@{/create}">
+        Add new product
+    </a>
+</p>
+<form th:action="@{/search}"
+      method="POST" novalidate="novalidate">
+    <input name="name" type="search" placeholder="Search" aria-label="Search" >
+    <button type="submit">search</button>
+
+</form>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Producer</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${products}">
+        <td th:text="${row.getProductName()}"></td>
+        <td th:text="${row.getProductPrice()}"></td>
+        <td th:text="${row.getProductDescription()}"></td>
+        <td th:text="${row.getProducer()}"></td>
+        <td><a th:href="@{product/{productId}/edit(productId=${row.getProductId()})}">edit</a></td>
+        <td><a th:href="@{product/{productId}/delete(productId=${row.getProductId()})}">delete</a></td>
+        <td><a th:href="@{product/{productId}/view(productId=${row.getProductId()})}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
