@@ -10,20 +10,12 @@
 <p>
     <a href="/blogs">blog list</a>
 </p>
-<form th:action="@{/blogs/delete}" th:object="${blog}" method="post">
+<form th:action="@{/categories/delete}" th:object="${category}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>
             <td>author:</td>
-            <td th:text="${blog.author}"></td>
-        </tr>
-        <tr>
-            <td>content:</td>
-            <td th:text="${blog.content}"></td>
-        </tr>
-        <tr>
-            <td>category:</td>
-            <td th:text="${blog.category.name}"></td>
+            <td th:text="${category.name}"></td>
         </tr>
         <tr>
             <td></td>

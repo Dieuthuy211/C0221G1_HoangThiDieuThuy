@@ -1,29 +1,47 @@
 package com.example.demo.model.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "blog")
 public class Blog {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     private String author;
     private String content;
+    private Date timeCreate =new Date();
 @ManyToOne
 @JoinColumn(name = "category_id",referencedColumnName = "id")
 private Category category;
 
-    public Blog() {
-    }
-
-
-
-
-    public Blog(String author, String content) {
+    public Blog(String author, String content, Date timeCreate, Category category) {
         this.author = author;
         this.content = content;
+        this.timeCreate = timeCreate;
+        this.category = category;
+    }
+
+    public Blog(Integer id, String author, String content, Date timeCreate, Category category) {
+        this.id = id;
+        this.author = author;
+        this.content = content;
+        this.timeCreate = timeCreate;
+        this.category = category;
+    }
+
+    public Blog() {
 
     }
+
+    public Date getTimeCreate() {
+        return timeCreate;
+    }
+
+    public void setTimeCreate(Date time) {
+        this.timeCreate = time;
+    }
+
     public Category getCategory() {
         return category;
     }

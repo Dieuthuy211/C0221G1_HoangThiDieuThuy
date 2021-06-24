@@ -17,7 +17,7 @@ public class BlogService implements IBlogService {
 
     @Override
     public Page<Blog> findAllByAuthorContains(String name, Pageable pageable) {
-        return blogRepository.findAllByAuthorContains(name,pageable);
+        return blogRepository.findAllByAuthorContains("%"+name+"%",pageable);
     }
 
     @Override
