@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">Create new user</a>
+<!--<th:block th:if="${msg}">-->
+<!--    <p th:text="${msg}"></p>-->
+<!--</th:block>-->
+<h1>user</h1>
+
+<br>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <th>first Name</th>
+        <th>last Name</th>
+        <th>age</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>edit</th>
+        <th>delete</th>
+    </tr>
+    <th:block th:each="user : ${users}">
+        <tr>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.phone}"></td>
+            <td th:text="${user.email}"></td>
+            <td><a th:href="@{/users/edit/__${user.id}__ }">Edit</a></td>
+            <td><a th:href="@{/users/delete/__${user.id}__ }">Delete</a></td>
+        </tr>
+        </tr>
+    </th:block>
+</table>
+<div>
+    <a th:href="@{'/users/'(page=${users.number - 1})}" th:if="${users.hasPrevious()}">Previous</a>
+    <span th:text="${users.number + 1}"></span>/<span th:text="${users.totalPages}"></span>
+    <a th:href="@{'/users/'(page=${users.number + 1})}" th:if="${users.hasNext()}">Next</a>
+</div>
+</body>
+</html>
