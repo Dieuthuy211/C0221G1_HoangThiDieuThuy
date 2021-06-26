@@ -19,7 +19,22 @@ public class User {
     public User() {
     }
 
+    public User(Integer id, String firstName, String lastName, Integer age, String phone, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.phone = phone;
+        this.email = email;
+    }
 
+    public User(String firstName, String lastName, Integer age, String phone, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.phone = phone;
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;

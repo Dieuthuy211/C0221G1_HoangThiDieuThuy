@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.*;
 
-public class UserDto {
+public class UserDto implements Validator {
 
     private Integer id;
     @NotEmpty
@@ -32,6 +32,7 @@ public class UserDto {
 
     public UserDto() {
     }
+
 
     public Integer getId() {
         return id;
@@ -81,5 +82,14 @@ public class UserDto {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+
+    }
 }

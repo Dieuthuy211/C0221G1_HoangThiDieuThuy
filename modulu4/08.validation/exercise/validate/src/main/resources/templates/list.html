@@ -6,9 +6,9 @@
 </head>
 <body>
 <a href="/create">Create new user</a>
-<!--<th:block th:if="${msg}">-->
-<!--    <p th:text="${msg}"></p>-->
-<!--</th:block>-->
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
 <h1>user</h1>
 
 <br>
@@ -31,8 +31,8 @@
             <td th:text="${user.age}"></td>
             <td th:text="${user.phone}"></td>
             <td th:text="${user.email}"></td>
-            <td><a th:href="@{/users/edit/__${user.id}__ }">Edit</a></td>
-            <td><a th:href="@{/users/delete/__${user.id}__ }">Delete</a></td>
+            <td><a th:href="@{/edit/__${user.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete/__${user.id}__ }">Delete</a></td>
         </tr>
         </tr>
     </th:block>

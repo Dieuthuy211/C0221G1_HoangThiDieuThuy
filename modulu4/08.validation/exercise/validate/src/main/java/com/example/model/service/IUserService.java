@@ -10,5 +10,6 @@ public interface IUserService {
 
     void save(User user);
 
+
     void remove(Integer id);
 }

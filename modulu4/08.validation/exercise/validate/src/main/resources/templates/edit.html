@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create user</title>
+    <title>edit user</title>
 </head>
 <body>
 <h1>edit user</h1>
@@ -10,33 +10,38 @@
     <a href="/users">user list</a>
 </p>
 
-<form th:action="@{/edit}" th:object="${user}" method="post">
-    <input th:type="hidden" name="id" th:field="*{id}">
+<form th:action="@{/edit}" th:object="${userDto}" method="post">
     <table>
+        <tr>
+            <td>id:</td>
+            <td><input th:type="text" th:field="*{id}" disabled>
+            </td>
+        </tr>
         <tr>
             <td>first Name:</td>
             <td><input type="text" th:field="*{firstName}"/></td>
-<!--            <span style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{'firstName'}"></span>-->
+            <td><span style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+            </td>
         </tr>
         <tr>
             <td>last Name:</td>
             <td><input type="text" th:field="*{lastName}"/></td>
-<!--            <span style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{'lastName'}"></span>-->
+            <td><span style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span></td>
         </tr>
         <tr>
             <td>age:</td>
             <td><input type="text" th:field="*{age}"/></td>
-<!--            <span style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{'age'}"></span>-->
+            <td><span style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
         </tr>
         <tr>
             <td>phone:</td>
             <td><input type="text" th:field="*{phone}"/></td>
-<!--            <span style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{'phone'}"></span>-->
+            <td><span style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
         </tr>
         <tr>
             <td>email:</td>
             <td><input type="text" th:field="*{email}"/></td>
-<!--            <span style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{'email'}"></span>-->
+            <td><span style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
         </tr>
 
         <td></td>

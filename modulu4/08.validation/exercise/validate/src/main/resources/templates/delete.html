@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
 <p>
     <a href="/users">user list</a>
 </p>
-<form th:action="@{/provinces/delete}" th:object="${user}" method="post">
-    <input th:type="hidden" name="id" th:text="*{id}">
+<form th:action="@{/delete}" th:object="${user}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>
             <td>First name:</td>

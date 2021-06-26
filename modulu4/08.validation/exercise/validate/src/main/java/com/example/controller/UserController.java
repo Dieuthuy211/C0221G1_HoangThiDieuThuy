@@ -19,10 +19,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.jws.soap.SOAPBinding;
+import java.util.List;
+
 @Controller
 public class UserController {
     @Autowired
     IUserService userService;
+
     @GetMapping("/users")
     public ModelAndView listCategory(@PageableDefault(value = 2) Pageable pageable) {
         Page<User> users = userService.findAll(pageable);
@@ -33,46 +37,69 @@ public class UserController {
     }
 
     @GetMapping("/create")
-    public String showCreateForm(Model model){
-        model.addAttribute("userDto",new UserDto());
+    public String showCreateForm(Model model) {
+        model.addAttribute("userDto", new UserDto());
         return "/create";
     }
+
     @PostMapping("/create")
-    public String createUser(@Validated  @ModelAttribute UserDto userDto, BindingResult bindingResult, RedirectAttributes redirect){
+    public String createUser(@Validated @ModelAttribute UserDto userDto, BindingResult bindingResult, RedirectAttributes redirect) {
         User user = new User();
-        BeanUtils.copyProperties(userDto,user);
-        if(bindingResult.hasFieldErrors()) {
+        BeanUtils.copyProperties(userDto, user);
+        if (bindingResult.hasFieldErrors()) {
             return "/create";
-        }else{
-                this.userService.save(user);
-                redirect.addFlashAttribute("message", "Create User Successfull !");
-                return "redirect:/users";
-            }
+        } else {
+            this.userService.save(user);
+            redirect.addFlashAttribute("message", "Create User Successfull !");
+            return "redirect:/users";
         }
+    }
+
     @GetMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable Integer id) {
         User user = userService.findById(id);
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(user, userDto);
+        ModelAndView modelAndView = new ModelAndView("/edit");
+        modelAndView.addObject("userDto", userDto);
+        return modelAndView;
 
-        if (user != null) {
-            ModelAndView modelAndView = new ModelAndView("/edit");
-            modelAndView.addObject("user", user);
-            return modelAndView;
-
-        } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
-            return modelAndView;
-        }
+//        if (userDto != null) {
+//            ModelAndView modelAndView = new ModelAndView("/edit");
+//            modelAndView.addObject("userDto", userDto);
+//            return modelAndView;
+//
+//        } else {
+//            ModelAndView modelAndView = new ModelAndView("/error.404");
+//            return modelAndView;
+//        }
     }
 
     @PostMapping("/edit")
-    public ModelAndView update(@ModelAttribute("user") User user) {
-        userService.save(user);
+    public String editUser(@Validated @ModelAttribute UserDto userDto,
+                           BindingResult bindingResult,
+                           RedirectAttributes redirect) {
 
-        ModelAndView modelAndView = new ModelAndView("/edit");
-        modelAndView.addObject("user", user);
-        modelAndView.addObject("message", "blog updated successfully");
-        return modelAndView;
+        if (bindingResult.hasFieldErrors()) {
+            return "/edit";
+        }
+        User user = new User();
+        BeanUtils.copyProperties(userDto, user);
+        this.userService.save(user);
+        redirect.addFlashAttribute("message", "edit User Successfull !");
+        return "redirect:/users";
+
     }
+
+//    @PostMapping("/edit")
+//    public ModelAndView update(@ModelAttribute("user") User user) {
+//        userService.save(user);
+//
+//        ModelAndView modelAndView = new ModelAndView("/edit");
+//        modelAndView.addObject("user", user);
+//        modelAndView.addObject("message", "blog updated successfully");
+//        return modelAndView;
+//    }
 
 
     @GetMapping("/delete/{id}")
@@ -90,8 +117,8 @@ public class UserController {
     }
 
     @PostMapping("/delete")
-    public String delete(@ModelAttribute("user") User province) {
-        userService.remove(province.getId());
+    public String delete(@ModelAttribute("user") User user) {
+        userService.remove(user.getId());
         return "redirect:/users";
     }
 }

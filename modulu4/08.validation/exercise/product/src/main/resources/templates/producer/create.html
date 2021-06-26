@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create producer</title>
+</head>
+<body>
+<h1>Create producer</h1>
+<p>
+    <a href="/producers">producer list</a>
+</p>
+
+<form th:action="@{/producers/create}" th:object="${producer}" method="post">
+    <table>
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create producer"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
