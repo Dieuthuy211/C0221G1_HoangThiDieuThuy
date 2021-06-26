@@ -1,14 +1,22 @@
 package com.example.controller;
 
+import com.example.dto.ProducerDto;
+import com.example.dto.ProductDto;
 import com.example.model.entity.Producer;
+import com.example.model.entity.Product;
 import com.example.model.service.IProducerService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
@@ -29,27 +37,34 @@ public class ProducerController {
     @GetMapping("/create")
     public ModelAndView showCreateForm() {
         ModelAndView modelAndView = new ModelAndView("/producer/create");
-        modelAndView.addObject("producer", new Producer());
+        modelAndView.addObject("producerDto", new ProducerDto());
         return modelAndView;
     }
 
     @PostMapping("/create")
-    public ModelAndView save(@ModelAttribute("producer") Producer producer) {
-        producerService.save(producer);
+    public String save(@Validated @ModelAttribute ProducerDto producerDto,
+                       BindingResult bindingResult,
+                       RedirectAttributes redirect) {
+        Producer producer = new Producer();
+        BeanUtils.copyProperties(producerDto, producer);
+        if(bindingResult.hasErrors()){
+            return "/producer/create";
+        }else {
+            producerService.save(producer);
+            redirect.addFlashAttribute("message", "New blog created successfully");
+            return "redirect:";
+        }
 
-        ModelAndView modelAndView = new ModelAndView("/producer/create");
-        modelAndView.addObject("producer", new Producer());
-
-        modelAndView.addObject("message", "New blog created successfully");
-        return modelAndView;
     }
 
     @GetMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable Integer id) {
         Producer producer = producerService.findById(id);
+        ProducerDto producerDto  = new ProducerDto();
+        BeanUtils.copyProperties(producer,producerDto);
         if (producer != null) {
             ModelAndView modelAndView = new ModelAndView("/producer/edit");
-            modelAndView.addObject("producer", producer);
+            modelAndView.addObject("producerDto", producerDto);
             return modelAndView;
 
         } else {
@@ -59,12 +74,23 @@ public class ProducerController {
     }
 
     @PostMapping("/edit")
-    public ModelAndView update(@ModelAttribute("producer") Producer producer) {
-        producerService.save(producer);
-        ModelAndView modelAndView = new ModelAndView("/producer/edit");
-        modelAndView.addObject("producer", producer);
-        modelAndView.addObject("message", "blog updated successfully");
-        return modelAndView;
+    public String update(@Validated @ModelAttribute ProducerDto producerDto,
+                       BindingResult bindingResult,
+                       RedirectAttributes redirect) {
+        Producer producer  = new Producer();
+        BeanUtils.copyProperties(producerDto,producer);
+        if(bindingResult.hasErrors()){
+            return "/producer/edit";
+        }else {
+            producerService.save(producer);
+            redirect.addFlashAttribute("message", "blog updated successfully");
+            return "redirect:";
+        }
+
+
+
+
+
     }
 
     @GetMapping("/delete/{id}")

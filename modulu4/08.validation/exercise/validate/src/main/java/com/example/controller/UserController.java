@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.jws.soap.SOAPBinding;
-import java.util.List;
+
 
 @Controller
 public class UserController {
@@ -43,14 +42,16 @@ public class UserController {
     }
 
     @PostMapping("/create")
-    public String createUser(@Validated @ModelAttribute UserDto userDto, BindingResult bindingResult, RedirectAttributes redirect) {
+    public String createUser(@Validated @ModelAttribute UserDto userDto,
+                             BindingResult bindingResult,
+                             RedirectAttributes redirect) {
         User user = new User();
         BeanUtils.copyProperties(userDto, user);
         if (bindingResult.hasFieldErrors()) {
             return "/create";
         } else {
             this.userService.save(user);
-            redirect.addFlashAttribute("message", "Create User Successfull !");
+            redirect.addFlashAttribute("message", "Create User successfully !");
             return "redirect:/users";
         }
     }
@@ -75,18 +76,18 @@ public class UserController {
 //        }
     }
 
-    @PostMapping("/edit")
+    @PostMapping("/update")
     public String editUser(@Validated @ModelAttribute UserDto userDto,
                            BindingResult bindingResult,
                            RedirectAttributes redirect) {
 
         if (bindingResult.hasFieldErrors()) {
-            return "/edit";
+            return "redirect:/update";
         }
         User user = new User();
         BeanUtils.copyProperties(userDto, user);
-        this.userService.save(user);
-        redirect.addFlashAttribute("message", "edit User Successfull !");
+        userService.save(user);
+        redirect.addFlashAttribute("message", "edit User successfully !");
         return "redirect:/users";
 
     }

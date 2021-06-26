@@ -10,42 +10,46 @@
     <a href="/users">user list</a>
 </p>
 
-<form th:action="@{/edit}" th:object="${userDto}" method="post">
+<form th:action="@{/update}" th:object="${userDto}" method="post">
+    <input type="hidden" th:field="*{id}" disabled/>
     <table>
         <tr>
-            <td>id:</td>
-            <td><input th:type="text" th:field="*{id}" disabled>
-            </td>
-        </tr>
-        <tr>
             <td>first Name:</td>
-            <td><input type="text" th:field="*{firstName}"/></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+            <td><input type="text" th:field="*{firstName}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
             </td>
+
         </tr>
         <tr>
             <td>last Name:</td>
-            <td><input type="text" th:field="*{lastName}"/></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span></td>
+            <td><input type="text" th:field="*{lastName}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+            </td>
+
         </tr>
         <tr>
             <td>age:</td>
-            <td><input type="text" th:field="*{age}"/></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
+            <td><input type="text" th:field="*{age}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+            </td>
+
         </tr>
         <tr>
             <td>phone:</td>
-            <td><input type="text" th:field="*{phone}"/></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
+            <td><input type="text" th:field="*{phone}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+            </td>
+
         </tr>
         <tr>
             <td>email:</td>
-            <td><input type="text" th:field="*{email}"/></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+            <td><input type="text" th:field="*{email}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+            </td>
+
         </tr>
 
-        <td></td>
-        <td><input type="submit" value="edit user"></td>
+        <td><input type="submit" value="edit"></td>
         </tr>
     </table>
 </form>

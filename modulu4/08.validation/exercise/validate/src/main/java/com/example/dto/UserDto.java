@@ -1,17 +1,9 @@
 package com.example.dto;
 
 
-
-import lombok.Data;
-import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
-import org.springframework.validation.Validator;
-import org.springframework.validation.annotation.Validated;
-
-
 import javax.validation.constraints.*;
 
-public class UserDto implements Validator {
+public class UserDto  {
 
     private Integer id;
     @NotEmpty
@@ -29,6 +21,7 @@ public class UserDto implements Validator {
     @NotEmpty
     @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$")
     private String email;
+
 
     public UserDto() {
     }
@@ -83,13 +76,5 @@ public class UserDto implements Validator {
         this.email = email;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
 
-    @Override
-    public void validate(Object target, Errors errors) {
-
-    }
 }
