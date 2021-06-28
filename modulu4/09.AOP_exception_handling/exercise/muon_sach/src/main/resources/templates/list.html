@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>name</th>
+        <th>category</th>
+        <th>amount</th>
+        <th>borrow</th>
+        <th>pay</th>
+    </tr>
+    <th:block th:each="book,loop : ${books}">
+        <tr>
+            <td th:text="${loop.count}"></td>
+            <td  th:text="${book.name}"></td>
+            <td th:text="${book.category}" ></td>
+            <td th:text="${book.amount}" ></td>
+            <td><a th:href="@{/borrow/__${book.id}__ }">borrow</a></td>
+            <td><a th:href="@{/pay  /__${book.id}__ }">pay</a></td>
+        </tr>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
