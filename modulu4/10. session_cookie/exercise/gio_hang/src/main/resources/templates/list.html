@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list products</title>
+</head>
+<body>
+<a href="/shopping">go to cart</a>
+<h1>Products</h1>
+<form>
+    Search:
+    <input name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<br>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>img</th>
+        <th>name</th>
+        <th>price</th>
+
+    </tr>
+    <th:block th:each="product,loop : ${products}">
+        <tr>
+            <td th:text="${loop.count}"></td>
+            <td th:text="${product.img}" ></td>
+<!--            <td><button><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></button></td>-->
+            <td ><a a th:href="@{/view/__${product.id}__ }" th:text="${product.name}"></a></td>
+            <td th:text="${product.price}" ></td>
+
+        </tr>
+        </tr>
+    </th:block>
+</table>
+<div>
+    <a th:href="@{''(page=${products.number - 1})}" th:if="${products.hasPrevious()}">Previous</a>
+    <span th:text="${products.number + 1}"></span>/<span th:text="${products.totalPages}"></span>
+    <a th:href="@{''(page=${products.number + 1})}" th:if="${products.hasNext()}">Next</a>
+</div>
+</body>
+</html>
