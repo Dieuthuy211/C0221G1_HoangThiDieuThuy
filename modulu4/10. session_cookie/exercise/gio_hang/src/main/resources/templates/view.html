@@ -8,30 +8,28 @@
 <p>
     <a href="/">product</a>
 </p>
-
-<form th:action="@{/view}" th:object="${product}" method="post">
-    <table>
+    <table th:object="${product}">
         <tr>
-            <td>id:</td>
-            <td th:text="${product.img}"></td>
+            <td>img:</td>
+            <td ><img th:src="${product.img}" width="200" height="400"/></td>
         </tr>
         <tr>
-            <td>author:</td>
+            <td>id:</td>
             <td th:text="${product.id}"></td>
         </tr>
         <tr>
-            <td>content:</td>
+            <td>name:</td>
             <td th:text="${product.name}"></td>
         </tr>
         <tr>
-            <td>category:</td>
+            <td>price:</td>
             <td th:text="${product.price}"></td>
         </tr>
         <tr>
             <td></td>
-            <td><button><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></button></td>
+            <td><button><a th:href="@{/add/__${product.id}__(action='add')}">Add To Cart</a></button></td>
         </tr>
     </table>
-</form>
+
 </body>
 </html>

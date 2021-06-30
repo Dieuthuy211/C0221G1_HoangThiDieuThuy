@@ -46,6 +46,9 @@ public class Cart {
     public void cutProduct(Product product){
         if (checkItemInCart(product)){
             Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
+            if(itemEntry.getValue()==0){
+                products.remove(product);
+            }
             Integer newQuantity = itemEntry.getValue() - 1;
             products.replace(itemEntry.getKey(),newQuantity);
         }

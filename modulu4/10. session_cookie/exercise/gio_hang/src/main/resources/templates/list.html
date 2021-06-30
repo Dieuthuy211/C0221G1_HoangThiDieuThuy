@@ -24,8 +24,7 @@
     <th:block th:each="product,loop : ${products}">
         <tr>
             <td th:text="${loop.count}"></td>
-            <td th:text="${product.img}" ></td>
-<!--            <td><button><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></button></td>-->
+            <td ><img th:src="${product.img}" width="200" height="400"/></td>
             <td ><a a th:href="@{/view/__${product.id}__ }" th:text="${product.name}"></a></td>
             <td th:text="${product.price}" ></td>
 
