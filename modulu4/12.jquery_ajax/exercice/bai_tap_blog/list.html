@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row w-50 mx-auto">
+        <div class="col-lg-12">
+
+            <div><h2>List blog other</h2></div>
+            <div class="mb-5">
+                <input type="text" id="search" name="search" placeholder="search">
+                <button id="authorSearch">search</button>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">author</th>
+                    <th scope="col">content</th>
+                    <th scope="col">date</th>
+                </tr>
+                </thead>
+                <tbody id="tableBodyBlog">
+                </tbody>
+            </table>
+            <div>
+                <button onclick="more()">more</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let page=0
+    let author = $("#search").val();
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        type: "GET", //GET, DELETE, PUT...
+        url:"http://localhost:8080/blogRest/blogs?search="+author+"&page="+page ,
+        success: function (blogOjb) {
+            console.log("Success");
+            let blogs = blogOjb.content;
+            let resultHTML = "";
+
+            for (let i = 0; i < blogs.length; i++) {
+                resultHTML += "<tr>";
+                resultHTML += "<th scope='row'>" + (i + 1) + "</th>";
+                resultHTML += "<td>" + blogs[i].id + "</td>";
+                resultHTML += "<td>" + blogs[i].author + "</td>";
+                resultHTML += "<td>" + blogs[i].content + "</td>";
+                resultHTML += "<td>" + blogs[i].timeCreate + "</td>";
+                resultHTML += "</tr>";
+            }
+
+            console.log(resultHTML);
+            // innerHTML
+            $("#tableBodyBlog").html(resultHTML);
+        },
+        error: function (resultError) {
+            console.log("Error: ");
+            console.log(resultError);
+        }
+    });
+    $("#authorSearch").click(function () {
+       
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: "http://localhost:8080/blogRest/blog?search="+author+"&page="+page,
+            success: function (blogOjb) {
+                console.log("Success");
+                let blogs = blogOjb.content;
+                let resultHTML = "";
+
+                for (let i = 0; i < blogs.length; i++) {
+                    resultHTML += "<tr>";
+                    resultHTML += "<th scope='row'>" + (i + 1) + "</th>";
+                    resultHTML += "<td>" + blogs[i].id + "</td>";
+                    resultHTML += "<td>" + blogs[i].author + "</td>";
+                    resultHTML += "<td>" + blogs[i].content + "</td>";
+                    resultHTML += "<td>" + blogs[i].timeCreate + "</td>";
+                    resultHTML += "</tr>";
+                }
+
+                console.log(resultHTML);
+                // innerHTML
+                $("#tableBodyBlog").html(resultHTML);
+            },
+            error: function (resultError) {
+                console.log("Error: ");
+                console.log(resultError);
+            }
+        });
+
+    })
+    function more() {
+
+        page=page+1;
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: "http://localhost:8080/blogRest/blogs?search="+author+"&page="+page,
+            success: function (blogOjb) {
+                console.log("Success");
+                let blogs = blogOjb.content;
+                let resultHTML = "";
+
+                for (let i = 0; i < blogs.length; i++) {
+                    resultHTML += "<tr>";
+                    resultHTML += "<th scope='row'>" + (i + 1) + "</th>";
+                    resultHTML += "<td>" + blogs[i].id + "</td>";
+                    resultHTML += "<td>" + blogs[i].author + "</td>";
+                    resultHTML += "<td>" + blogs[i].content + "</td>";
+                    resultHTML += "<td>" + blogs[i].timeCreate + "</td>";
+                    resultHTML += "</tr>";
+                }
+
+                console.log(resultHTML);
+                // innerHTML
+                $("#tableBodyBlog").html(resultHTML);
+            },
+            error: function (resultError) {
+                console.log("Error: ");
+                console.log(resultError);
+            }
+        });
+    }
+</script>
+</body>
+</html>
