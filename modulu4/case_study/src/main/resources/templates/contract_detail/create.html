@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create contract detail</title>
+</head>
+<body>
+<h1>Create contract detail</h1>
+
+<form action="//create" th:object="${contractDetail}" method="post">
+    <table>
+
+        <tr>
+            <td>contract:</td>
+            <td><select th:field="*{contract}" >
+                <option th:each="contract : ${contracts}"  th:text="${contract.id}" th:text="${contract.customer.name}" th:value="${contract.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>attach Service:</td>
+            <td><select th:field="*{attachService}" >
+                <option th:each="attachService : ${attachServices}" th:text="${attachService.name}" th:value="${attachService.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>quantity:</td>
+            <td><input type="text" th:field="*{quantity}"/></td>
+        </tr>
+
+        <td></td>
+        <td><input type="submit" value="Create contract detail"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

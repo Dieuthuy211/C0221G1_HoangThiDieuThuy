@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list customer</title>
+</head>
+<body>
+
+<h1>List Customer</h1>
+<th:block th:if="${msg}">
+    <p th:text="${msg}"></p>
+</th:block>
+<form>
+    Search:
+    <input name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<br>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>contract</th>
+        <th>customer</th>
+        <th>contract detail</th>
+        <th>contract_start_date</th>
+        <th>contract_end_date</th>
+        <th>service</th>
+        <th>attach service</th>
+        <th>edit</th>
+        <th>delete</th>
+    </tr>
+    <th:block th:each="customerUserService,loop : ${customerUserServices}">
+        <tr>
+            <td th:text="${loop.count}"></td>
+            <td th:text="${customerUserService.contract.id}"></td>
+            <td th:text="${customerUserService.customer.name}"></td>
+            <td th:text="${customerUserService.contractDetail.id}"></td>
+            <td th:text="${customerUserService.contract.contractStartDate}"></td>
+            <td th:text="${customerUserService.contract.contractEndDate}"></td>
+            <td th:text="${customerUserService.contract.service.name}"></td>
+            <td>
+                <select>
+                    <option th:if="${customerUserService.attachService.id}" th:each="attachService : ${attachServices}" th:text="${attachService.name}"></option>
+                </select>
+            </td>
+            <td><a th:href="@{/customerUsers/edit/__${customerUserService.contract.id}__ }">Edit</a></td>
+            <td><a th:href="@{/customerUsers/delete/__${customerUserService.contract.id}__ }">Delete</a></td>
+        </tr>
+        </tr>
+    </th:block>
+</table>
+<div>
+    <a th:href="@{'/customerUsers'(page=${customerUserServices.number - 1})}" th:if="${customerUserServices.hasPrevious()}">Previous</a>
+    <span th:text="${customerUserServices.number + 1}"></span>/<span th:text="${customerUserServices.totalPages}"></span>
+    <a th:href="@{'/customerUsers'(page=${customerUserServices.number + 1})}" th:if="${customerUserServices.hasNext()}">Next</a>
+    <br>
+    <span th:each="pageNo:${#numbers.sequence(0,customerUserServices.totalPages - 1)}">
+            <a th:href="@{/customerUserServices(page=${pageNo})}" th:text="${pageNo+1}"></a>
+        </span>
+</div>
+</body>
+</html>

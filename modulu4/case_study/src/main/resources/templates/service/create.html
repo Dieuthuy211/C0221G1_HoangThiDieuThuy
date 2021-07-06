@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Create service</title>
 </head>
 <body>
-$END$
+<h1>Create service</h1>
+<th:block th:if="${msg}">
+    <p th:text="${msg}"></p>
+</th:block>
+
+<form th:action="@{/services/create}" th:object="${service}" method="post">
+    <table>
+        <tr>
+            <td>code:</td>
+            <td><input type="text" th:field="*{code}"/></td>
+        </tr>
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>are:</td>
+            <td><input type="text" th:field="*{areas}"/></td>
+        </tr>
+        <tr>
+            <td>cost:</td>
+            <td><input type="text" th:field="*{costs}"/></td>
+        </tr>
+        <tr>
+            <td>max people:</td>
+            <td><input type="text" th:field="*{maxPeople}"/></td>
+        </tr>
+        <tr>
+            <td>rent Type:</td>
+            <td><select th:field="*{rentType}" >
+                <option th:each="rentType : ${rentTypes}" th:text="${rentType.name}" th:value="${rentType.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>rent Type:</td>
+            <td><select th:field="*{serviceType}" >
+                <option th:each="serviceType : ${serviceTypes}" th:text="${serviceType.name}" th:value="${serviceType.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>standard Room:</td>
+            <td><input type="text" th:field="*{standardRoom}"/></td>
+        </tr>
+        <tr>
+            <td>description Other Convenience:</td>
+            <td><input type="text" th:field="*{descriptionOtherConvenience}"/></td>
+        </tr>
+        <tr>
+            <td>pool Area:</td>
+            <td><input type="text" th:field="*{poolArea}"/></td>
+        </tr>
+        <tr>
+            <td>number Of Floors:</td>
+            <td><input type="text" th:field="*{numberOfFloors}"/></td>
+        </tr>
+
+        <td></td>
+        <td><input type="submit" value="Create service"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

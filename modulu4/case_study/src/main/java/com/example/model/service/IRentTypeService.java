@@ -1,4 +1,7 @@
-package com.example.model.service.imple;
+package com.example.model.service;
 
-public interface IRentTypeService {
+import com.example.model.entity.service.RentType;
+import com.example.model.service.IGeneralService;
+
+public interface IRentTypeService extends IGeneralService<RentType> {
 }

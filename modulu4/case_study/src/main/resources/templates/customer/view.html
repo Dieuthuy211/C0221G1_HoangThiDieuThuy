@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>
+    <a href="/customers/">back to list</a>
+</p>
+<table>
+    <tr>
+        <td>id:</td>
+        <td th:text="${customer.id}"></td>
+    </tr>
+    <tr>
+        <td>code:</td>
+        <td th:text="${customer.code}"></td>
+    </tr>
+    <tr>
+        <td>customerType:</td>
+        <td th:text="${customer.customerType.name}"></td>
+    </tr>
+    <tr>
+        <td>name:</td>
+        <td th:text="${customer.name}"></td>
+    </tr>
+
+    <tr>
+        <td>birthday:</td>
+        <td th:text="${customer.birthday}"></td>
+    </tr>
+    <tr>
+        <td>gender:</td>
+        <td th:text="${customer.gender}"></td>
+    </tr>
+    <tr>
+        <td>idCard:</td>
+        <td th:text="${customer.idCard}"></td>
+    </tr>
+    <tr>
+        <td>phone:</td>
+        <td th:text="${customer.phone}"></td>
+    </tr>
+    <tr>
+        <td>email:</td>
+        <td th:text="${customer.email}"></td>
+    </tr>
+    <tr>
+        <td>address:</td>
+        <td th:text="${customer.address}"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Delete customer"></td>
+    </tr>
+</table>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create employee</title>
+</head>
+<body>
+<h1>Create employee</h1>
+<p>
+    <a href="/employees/">Back to list</a>
+</p>
+<form action="/employees/edit" th:object="${employee}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>code:</td>
+            <td><input type="text" th:field="*{code}"/></td>
+        </tr>
+
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>birthday:</td>
+            <td><input type="date" th:field="*{birthday}"/></td>
+        </tr>
+        <tr>
+            <td>id Card:</td>
+            <td><input type="text" th:field="*{idCard}"/></td>
+        </tr>
+        <tr>
+            <td>salary:</td>
+            <td><input type="text" th:field="*{salary}"/></td>
+        </tr>
+        <tr>
+            <td>phone:</td>
+            <td><input type="text" th:field="*{phone}"/></td>
+        </tr>
+        <tr>
+            <td>email:</td>
+            <td><input type="email" th:field="*{email}"/></td>
+        </tr>
+        <tr>
+            <td>address:</td>
+            <td><input type="text" th:field="*{address}"/></td>
+        </tr>
+        <tr>
+            <td>position:</td>
+            <td><select th:field="*{position}" >
+                <option th:each="position : ${positions}" th:text="${position.name}" th:value="${position.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>education degree:</td>
+            <td><select th:field="*{eductionDegree}" >
+                <option th:each="eductionDegree : ${eductionDegrees}" th:text="${eductionDegree.name}" th:value="${eductionDegree.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>division:</td>
+            <td><select th:field="*{division}" >
+                <option th:each="division : ${divisions}" th:text="${division.name}" th:value="${division.id}"></option>
+            </select>
+            </td>
+        </tr>
+
+        <td></td>
+        <td><input type="submit" value="update employee"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

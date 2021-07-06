@@ -1,4 +1,7 @@
 package com.example.model.service;
 
-public interface IServiceTypeService {
+import com.example.model.entity.service.ServiceType;
+import com.example.model.service.IGeneralService;
+
+public interface IServiceTypeService extends IGeneralService<ServiceType> {
 }

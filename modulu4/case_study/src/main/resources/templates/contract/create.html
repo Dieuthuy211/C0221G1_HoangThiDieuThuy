@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create contract</title>
+</head>
+<body>
+<h1>Create contract</h1>
+
+<form action="/contract/create" th:object="${contract}" method="post">
+    <table>
+        <tr>
+            <td>contract Start Date:</td>
+            <td><input type="date" th:field="*{contractStartDate}"/></td>
+        </tr>
+
+        <tr>
+            <td>contract End Date:</td>
+            <td><input type="date" th:field="*{contractEndDate}"/></td>
+        </tr>
+        <tr>
+            <td>deposit:</td>
+            <td><input type="text" th:field="*{deposit}"/></td>
+        </tr>
+        <tr>
+            <td>total:</td>
+            <td><input type="text" th:field="*{total}"/></td>
+        </tr>
+        <tr>
+            <td>employee:</td>
+            <td><select th:field="*{employee}" >
+                <option th:each="employee : ${employees}"  th:text="${employee.id}" th:text="${employee.name}" th:value="${employee.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>customer:</td>
+            <td><select th:field="*{customer}" >
+                <option th:each="customer : ${customers}" th:text="${customer.name}" th:value="${customer.id}"></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>service:</td>
+            <td><select th:field="*{service}" >
+                <option th:each="service : ${services}" th:text="${service.name}" th:value="${service.id}"></option>
+            </select>
+            </td>
+        </tr>
+
+        <td></td>
+        <td><input type="submit" value="Create contract"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

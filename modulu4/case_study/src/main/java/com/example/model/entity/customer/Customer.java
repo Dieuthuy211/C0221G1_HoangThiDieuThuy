@@ -1,6 +1,11 @@
 package com.example.model.entity.customer;
 
+import com.example.model.entity.contract.Contract;
+import com.example.model.entity.customer_user_service.CustomerUserService;
+
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "customer")
 public class Customer {
@@ -12,39 +17,43 @@ public class Customer {
     @JoinColumn(name = "customer_type_id",referencedColumnName = "id")
     private CustomerType customerType;
     private String name;
+    @Column(columnDefinition = "date")
     private String birthday;
     private String gender;
     private String idCard;
     private String phone;
     private String email;
     private String address;
-
+    private boolean flag;
+    @OneToMany(mappedBy = "customer")
+    private List<Contract> contracts;
+    @OneToMany
+    private List<CustomerUserService> customerUserServices;
     public Customer() {
     }
 
-    public Customer(Integer id, String code, CustomerType customerType, String name, String birthday, String gender, String idCard, String phone, String email, String address) {
-        this.id = id;
-        this.code = code;
-        this.customerType = customerType;
-        this.name = name;
-        this.birthday = birthday;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public boolean isFlag() {
+        return flag;
     }
 
-    public Customer(String code, CustomerType customerType, String name, String birthday, String gender, String idCard, String phone, String email, String address) {
-        this.code = code;
-        this.customerType = customerType;
-        this.name = name;
-        this.birthday = birthday;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+    public List<CustomerUserService> getCustomerUserServices() {
+        return customerUserServices;
+    }
+
+    public void setCustomerUserServices(List<CustomerUserService> customerUserServices) {
+        this.customerUserServices = customerUserServices;
+    }
+
+    public List<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(List<Contract> contracts) {
+        this.contracts = contracts;
     }
 
     public Integer getId() {
