@@ -13,7 +13,7 @@
         <tr>
             <td>contract:</td>
             <td><select th:field="*{contract}" >
-                <option th:each="contract : ${contracts}"  th:text="${contract.id}" th:text="${contract.customer.name}" th:value="${contract.id}"></option>
+                <option th:each="contract : ${contracts}" th:text="${contract.customer.name}" th:value="${contract.id}"></option>
             </select>
             </td>
         </tr>

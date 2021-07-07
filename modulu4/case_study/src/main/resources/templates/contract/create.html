@@ -2,16 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create contract</title>
+    <title>Create service</title>
 </head>
 <body>
-<h1>Create contract</h1>
+<h1>Create service</h1>
+<th:block th:if="${msg}">
+    <p th:text="${msg}"></p>
+</th:block>
 
-<form action="/contract/create" th:object="${contract}" method="post">
+<form th:action="@{/contracts/create}" th:object="${contractDto}" method="post">
     <table>
         <tr>
             <td>contract Start Date:</td>
             <td><input type="date" th:field="*{contractStartDate}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('contractStartDate')}" th:errors="*{contractStartDate}"></span></td>
         </tr>
 
         <tr>
@@ -19,17 +26,29 @@
             <td><input type="date" th:field="*{contractEndDate}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('contractEndDate')}" th:errors="*{contractEndDate}"></span></td>
+        </tr>
+        <tr>
             <td>deposit:</td>
             <td><input type="text" th:field="*{deposit}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></span></td>
         </tr>
         <tr>
             <td>total:</td>
             <td><input type="text" th:field="*{total}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('total')}" th:errors="*{total}"></span></td>
+        </tr>
+        <tr>
             <td>employee:</td>
             <td><select th:field="*{employee}" >
-                <option th:each="employee : ${employees}"  th:text="${employee.id}" th:text="${employee.name}" th:value="${employee.id}"></option>
+                <option th:each="employee : ${employees}" th:text="${employee.name}" th:value="${employee.id}"></option>
             </select>
             </td>
         </tr>

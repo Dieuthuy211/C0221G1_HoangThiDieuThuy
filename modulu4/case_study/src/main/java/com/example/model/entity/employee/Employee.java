@@ -1,5 +1,6 @@
 package com.example.model.entity.employee;
 
+
 import com.example.model.entity.contract.Contract;
 
 import javax.persistence.*;
@@ -10,7 +11,6 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String code;
     private String name;
     @Column(columnDefinition = "date")
     private String birthday;
@@ -19,6 +19,7 @@ public class Employee {
     private String phone;
     private String email;
     private String address;
+    private Boolean flag;
 
     @ManyToOne
     @JoinColumn(name = "position_id",referencedColumnName = "id")
@@ -31,11 +32,17 @@ public class Employee {
     private EductionDegree eductionDegree;
     @OneToMany(mappedBy = "employee")
     private List<Contract> contracts;
-//    @OneToMany
-//    @JoinColumn(name = "username",referencedColumnName = "username")
-//    private AddUser addUser;
+
 
     public Employee() {
+    }
+
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
     }
 
     public Integer getId() {
@@ -44,14 +51,6 @@ public class Employee {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public String getName() {

@@ -3,7 +3,7 @@ package com.example.model.entity.service;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "rant_type")
+@Entity(name = "rent_type")
 public class RentType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

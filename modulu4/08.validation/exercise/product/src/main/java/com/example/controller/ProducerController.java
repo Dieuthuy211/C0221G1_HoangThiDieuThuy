@@ -1,9 +1,7 @@
 package com.example.controller;
 
 import com.example.dto.ProducerDto;
-import com.example.dto.ProductDto;
 import com.example.model.entity.Producer;
-import com.example.model.entity.Product;
 import com.example.model.service.IProducerService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -86,11 +83,6 @@ public class ProducerController {
             redirect.addFlashAttribute("message", "blog updated successfully");
             return "redirect:";
         }
-
-
-
-
-
     }
 
     @GetMapping("/delete/{id}")
@@ -107,7 +99,7 @@ public class ProducerController {
         }
     }
 
-    @PostMapping("/producers/delete")
+    @PostMapping("/delete")
     public String delete(@ModelAttribute("producer") Producer producer) {
         producerService.remove(producer.getId());
         return "redirect:";

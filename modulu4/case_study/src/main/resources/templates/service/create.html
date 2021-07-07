@@ -10,27 +10,47 @@
     <p th:text="${msg}"></p>
 </th:block>
 
-<form th:action="@{/services/create}" th:object="${service}" method="post">
+<form th:action="@{/services/create}" th:object="${serviceDto}" method="post">
     <table>
         <tr>
             <td>code:</td>
             <td><input type="text" th:field="*{code}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></span></td>
+        </tr>
+        <tr>
             <td>name:</td>
             <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
         </tr>
         <tr>
             <td>are:</td>
             <td><input type="text" th:field="*{areas}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('areas')}" th:errors="*{areas}"></span></td>
+        </tr>
+        <tr>
             <td>cost:</td>
             <td><input type="text" th:field="*{costs}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('costs')}" th:errors="*{costs}"></span></td>
+        </tr>
+        <tr>
             <td>max people:</td>
             <td><input type="text" th:field="*{maxPeople}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('maxPeople')}" th:errors="*{maxPeople}"></span></td>
         </tr>
         <tr>
             <td>rent Type:</td>
@@ -39,6 +59,7 @@
             </select>
             </td>
         </tr>
+
         <tr>
             <td>rent Type:</td>
             <td><select th:field="*{serviceType}" >
@@ -51,16 +72,32 @@
             <td><input type="text" th:field="*{standardRoom}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('standardRoom')}" th:errors="*{standardRoom}"></span></td>
+        </tr>
+        <tr>
             <td>description Other Convenience:</td>
             <td><input type="text" th:field="*{descriptionOtherConvenience}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('descriptionOtherConvenience')}" th:errors="*{descriptionOtherConvenience}"></span></td>
         </tr>
         <tr>
             <td>pool Area:</td>
             <td><input type="text" th:field="*{poolArea}"/></td>
         </tr>
         <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></span></td>
+        </tr>
+        <tr>
             <td>number Of Floors:</td>
             <td><input type="text" th:field="*{numberOfFloors}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></span></td>
         </tr>
 
         <td></td>

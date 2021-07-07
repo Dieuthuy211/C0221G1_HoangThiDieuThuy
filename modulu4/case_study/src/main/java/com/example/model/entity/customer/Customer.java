@@ -12,6 +12,8 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(unique = true)
     private String code;
     @ManyToOne
     @JoinColumn(name = "customer_type_id",referencedColumnName = "id")

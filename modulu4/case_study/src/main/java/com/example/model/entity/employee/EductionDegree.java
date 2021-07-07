@@ -2,7 +2,7 @@ package com.example.model.entity.employee;
 
 import javax.persistence.*;
 import java.util.List;
-@Entity
+@Entity(name = "education_degree")
 public class EductionDegree {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
