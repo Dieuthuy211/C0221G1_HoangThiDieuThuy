@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.model.entity.contract.Contract;
 import com.example.model.entity.contract_detail.AttachService;
+import com.example.model.entity.customer.Customer;
 import com.example.model.entity.service.Service;
 import com.example.model.service.IAttachService;
 import com.example.model.service.IContractService;
@@ -13,6 +14,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
@@ -65,8 +67,17 @@ public class CustomerUserServiceController {
         return "/customer_user_service/delete";
     }
     @PostMapping("/delete")
-    public String delete(@ModelAttribute("contract") Contract contract,Model model){
-        contractService.remove(contract.getId());
-        return "redirect:/customerUsers/";
+    public String delete(@RequestParam Integer id, RedirectAttributes redirectAttributes){
+        Contract contract=contractService.findById(id);
+        if(contract==null){
+            return "error.404";
+
+        }else {
+            contract.setFlag(true);
+            contractService.save(contract);
+            redirectAttributes.addFlashAttribute("msg","xóa thành công");
+            return "redirect:/customerUsers/";
+        }
+
     }
 }

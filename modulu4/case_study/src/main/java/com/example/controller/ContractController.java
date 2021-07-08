@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -57,9 +58,8 @@ public class ContractController {
         List<Customer> customers=customerService.findAll();
         List<Employee> employees=employeeService.findAll();
         List<Service> services=serviceService.findAll();
-        Date date1 = new SimpleDateFormat("yyyy/MM/dd").parse(contract.getContractStartDate());
-        Date date2 = new SimpleDateFormat("yyyy/MM/dd").parse(contract.getContractEndDate());
-        if(bindingResult.hasErrors()&& date1.compareTo(date2)>0) {
+
+        if(bindingResult.hasErrors()) {
             model.addAttribute("customers", customers);
             model.addAttribute("employees", employees);
             model.addAttribute("services", services);

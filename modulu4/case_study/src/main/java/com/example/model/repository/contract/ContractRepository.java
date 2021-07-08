@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ContractRepository extends JpaRepository<Contract,Integer> {
-    @Query(value="select * from contract  where customer_id like %?% and contract_end_date>=now()",nativeQuery=true)
+    @Query(value="select * from contract  left join customer on customer.id=contract.customer_id where customer.name like %?%  and contract_end_date>=now()",nativeQuery=true)
     Page<Contract> findByCustomerNameContaining(String search, Pageable pageable);
 }

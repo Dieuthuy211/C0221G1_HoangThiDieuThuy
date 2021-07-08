@@ -20,7 +20,8 @@ public class Contract {
     @Column(columnDefinition = "date")
     private String contractEndDate;
     private Integer deposit;
-    private  Integer total;
+    private Integer total;
+    private Boolean flag;
     @ManyToOne
     @JoinColumn(name = "employee_id",referencedColumnName = "id")
     private Employee employee;
@@ -36,6 +37,13 @@ public class Contract {
     public Contract() {
     }
 
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
 
     public Integer getId() {
         return id;
