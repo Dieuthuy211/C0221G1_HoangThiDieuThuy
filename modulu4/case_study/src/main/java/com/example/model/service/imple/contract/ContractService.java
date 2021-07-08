@@ -1,9 +1,13 @@
 package com.example.model.service.imple.contract;
 
 import com.example.model.entity.contract.Contract;
+import com.example.model.entity.contract_detail.ContractDetail;
 import com.example.model.repository.contract.ContractRepository;
+import com.example.model.service.IContractDetailService;
 import com.example.model.service.IContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,11 +29,23 @@ public class ContractService implements IContractService {
 
     @Override
     public void save(Contract contract) {
+//       List<ContractDetail> contractDetails= contractDetailService.findAll();
+//       for (ContractDetail contractDetail:contractDetails){
+//           if(contract.getId()==contractDetail.getContract().getId()){
+//               contract.setTotal((contract.getService().getCosts()+contractDetail.getAttachService().getCost())*contractDetail.getQuantity());
+//               contractRepository.save(contract);
+//           }
+//       }
         contractRepository.save(contract);
     }
 
     @Override
     public void remove(Integer id) {
         contractRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Contract> findByCustomerNameContaining(String search, Pageable pageable) {
+        return contractRepository.findByCustomerNameContaining(search,pageable);
     }
 }

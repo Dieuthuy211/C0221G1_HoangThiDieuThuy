@@ -1,11 +1,9 @@
 package com.example.model.entity.contract_detail;
 
 import com.example.model.entity.contract.Contract;
-import com.example.model.entity.customer_user_service.CustomerUserService;
 
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "contract_detail")
 public class ContractDetail {
@@ -19,8 +17,7 @@ public class ContractDetail {
     @JoinColumn(name = "attach_Service_id",referencedColumnName = "id")
     private AttachService attachService;
     private Integer quantity;
-    @OneToMany(mappedBy = "contractDetail")
-    private List<CustomerUserService> customerUserServices;
+
 
     public ContractDetail() {
     }

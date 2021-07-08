@@ -2,8 +2,6 @@ package com.example.model.entity.contract_detail;
 
 
 
-import com.example.model.entity.customer_user_service.CustomerUserService;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,8 +15,6 @@ public class AttachService {
     private String status;
     @OneToMany(mappedBy = "attachService")
     List<ContractDetail> contractDetails;
-    @OneToMany(mappedBy = "attachService")
-    private List<CustomerUserService> customerUserServices;
 
     public AttachService() {
     }

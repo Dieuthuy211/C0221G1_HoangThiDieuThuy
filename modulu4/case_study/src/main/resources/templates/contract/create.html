@@ -14,7 +14,7 @@
     <table>
         <tr>
             <td>contract Start Date:</td>
-            <td><input type="date" th:field="*{contractStartDate}"/></td>
+            <td><input type="text" th:field="*{contractStartDate}"/></td>
         </tr>
         <tr>
             <td></td>
@@ -23,7 +23,7 @@
 
         <tr>
             <td>contract End Date:</td>
-            <td><input type="date" th:field="*{contractEndDate}"/></td>
+            <td><input type="text" th:field="*{contractEndDate}"/></td>
         </tr>
         <tr>
             <td></td>
@@ -36,14 +36,6 @@
         <tr>
             <td></td>
             <td><span style="color: red" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></span></td>
-        </tr>
-        <tr>
-            <td>total:</td>
-            <td><input type="text" th:field="*{total}"/></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><span style="color: red" th:if="${#fields.hasErrors('total')}" th:errors="*{total}"></span></td>
         </tr>
         <tr>
             <td>employee:</td>

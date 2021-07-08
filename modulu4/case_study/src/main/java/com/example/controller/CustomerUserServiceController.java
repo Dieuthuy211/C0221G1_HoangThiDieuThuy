@@ -2,11 +2,9 @@ package com.example.controller;
 
 import com.example.model.entity.contract.Contract;
 import com.example.model.entity.contract_detail.AttachService;
-import com.example.model.entity.customer_user_service.CustomerUserService;
 import com.example.model.entity.service.Service;
 import com.example.model.service.IAttachService;
 import com.example.model.service.IContractService;
-import com.example.model.service.ICustomerUserService;
 import com.example.model.service.IServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,8 +21,6 @@ import java.util.Optional;
 @RequestMapping(value = "/customerUsers")
 public class CustomerUserServiceController {
     @Autowired
-    ICustomerUserService customerUserService;
-    @Autowired
     IAttachService attachService;
     @Autowired
     IContractService contractService;
@@ -37,9 +33,10 @@ public class CustomerUserServiceController {
         if(search.isPresent()){
             searchValue=search.get();
         }
-        Page<CustomerUserService> customerUserServices=customerUserService.findByNameContaining(searchValue,pageable);
+        Page<Contract> contracts=contractService.findByCustomerNameContaining(searchValue,pageable);
         model.addAttribute("attachServices",attachServices);
-        model.addAttribute("customerUserServices",customerUserServices);
+        model.addAttribute("contracts",contracts);
+
         return "/customer_user_service/list";
     }
     @GetMapping(value = "/edit/{id}")

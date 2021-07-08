@@ -1,7 +1,6 @@
 package com.example.model.entity.customer;
 
 import com.example.model.entity.contract.Contract;
-import com.example.model.entity.customer_user_service.CustomerUserService;
 
 
 import javax.persistence.*;
@@ -29,8 +28,7 @@ public class Customer {
     private boolean flag;
     @OneToMany(mappedBy = "customer")
     private List<Contract> contracts;
-    @OneToMany
-    private List<CustomerUserService> customerUserServices;
+
     public Customer() {
     }
 
@@ -40,14 +38,6 @@ public class Customer {
 
     public void setFlag(boolean flag) {
         this.flag = flag;
-    }
-
-    public List<CustomerUserService> getCustomerUserServices() {
-        return customerUserServices;
-    }
-
-    public void setCustomerUserServices(List<CustomerUserService> customerUserServices) {
-        this.customerUserServices = customerUserServices;
     }
 
     public List<Contract> getContracts() {

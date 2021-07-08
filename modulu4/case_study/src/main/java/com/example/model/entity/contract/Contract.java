@@ -2,7 +2,6 @@ package com.example.model.entity.contract;
 
 import com.example.model.entity.contract_detail.ContractDetail;
 import com.example.model.entity.customer.Customer;
-import com.example.model.entity.customer_user_service.CustomerUserService;
 import com.example.model.entity.employee.Employee;
 import com.example.model.entity.service.Service;
 
@@ -14,6 +13,7 @@ import java.util.List;
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     @Column(columnDefinition = "date")
     private String contractStartDate;
@@ -32,8 +32,7 @@ public class Contract {
     private Service service;
     @OneToMany(mappedBy = "contract")
     private List<ContractDetail> contractDetails;
-    @OneToMany(mappedBy = "contract")
-    private List<CustomerUserService> customerUserServices;
+
     public Contract() {
     }
 
@@ -100,5 +99,13 @@ public class Contract {
 
     public void setService(Service service) {
         this.service = service;
+    }
+
+    public List<ContractDetail> getContractDetails() {
+        return contractDetails;
+    }
+
+    public void setContractDetails(List<ContractDetail> contractDetails) {
+        this.contractDetails = contractDetails;
     }
 }

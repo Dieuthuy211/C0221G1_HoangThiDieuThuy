@@ -20,6 +20,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -45,18 +50,21 @@ public class ContractController {
         return "contract/create";
     }
     @PostMapping(value = "create")
-    public String createContract(@Valid @ModelAttribute("contractDto") ContractDto contractDto, BindingResult bindingResult, Model model){
+    public String createContract(@Valid @ModelAttribute("contractDto") ContractDto contractDto, BindingResult bindingResult, Model model) throws ParseException {
         Contract contract=new Contract();
+
         BeanUtils.copyProperties(contractDto,contract);
         List<Customer> customers=customerService.findAll();
         List<Employee> employees=employeeService.findAll();
         List<Service> services=serviceService.findAll();
-        if(bindingResult.hasErrors()){
-            model.addAttribute("customers",customers);
-            model.addAttribute("employees",employees);
-            model.addAttribute("services",services);
+        Date date1 = new SimpleDateFormat("yyyy/MM/dd").parse(contract.getContractStartDate());
+        Date date2 = new SimpleDateFormat("yyyy/MM/dd").parse(contract.getContractEndDate());
+        if(bindingResult.hasErrors()&& date1.compareTo(date2)>0) {
+            model.addAttribute("customers", customers);
+            model.addAttribute("employees", employees);
+            model.addAttribute("services", services);
             return "contract/create";
-        }else {
+        } else {
             contractService.save(contract);
             model.addAttribute("customers", customers);
             model.addAttribute("employees", employees);
