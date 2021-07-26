@@ -16,7 +16,7 @@
 
   <div formGroupName="pwGroup">
     <div class="form-group row">
-      <label class="col">
+      <label class="col"  >
         Password
         <input type="password" class="form-control" formControlName="password">
       </label>
@@ -28,7 +28,6 @@
       </label>
     </div>
   </div>
-
 
   <div class="alert alert-danger" role="alert" *ngIf="rw.hasError('passwordNotMatch', ['pwGroup']) &&
       rw.get('pwGroup').touched">
