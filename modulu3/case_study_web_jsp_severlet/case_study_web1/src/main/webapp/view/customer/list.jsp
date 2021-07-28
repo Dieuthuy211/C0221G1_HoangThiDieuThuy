@@ -5,8 +5,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>List</title>
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/dataTables.bootstrap.min.css">
 
 </head>
 <body>
@@ -63,10 +63,10 @@
         <h1 class="text-center">List Customer</h1>
         <a href="/userService">list of customers using the service </a>
         <div class="row" style="margin-left: 20px">
-                <div ><a class="btn btn-default-btn-xs btn-success"
-                                                                        href="/customers?action=create">
-                    <i class="glyphicon glyphicon-plus"></i> New create</a>
-                </div>
+            <div ><a class="btn btn-default-btn-xs btn-success"
+                     href="/customers?action=create">
+                <i class="glyphicon glyphicon-plus"></i> New create</a>
+            </div>
         </div>
         <table id="tableCustomer" class="container table table-bordered table-striped ">
             <thead>
@@ -87,9 +87,12 @@
             <tbody>
             <c:forEach items="${customers}" var="customer">
                 <tr>
-                    <td><a href="/customers?action=view&id=${customer.id}">${customer.id}</a>
-                    </td>
-                    <td>${customer.idCustomerType}</td>
+                    <td><a href="/customers?action=view&id=${customer.id}">${customer.id}</a></td>
+                    <c:forEach var="type" items="${customerTypes}">
+                        <c:if test="${type.customerTypeId == customer.customerTypeId}">
+                            <td>${type.customerTypeName}</td>
+                        </c:if>
+                    </c:forEach>
                     <td>${customer.name}</td>
                     <td>${customer.gender}</td>
                     <td>${customer.dateOfBirth}</td>
@@ -149,11 +152,11 @@
 
 
 
-<script src="bootstrap/jquery-3.6.0.min.js"></script>
-<script src="bootstrap/jquery.dataTables.min.js"></script>
-<script src="bootstrap/dataTables.bootstrap4.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
+<script src="../../bootstrap/jquery-3.6.0.min.js"></script>
+<script src="../../bootstrap/jquery.dataTables.min.js"></script>
+<script src="../../bootstrap/dataTables.bootstrap4.min.js"></script>
+<script src="../../bootstrap/popper.min.js"></script>
+<script src="../../bootstrap/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
         $('#tableCustomer').dataTable({

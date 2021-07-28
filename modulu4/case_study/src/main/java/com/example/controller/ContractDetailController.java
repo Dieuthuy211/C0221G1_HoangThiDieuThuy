@@ -39,12 +39,6 @@ public class ContractDetailController {
         List<Contract> contracts=contractService.findAll();
         List<AttachService> attachServices=iAttachService.findAll();
         if(contractDetail!=null){
-            for (Contract contract:contracts){
-                if(contract.getId()==contractDetail.getContract().getId()){
-                    contract.setTotal((contract.getService().getCosts()+contractDetail.getAttachService().getCost())*contractDetail.getQuantity());
-                    contractService.save(contract);
-                }
-            }
             contractDetailService.save(contractDetail);
             model.addAttribute("contracts",contracts);
             model.addAttribute("attachServices",attachServices);

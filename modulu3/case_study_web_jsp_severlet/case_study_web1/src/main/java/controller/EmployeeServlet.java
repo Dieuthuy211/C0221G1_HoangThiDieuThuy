@@ -209,7 +209,9 @@ public class EmployeeServlet extends HttpServlet {
 
     private void showEployee(HttpServletRequest request, HttpServletResponse response) {
         List<Employee> employees = this.employeeService.findAll();
+        List<Division> divisions = this.employeeService.selectDivision();
         request.setAttribute("employees", employees);
+        request.setAttribute("divisions", divisions);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/list.jsp");
         try {
             requestDispatcher.forward(request, response);

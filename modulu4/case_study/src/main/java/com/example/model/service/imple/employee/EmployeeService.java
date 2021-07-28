@@ -38,7 +38,12 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public Page<Employee> findByNameContaining(String search, Pageable pageable) {
-        return employeeRepository.findByNameContaining(search, pageable);
+    public Page<Employee> findByNameContaining(String name, String birthday, Pageable pageable) {
+        return employeeRepository.findByNameContaining(name, birthday, pageable);
     }
+
+//    @Override
+//    public Page<Employee> findByNameContaining(String search, Pageable pageable) {
+//        return employeeRepository.findByNameContaining(search, pageable);
+//    }
 }

@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
-
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import javax.sql.DataSource;
@@ -46,14 +45,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         // Các trang không yêu cầu login
-        http.authorizeRequests().antMatchers("/", "/login", "/logout").permitAll();
+        http.authorizeRequests().antMatchers("/", "/login", "/logout","/home","/customers/**").permitAll();
 
         // Trang /userInfo yêu cầu phải login với vai trò ROLE_USER hoặc ROLE_ADMIN.
         // Nếu chưa login, nó sẽ redirect tới trang /login.
-        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/employees/","/contracts","/contractDetails","/customerUsers/**").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // Trang chỉ dành cho ADMIN
-        http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/employees/**").access("hasRole('ROLE_ADMIN')");
 
         // Khi người dùng đã login, với vai trò XX.
         // Nhưng truy cập vào trang yêu cầu vai trò YY,
@@ -63,14 +62,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Cấu hình cho Login Form.
         http.authorizeRequests().and().formLogin()//
                 // Submit URL của trang login
-                .loginProcessingUrl("/j_spring_security_check") // Submit URL
+                .loginProcessingUrl("/home") // Submit URL
                 .loginPage("/login")//
-                .defaultSuccessUrl("/userAccountInfo")//
+                .defaultSuccessUrl("/home")//
                 .failureUrl("/login?error=true")//
                 .usernameParameter("username")//
                 .passwordParameter("password")
                 // Cấu hình cho Logout Page.
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/backHome");
 
         // Cấu hình Remember Me.
         http.authorizeRequests().and() //

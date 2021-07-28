@@ -51,7 +51,11 @@
                 <td>${employee.employeeName}</td>
                 <td>${employee.positionId}</td>
                 <td>${employee.educationDegreeId}</td>
-                <td>${employee.divisionId}</td>
+                <c:forEach var="division" items="${divisions}">
+                <c:if test="${employee.divisionId == division.divisionId}">
+                    <td>${division.divisionName}</td>
+                </c:if>
+                </c:forEach>
                 <td>${employee.employeeBirthday}</td>
                 <td>${employee.employeeIdCard}</td>
                 <td>${employee.employeeSalary}</td>

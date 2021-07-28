@@ -1,4 +1,6 @@
 package com.example.model.service;
 
-public interface IoaiCauHoiService {
+import com.example.model.entity.LoaiCauHoi;
+
+public interface ILoaiCauHoiService extends IGeneralService<LoaiCauHoi> {
 }

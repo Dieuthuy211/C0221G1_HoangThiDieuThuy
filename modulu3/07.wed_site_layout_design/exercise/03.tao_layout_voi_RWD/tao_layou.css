@@ -1,21 +1,35 @@
-.header {
-    background: dimgray;
+body{
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+.header {
+    background: dimgray;
+   margin-bottom: 10px;
+    padding: 0;
     height: 40px;
+  align-items: center;
+
 
 }
 
-[class*="col-"] {
-    float: left
+ul{
 
+    display: flex;
 }
+.main{
+    display: flex;
+}
+
+/*[class*="col-"] {*/
+/*    float: left*/
+
+/*}*/
 
 ul li {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    float: left;
     line-height: 40px;
     list-style: none;
     width: 120px;
@@ -37,12 +51,12 @@ ul li a:hover {
 }
 
 .nav {
-    float: left;
+
     background: darkgray;
-    height: 500px;
+
 }
 .aside{
-    float: left;
+
     background: darkgray;
 
 }
@@ -55,7 +69,7 @@ ul li a:hover {
 }
 
 .content {
-    float: left;
+
 
 }
 
@@ -90,12 +104,13 @@ span {
 
 }
 
+
 [class*="col-"] {
     width: 100%;
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) {
     /*[class*=col-]{*/
     /*    width: 100px;*/
     /*}*/
@@ -153,7 +168,7 @@ span {
 
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
     .col-m-1 {
         width: 8.33%;
     }

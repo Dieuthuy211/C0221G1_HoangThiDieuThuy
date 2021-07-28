@@ -8,7 +8,7 @@
 <p>
     <a href="/customerUsers/">Back to list</a>
 </p>
-<form action="/customerUsers/edit" th:object="${contract}" method="post">
+<form th:action="@{/customerUsers/edit}" th:object="${contract}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>

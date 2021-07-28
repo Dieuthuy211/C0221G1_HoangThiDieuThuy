@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
@@ -38,13 +39,13 @@ public class EmployeeController {
     IDivisionService divisionService;
 
     @GetMapping(value = "")
-    public String showEmployee(@RequestParam("search") Optional<String> search, @PageableDefault(value = 5) Pageable pageable, Model model) {
-        String searchValue = "";
-        if (search.isPresent()) {
-            searchValue = search.get();
-        }
-        Page<Employee> employees = employeeService.findByNameContaining(searchValue, pageable);
+    public String showEmployee(@RequestParam("name") Optional<String> name,
+                               @RequestParam("birthday") Optional<String> birthday,
+                               @PageableDefault(value = 2) Pageable pageable, Model model) {
+        Page<Employee> employees = employeeService.findByNameContaining(name.orElse(""),birthday.orElse(""), pageable);
         model.addAttribute("employees", employees);
+        model.addAttribute("name", name.orElse(""));
+        model.addAttribute("birthday", birthday.orElse(""));
         return "employee/list";
     }
     @GetMapping(value = "/create")
@@ -110,19 +111,36 @@ public class EmployeeController {
             redirectAttributes.addFlashAttribute("msg","update thành công");
             return "redirect:/employees/";
     }
-    @PostMapping(value = "/delete")
-    public String delete(@RequestParam Integer id,RedirectAttributes redirectAttributes){
-        Employee employee=employeeService.findById(id);
-        if(employee==null){
-            return "error.404";
-
-        }else {
-            employee.setFlag(true);
-            employeeService.save(employee);
-            redirectAttributes.addFlashAttribute("msg","xóa thành công");
-            return "redirect:/employees/";
+//    @PostMapping(value = "/delete")
+//    public String delete(@RequestParam Integer id,RedirectAttributes redirectAttributes){
+//        Employee employee=employeeService.findById(id);
+//        if(employee==null){
+//            return "error.404";
+//
+//        }else {
+//            employee.setFlag(true);
+//            employeeService.save(employee);
+//            redirectAttributes.addFlashAttribute("msg","xóa thành công");
+//            return "redirect:/employees/";
+//        }
+//
+//    }
+    @PostMapping("/delete")
+    public ModelAndView delete(@RequestParam("listId") Optional<List<Integer>> listId, RedirectAttributes redirectAttributes){
+        if (listId.isPresent()){
+            for (Integer id: listId.get()) {
+                Employee employee=employeeService.findById(id);
+                if (employee==null){
+                    return new ModelAndView("error.404");
+                }
+                employee.setFlag(true);
+                employeeService.save(employee);
+            }
+            redirectAttributes.addFlashAttribute("msg","Delete is successful!!");
+            return new ModelAndView("redirect:/employees/");
         }
-
+        return new ModelAndView("redirect:/employees/");
     }
-
 }
+
+

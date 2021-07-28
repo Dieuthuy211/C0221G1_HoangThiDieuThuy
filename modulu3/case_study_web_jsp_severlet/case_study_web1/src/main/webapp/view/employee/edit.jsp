@@ -134,9 +134,9 @@
                         <label class="col-md-4 control-label"></label>
                         <div class="col-md-4">
                             <button type="submit"  class="btn btn-success">update</button>
-                            <button name="btn-save" class="btn btn-success">
-                                <a href="/employees">back to list</a>
-                            </button>
+
+                                <a href="/employees" class="btn btn-default-btn-xs btn-success">back to list</a>
+
                         </div>
                     </div>
 

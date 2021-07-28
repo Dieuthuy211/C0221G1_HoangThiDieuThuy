@@ -3,10 +3,13 @@ package com.example.model.entity.customer;
 import com.example.model.entity.contract.Contract;
 
 
+
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity(name = "customer")
+
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +18,7 @@ public class Customer {
     @Column(unique = true)
     private String code;
     @ManyToOne
-    @JoinColumn(name = "customer_type_id",referencedColumnName = "id")
+    @JoinColumn(referencedColumnName = "id")
     private CustomerType customerType;
     private String name;
     @Column(columnDefinition = "date")

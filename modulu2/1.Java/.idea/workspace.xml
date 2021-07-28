@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3e92df6b-e981-4fd6-be31-f60690e75b0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/bai9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/fibonacci.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/fibonacci2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/năm-nhuận.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/so-nguyen-to.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/ham/tim-so-nguyen-to-trong-finobocci.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baitap/DocSothanhchu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baitap/doitien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baitap/hienthiloichao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/ChiSocannang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/KiemTraNamNhuan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/RectangleProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/TinhSoNgayTrongThang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/giaiphuongtrinh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thuhanh/hienthi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/bai11-ham/bai-tap/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/bai11-ham/bai-tap/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/bai7/bai_tap/bai_tap1a.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/bai7/bai_tap/bai_tap1a.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/caseStudy/chondouong2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/caseStudy/chondouong2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/caseStudy/letkecacsonguyentotrongmang2chieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/caseStudy/letkecacsonguyentotrongmang2chieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/caseStudy/tamgiaccanrong.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/caseStudy/tamgiaccanrong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modelu1/casestudy1/bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelu1/casestudy1/bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../modulu3/09.web_application/practice/chuyen_doi_tien_te/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../modulu3/09.web_application/practice/chuyen_doi_tien_te/src/main/java/ConverterServle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../modulu3/09.web_application/practice/simple_login/src/main/java/Login_servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../modulu3/09.web_application/practice/src/main/java/servlet/ServletTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../modulu3/09.web_application/practice/tu_dien/src/main/java/TranslationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulu3/07.wed_site_layout_design/exercise/03.tao_layout_voi_RWD/tao_layou.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulu3/07.wed_site_layout_design/exercise/03.tao_layout_voi_RWD/tao_layou.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulu3/07.wed_site_layout_design/exercise/03.tao_layout_voi_RWD/tao_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulu3/07.wed_site_layout_design/exercise/03.tao_layout_voi_RWD/tao_layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,24 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\C0221G1-HoangThiDieuThuy\module2\bai1\.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectId" id="1qVRR93IfIOKwcKUIkOtpnUBd2k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../modulu3/09.web_application/practice/chuyen_doi_tien_te" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -146,6 +140,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -158,17 +153,34 @@
       <updated>1617162759636</updated>
       <workItem from="1617162762854" duration="4327000" />
       <workItem from="1617171012707" duration="12904000" />
+      <workItem from="1622012049251" duration="246000" />
+      <workItem from="1622012356079" duration="2952000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="250" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617164548050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="250" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617164548050" />
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1622017678731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1622017678731" />
     <state width="1323" height="163" key="GridCell.Tab.0.bottom" timestamp="1617183835302">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,6 +201,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617171019137" />
+    <state x="342" y="130" key="new project wizard" timestamp="1622014301169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1622014301169" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617166493125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

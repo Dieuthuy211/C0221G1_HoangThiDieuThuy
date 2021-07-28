@@ -28,10 +28,19 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >code</label>
+                            <div class="col-md-4">
+                                <input id="code" name="code" value="${customer.code}" type="text"
+                                       class="form-control input-md">
+                                <span class="help-block">code of your customer</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
                         <label class="col-md-4 control-label">ID Customer Type</label>
 
                         <div class="col-md-4">
-                            <select class="form-control" name="idCustomerType" >
+                            <select class="form-control" name="CustomerType" >
                                     <c:forEach items="${customerTypes}" var="customerType">
                                         <option value="${customerType.customerTypeId}" ${customerType.customerTypeId==customerType.customerTypeId?"selected":""}>${customerType.customerTypeName}</option>
                                     </c:forEach>
@@ -52,8 +61,8 @@
 
                     <div class="form-group">
                         <label class="col-md-4 control-label">Gender</label>
-                        <div class="col-md-4">
-                            <select name="gender" style="width: 370px;height: 35px">
+                        <div class="col-md-4" >
+                            <select name="gender" class="form-control" >
                                 <option value="male" ${customer.gender=='male'?"selected":""}>male</option>
                                 <option value="female" ${customer.gender=='female'?"selected":""}>female</option>
                             </select>

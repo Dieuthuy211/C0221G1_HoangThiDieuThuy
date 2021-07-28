@@ -10,11 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -24,13 +27,14 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping(value = "/customers")
+
 public class CustomerController {
     @Autowired
     private ICustomerTypeService customerTypeService;
     @Autowired
     private ICustomerService customerService;
     @GetMapping(value = "")
-    public String showCustomer(Model model, @RequestParam("search") Optional<String> search,@PageableDefault(value = 5) Pageable pageable){
+    public String showCustomer(Model model, @RequestParam("search") Optional<String> search, @PageableDefault(value = 5) Pageable pageable){
         String searchValue="";
         if(search.isPresent()) {
             searchValue = search.get();
@@ -74,6 +78,7 @@ public class CustomerController {
     public String editCustomer(@Valid@ModelAttribute("customerDto") CustomerDto customerDto,BindingResult bindingResult,Model model,RedirectAttributes redirectAttributes){
         Customer customer=new Customer();
         BeanUtils.copyProperties(customerDto,customer);
+        new CustomerDto().validate(customerDto,bindingResult);
         if(bindingResult.hasErrors()){
             return "customer/edit";
         }
@@ -98,10 +103,17 @@ public class CustomerController {
         }
 
     }
+//    @GetMapping(value = "/view/{id}")
+//    public String showView(@PathVariable("id") Integer id,Model model){
+//        Customer customer=customerService.findById(id);
+//        model.addAttribute("customer",customer);
+//        return "customer/view";
+//    }
     @GetMapping(value = "/view/{id}")
-    public String showView(@PathVariable("id") Integer id,Model model){
-        Customer customer=customerService.findById(id);
-        model.addAttribute("customer",customer);
-        return "customer/view";
+    public ResponseEntity<Customer> listBlog(@PathVariable("id") Integer id) {
+
+   Customer customer=customerService.findById(id);
+
+        return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 }

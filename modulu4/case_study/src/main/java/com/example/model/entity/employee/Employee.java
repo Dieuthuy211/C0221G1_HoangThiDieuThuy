@@ -19,7 +19,7 @@ public class Employee {
     private String phone;
     private String email;
     private String address;
-    private Boolean flag;
+    private Boolean flag=false;
 
     @ManyToOne
     @JoinColumn(name = "position_id",referencedColumnName = "id")

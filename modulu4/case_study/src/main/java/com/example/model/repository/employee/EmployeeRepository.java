@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
-    @Query(value="select * from employee where name like %?% and flag=0",nativeQuery=true)
-    Page<Employee> findByNameContaining(String search, Pageable pageable);
+    @Query(value="select * from employee where name like %?% and birthday like %?% and flag=0",nativeQuery=true)
+    Page<Employee> findByNameContaining(String name,String birthday, Pageable pageable);
 }

@@ -106,7 +106,7 @@ public class CustomerServlet extends HttpServlet {
 
     private void showEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-       Customer customer= (Customer) customerService.findById(id);
+        Customer customer= (Customer) customerService.findById(id);
         List<CustomerType> customerTypes=customerService.selectCustomerType();
         request.setAttribute("customerTypes", customerTypes);
 
@@ -185,7 +185,7 @@ public class CustomerServlet extends HttpServlet {
             boolean check=this.customerService.remove(id);
             String message=null;
             if(check){
-              message="xoa thanh cong";
+                message="xoa thanh cong";
             }else {
                 message="xoa khong thanh cong";
             }
@@ -194,9 +194,11 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void listCustomer(HttpServletRequest request, HttpServletResponse response, String message) {
+
         List<Customer> customer=this.customerService.findAll();
-        request.setAttribute("message",message);
         request.setAttribute("customer",customer);
+        List<CustomerType> customerTypes=customerService.selectCustomerType();
+        request.setAttribute("customerTypes", customerTypes);
         RequestDispatcher requestDispatcher=request.getRequestDispatcher("view/customer/list.jsp");
         try {
             requestDispatcher.forward(request,response);

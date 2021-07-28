@@ -11,7 +11,7 @@ public class EmployeeDto {
     @NotBlank(message = "vui long nhập")
     private String name;
     @NotEmpty(message = "vui long nhập")
-    @Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$",message = "format DD/MM/YYYY")
+//    @Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$",message = "format DD/MM/YYYY")
     private String birthday;
     @Min(value = 0,message = "vui lòng nhập lại")
     private Integer salary;
@@ -29,8 +29,18 @@ public class EmployeeDto {
     private Position position;
     private Division division;
     private EductionDegree eductionDegree;
+    private Boolean flag=false;
+
 
     public EmployeeDto() {
+    }
+
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
     }
 
     public Integer getId() {

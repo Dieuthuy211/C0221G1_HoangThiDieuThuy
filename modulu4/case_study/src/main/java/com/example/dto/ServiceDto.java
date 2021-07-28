@@ -1,16 +1,22 @@
 package com.example.dto;
 
 import com.example.model.entity.service.RentType;
+import com.example.model.entity.service.Service;
 import com.example.model.entity.service.ServiceType;
+import com.example.model.service.IServiceService;
 import com.sun.istack.NotNull;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import java.lang.annotation.Target;
+import java.util.List;
 
 
-public class ServiceDto {
+public class ServiceDto implements Validator {
     private Integer id;
     @NotBlank(message = "vui lòng nhập")
     @Pattern(regexp = "^(DV)-[0-9]{4}$",message = "DV-XXXX")
@@ -131,5 +137,24 @@ public class ServiceDto {
 
     public void setNumberOfFloors(Integer numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
+    }
+
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+@Autowired
+    IServiceService serviceService;
+    @Override
+    public void validate(Object target, Errors errors) {
+        ServiceDto serviceDto= (ServiceDto) target;
+        List<Service> services=serviceService.findAll();
+        for(Service service:services){
+            if(service.getCode().equals(serviceDto.code)){
+                errors.rejectValue("code","code.service","vui lòng nhập lại code bị trùng");
+            }
+        }
+
     }
 }

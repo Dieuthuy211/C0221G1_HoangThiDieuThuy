@@ -44,6 +44,7 @@ public class ServiceController {
         BeanUtils.copyProperties(serviceDto, service);
         List<RentType> rentTypes = rentTypeService.findAll();
         List<ServiceType> serviceTypes = serviceTypeService.findAll();
+        new ServiceDto().validate(serviceDto,bindingResult);
         if (bindingResult.hasErrors()) {
             model.addAttribute("rentTypes", rentTypes);
             model.addAttribute("serviceTypes", serviceTypes);

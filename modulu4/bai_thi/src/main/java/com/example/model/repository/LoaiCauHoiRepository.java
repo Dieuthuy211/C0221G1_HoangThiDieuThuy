@@ -1,4 +1,9 @@
 package com.example.model.repository;
 
-public interface LoaiCauHoiRepository {
+import com.example.model.entity.LoaiCauHoi;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface LoaiCauHoiRepository extends JpaRepository<LoaiCauHoi,Integer> {
 }

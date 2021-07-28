@@ -105,7 +105,7 @@ public class CustomerUseServiceServlet extends HttpServlet {
         contractService.update(conTract);
         request.setAttribute("message","da sua thanh cong");
 
-//        request.setAttribute("conTract",conTract);
+        request.setAttribute("conTract",conTract);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customerUseService/edit.jsp");
         try {
             dispatcher.forward(request, response);

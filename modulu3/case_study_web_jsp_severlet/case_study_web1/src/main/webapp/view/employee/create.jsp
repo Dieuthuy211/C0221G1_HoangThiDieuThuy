@@ -126,8 +126,8 @@
                         <label class="col-md-4 control-label"></label>
                         <div class="col-md-4">
                             <button type="submit"  class="btn btn-success">create</button>
-                            <button name="btn-save" class="btn btn-success">
-                                <a href="/employees">back to list</a>
+                            <button name="btn-success" class="btn btn-success">
+                                <a href="/employees" style="color: white">back to list</a>
                             </button>
                         </div>
                     </div>

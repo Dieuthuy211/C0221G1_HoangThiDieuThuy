@@ -1,47 +1,47 @@
-package model.serviec.impl;
+package model.services.impl;
 
 import model.bean.User;
 import model.repository.UserRepository;
-import model.serviec.IUserService;
+import model.services.IUserService;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserServiceImp implements IUserService {
-    UserRepository userRepository = new UserRepository();
+public class UserServiceImpl implements IUserService {
+    UserRepository reponsitory = new UserRepository();
 
     @Override
-    public void insertUser(User user) {
-        userRepository.insertUser(user);
+    public void insertUser(User user) throws SQLException {
+        reponsitory.insertUser(user);
     }
 
     @Override
     public User selectUser(int id) {
-        return userRepository.selectUser(id);
+        return reponsitory.selectUser(id);
     }
 
     @Override
-    public List<User> selectAllUsers() {
-        return userRepository.selectAllUsers();
+    public List<User> selectAllUser() {
+        return reponsitory.selectAllUser();
     }
 
     @Override
-    public boolean deleteUser(int id) {
-        return userRepository.deleteUser(id);
+    public boolean deleteUser(int id) throws SQLException {
+        return reponsitory.deleteUser(id);
     }
 
     @Override
-    public boolean updateUser(int id, User user) {
-        return userRepository.update(id,user);
+    public boolean updateUser(User user) throws SQLException {
+        return reponsitory.updateUser(user);
     }
 
     @Override
-    public List<User> search(String country) {
-        return userRepository.search(country);
+    public List<User> searchByCountry(String search) {
+        return reponsitory.searchByCountry(search);
     }
 
     @Override
-    public List<User> sortList() {
-        return userRepository.sortList();
+    public List<User> sortByName() {
+        return reponsitory.sortByName();
     }
 }

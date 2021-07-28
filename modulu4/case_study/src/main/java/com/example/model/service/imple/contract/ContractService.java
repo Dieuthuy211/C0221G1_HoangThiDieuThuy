@@ -16,6 +16,8 @@ import java.util.List;
 public class ContractService implements IContractService {
     @Autowired
     ContractRepository contractRepository;
+    @Autowired
+    IContractDetailService contractDetailService;
 
     @Override
     public List<Contract> findAll() {
@@ -29,14 +31,14 @@ public class ContractService implements IContractService {
 
     @Override
     public void save(Contract contract) {
-//       List<ContractDetail> contractDetails= contractDetailService.findAll();
-//       for (ContractDetail contractDetail:contractDetails){
-//           if(contract.getId()==contractDetail.getContract().getId()){
-//               contract.setTotal((contract.getService().getCosts()+contractDetail.getAttachService().getCost())*contractDetail.getQuantity());
-//               contractRepository.save(contract);
-//           }
-//       }
-        contractRepository.save(contract);
+        List<ContractDetail> contractDetails = contractDetailService.findAll();
+        for(ContractDetail contractDetail:contractDetails){
+            if(contractDetail.getContract().getId()==contract.getId()){
+                contract.setTotal(contract.getTotal() + (contractDetail.getAttachService().getCost()*contractDetail.getQuantity()));
+            }
+            contractRepository.save(contract);
+        }
+
     }
 
     @Override

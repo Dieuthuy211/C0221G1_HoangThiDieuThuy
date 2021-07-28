@@ -1,5 +1,7 @@
 package com.example.model.entity.customer;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 

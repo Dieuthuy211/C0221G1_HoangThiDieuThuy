@@ -32,7 +32,10 @@ public class CustomerServiceImp implements IService<Customer> {
         customerRepository.insertCustomer(customer);
 
     }
-
+    @Override
+    public List<CustomerType> selectCustomerType() {
+        return customerRepository.selectCustomerTyPe();
+    }
 
     @Override
     public boolean update( Customer customer) {
@@ -54,10 +57,7 @@ public class CustomerServiceImp implements IService<Customer> {
         return null;
     }
 
-    @Override
-    public List<CustomerType> selectCustomerType() {
-        return customerRepository.selectCustomerTyPe();
-    }
+
 
     @Override
     public List<Position> selectPosition() {

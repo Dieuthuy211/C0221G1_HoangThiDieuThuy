@@ -1,10 +1,127 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        p {
+            color: red;
+        }
+
+
+        #box{
+            height: 2px;
+            width: 1px;
+            padding: 5px;
+            background-color: #66f9ff;
+            border-radius: 10px;
+            line-height:90px;
+            box-shadow: 0 0 15px #66ffff;
+        }
+        #circle{
+            height: 100%;
+            width: 75%;
+            border-radius: 400px;
+
+            padding-bottom: 30px;
+            border : 4px solid #00cccc;
+        }
+        #in{
+            width: 90%;
+            height: 50px;
+            border-radius: 10px;
+            padding: 8px;
+            border : 4px solid #00cccc;
+            background-color: #333333;
+            color: white;
+        }
+        #in:focus{
+            border:6px solid #00cccc;
+        }
+        #inBtn{
+            width: 90%;
+            height: 50px;
+            border-radius: 10px;
+            line-height:10px;
+            border : 4px solid #00cccc;
+            background-color: #333333;
+            color:white;
+            cursor: pointer;
+        }
+        #copy{
+            color: #00cccc;
+            text-align: center;
+            font-style: italic;
+        }
+        footer{
+            position:fixed;
+            bottom:0px;
+            left:0px;
+            right:0px;
+            margin-bottom:0px;
+        }
+        hr{
+            color: #00cccc;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<div class="container">
+    <form  th:object="${cauHoiDto}" class="well form-horizontal" th:action="@{/cauHois/create}" method="post">
+        <a href="/cauHois/list"><button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-chevron-left"></span> Back to list</button></a>
+
+        <fieldset>
+            <!-- Form Name -->
+            <legend><center><h2><b>Create Form  </b></h2></center></legend><br>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label ">tieu đề</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  th:field="*{tieuDe}" placeholder="tiêu đề" class="form-control"  type="text">
+                    </div>
+                    <p th:errors="*{tieuDe}"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">nôi Dung</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  th:field="*{noiDung}" placeholder="noi dung" class="form-control"  type="text">
+                    </div>
+                    <p th:errors="*{noiDung}"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">loai câu hỏi</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select th:field="*{loaiCauHoi}" class="form-control selectpicker">
+                            <option th:each="l : ${loaiCauHois}"
+                                    th:value="${l.id}"
+                                    th:text="${l.tenLoaiCauHoi}">
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="submit" class="btn btn-warning" ><span class="glyphicon glyphicon-send"></span>Submit</button>
+        </fieldset>
+    </form>
+</div>
+</div>
+
+
+
 </body>
 </html>

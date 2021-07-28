@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ServiceRepository {
+public class ServiceRepository{
     BasaRepository basaRepository = new BasaRepository();
     final String INSERT_SERVICE = "insert into service(service_name,service_area,service_cost,service_max_people,rent_type_id,service_type_id,standrad_room,description_other_convenience,pool_area,number_of_floors)\n" +
             "values (?,?,?,?,?,?,?,?,?,?);";
