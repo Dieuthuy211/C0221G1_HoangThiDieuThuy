@@ -1,23 +1,28 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {TodoComponent} from './todo/todo.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+
 import {TodoCreateComponent} from './todo-create/todo-create.component';
 import {TodoEditComponent} from './todo-edit/todo-edit.component';
+import {TodoComponent} from './todo/todo.component';
 
 
 const routes: Routes = [
-  {path: '',
-    pathMatch: 'full',
-    redirectTo: 'list',
+//   {
+//   path: '',
+//     pathMatch: 'full',
+//     redirectTo: 'list',
+//     component: TodoComponent
+// },
+  {
+    path: 'list',
     component: TodoComponent
   },
-  {path: 'list',
-    component: TodoComponent
-  },
-  {path: 'create',
+  {
+    path: 'create',
     component: TodoCreateComponent
   },
-  {path: 'edit/:id',
+  {
+    path: 'edit/:id',
     component: TodoEditComponent
   }
 ];
@@ -26,4 +31,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

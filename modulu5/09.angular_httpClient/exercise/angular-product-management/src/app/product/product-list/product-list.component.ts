@@ -38,7 +38,6 @@ export class ProductListComponent implements OnInit {
 
   changeId(id: any) {
     this.idDelete = id;
-    console.log(id);
   }
 
   deleteModal() {

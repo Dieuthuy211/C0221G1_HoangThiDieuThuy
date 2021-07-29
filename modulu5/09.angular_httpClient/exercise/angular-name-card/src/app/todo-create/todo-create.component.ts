@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TodoService} from '../service/todo.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-todo-create',
@@ -12,15 +13,18 @@ export class TodoCreateComponent implements OnInit {
     id: new FormControl(),
     name: new FormControl()
   });
-  constructor(private todoService: TodoService) { }
+
+  constructor(private todoService: TodoService,
+              private router: Router) {
+  }
 
   ngOnInit(): void {
   }
+
   submit() {
     const todo = this.createForm.value;
     this.todoService.saveTodo(todo).subscribe(() => {
-      this.createForm.reset();
-      alert('Tạo thành công');
+      this.router.navigate(['/list']);
     }, e => {
       console.log(e);
     });
