@@ -16,7 +16,7 @@ export class TodoService {
     return this.http.get<Todo[]>(API_URL);
   }
 
-  saveCategory(todo): Observable<Todo> {
+  saveTodo(todo): Observable<Todo> {
     return this.http.post<Todo>(API_URL, todo);
   }
 
