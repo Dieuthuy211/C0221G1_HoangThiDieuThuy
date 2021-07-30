@@ -57,30 +57,6 @@
         "id": 1,
         "name": "IPhone"
       }
-    },
-    {
-      "id": 5,
-      "name": "1",
-      "price": 1,
-      "description": "1",
-      "category": {
-        "id": 2,
-        "name": "samsung"
-      }
-    }
-  ],
-  "todo": [
-    {
-      "id": 1,
-      "name": "fafstyvs"
-    },
-    {
-      "id": 2,
-      "name": "fafstyvs"
-    },
-    {
-      "id": 3,
-      "name": "fafstyvs"
     }
   ]
 }
